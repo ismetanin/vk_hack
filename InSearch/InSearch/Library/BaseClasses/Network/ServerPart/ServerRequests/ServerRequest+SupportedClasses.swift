@@ -64,7 +64,13 @@ public class ServerRequestsManager {
         configuration.timeoutIntervalForRequest = 60 * 3
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = nil
-        self.manager = Alamofire.SessionManager(configuration: configuration)
+        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+            "77.244.217.34": .disableEvaluation
+        ]
+        self.manager = Alamofire.SessionManager(
+            configuration: configuration,
+            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+        )
     }
 }
 

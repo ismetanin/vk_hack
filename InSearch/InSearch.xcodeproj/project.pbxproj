@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */; };
 		1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */; };
 		150217DDF6F191B4B2E44FE4 /* UserListMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */; };
 		15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */; };
 		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
 		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
+		723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */; };
 		79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */; };
+		82932D77E115A9C8AA2CB741 /* AuthorizationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16092E590D95C053EB4D3508 /* AuthorizationServiceTests.swift */; };
 		8569C6EF55CA900CB0E8E00F /* MyServiceMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */; };
 		8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A4FB71F9A349E00B86005 /* .gitignore */; };
 		8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A4FCB1F9A349E00B86005 /* AppDelegate.swift */; };
@@ -37,6 +40,10 @@
 		8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A50171F9A5FB100B86005 /* GetUserRequest.swift */; };
 		8B0A501A1F9A60BB00B86005 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A50191F9A60BA00B86005 /* Constants.swift */; };
 		8B0A501C1F9A63FD00B86005 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501B1F9A63FD00B86005 /* UIImageView.swift */; };
+		8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */; };
+		8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */; };
+		8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A50211F9A811100B86005 /* KeychainStorage.swift */; };
+		8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
 		B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A81217B1653390955E4543 /* NotifiesViewController.xib */; };
@@ -63,6 +70,7 @@
 /* Begin PBXFileReference section */
 		11369D40F53F2CF101D4BA0E /* Pods-InSearch-InSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceMappingTests.swift; path = ../Services/MyService/MyServiceMappingTests.swift; sourceTree = "<group>"; };
+		16092E590D95C053EB4D3508 /* AuthorizationServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationServiceTests.swift; path = ../Services/Authorization/AuthorizationServiceTests.swift; sourceTree = "<group>"; };
 		1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		1F25F7DB97B7BFA8C6598441 /* UserListServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListServiceTests.swift; path = ../Services/UserList/UserListServiceTests.swift; sourceTree = "<group>"; };
 		22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
@@ -74,13 +82,13 @@
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
 		5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
+		69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationMappingTests.swift; path = ../Services/Authorization/AuthorizationMappingTests.swift; sourceTree = "<group>"; };
 		8B0A4FB21F9A349E00B86005 /* InSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A4FB61F9A349E00B86005 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		8B0A4FB71F9A349E00B86005 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		8B0A4FCB1F9A349E00B86005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B0A4FCD1F9A349E00B86005 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8B0A4FCF1F9A349E00B86005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8B0A4FD11F9A349E00B86005 /* ModuleTransitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModuleTransitionable.swift; path = Protocols/ModuleTransitionable.swift; sourceTree = "<group>"; };
 		8B0A4FD31F9A349E00B86005 /* Rambafile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Rambafile; path = ../Rambafile; sourceTree = "<group>"; };
 		8B0A4FD41F9A349E00B86005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0A4FD91F9A349E00B86005 /* InSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,10 +111,15 @@
 		8B0A50171F9A5FB100B86005 /* GetUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
 		8B0A50191F9A60BA00B86005 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B0A501B1F9A63FD00B86005 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKDelegateImpl.swift; sourceTree = "<group>"; };
+		8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorable.swift; sourceTree = "<group>"; };
+		8B0A50211F9A811100B86005 /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTokenRequest.swift; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		BE02FC7F6EA52D11D46D48C6 /* UserService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
 		D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListMappingTests.swift; path = ../Services/UserList/UserListMappingTests.swift; sourceTree = "<group>"; };
@@ -135,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B03DDEB156890AD3B63F1E7 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */,
+				8B52CA101F9A85A000CC0DA2 /* Requests */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		0DD36A99E994F09CE299D01A /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				55373BA99C4F5E973CC0947D /* UserList */,
+				0B03DDEB156890AD3B63F1E7 /* Authorization */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,6 +388,7 @@
 		8B0A4FC61F9A349E00B86005 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8B0A50211F9A811100B86005 /* KeychainStorage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -387,7 +411,7 @@
 		8B0A4FC91F9A349E00B86005 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8B0A4FD11F9A349E00B86005 /* ModuleTransitionable.swift */,
+				8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -396,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0A4FCB1F9A349E00B86005 /* AppDelegate.swift */,
+				8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */,
 				8B0A4FCD1F9A349E00B86005 /* LaunchScreen.xib */,
 			);
 			path = Application;
@@ -453,6 +478,7 @@
 			children = (
 				BDBA0C33CE94DE28CB14E45F /* MyService */,
 				BC2CB59901E3C14A657FB7A7 /* UserList */,
+				E6E3A01CC57F0C29212508D2 /* Authorization */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -519,6 +545,14 @@
 				D1474566747D2A3291AF3456 /* View */,
 			);
 			path = Notifies;
+			sourceTree = "<group>";
+		};
+		8B52CA101F9A85A000CC0DA2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		9797399628FEA523F766F3BA /* Picker */ = {
@@ -606,6 +640,15 @@
 				22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E6E3A01CC57F0C29212508D2 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				16092E590D95C053EB4D3508 /* AuthorizationServiceTests.swift */,
+				69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		F14688D83B30984BDC33F797 /* View */ = {
@@ -882,11 +925,16 @@
 				79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */,
 				8B0A50041F9A4D1B00B86005 /* BaseServerRequest.swift in Sources */,
 				1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */,
+				8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */,
+				8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */,
+				8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */,
 				8B0A50131F9A5E7600B86005 /* User.swift in Sources */,
 				29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */,
 				8B0A500C1F9A4D1B00B86005 /* SyncServerRequest.swift in Sources */,
+				8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
+				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,6 +951,8 @@
 				ED3C66E63F37EBAB32F19FB1 /* NotifiesViewControllerTests.swift in Sources */,
 				D2E6CD134D67A62055249F42 /* UserListServiceTests.swift in Sources */,
 				150217DDF6F191B4B2E44FE4 /* UserListMappingTests.swift in Sources */,
+				82932D77E115A9C8AA2CB741 /* AuthorizationServiceTests.swift in Sources */,
+				723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

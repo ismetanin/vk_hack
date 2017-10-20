@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyVK
 
 final class ProfileViewController: UIViewController {
 
@@ -16,6 +17,10 @@ final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        VK.logIn()
     }
 
     // MARK: - Internal helpers
