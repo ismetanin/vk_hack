@@ -1,0 +1,39 @@
+### Headers settings
+company: 9th Bit
+
+### Xcode project settings
+project_name: InSearch
+xcodeproj_path: InSearch.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: InSearch
+
+# The file path for new modules
+project_file_path: InSearch/Screens
+
+# The Xcode group path to new modules
+project_group_path: InSearch/Screens
+
+### Tests generation settings section
+# The tests target name
+test_target: InSearchTests
+
+# The file path for new tests
+test_file_path: InSearchTests/Tests/Screens
+
+# The Xcode group path to new tests
+test_group_path: InSearchTests/Tests/Screens
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Catalogs
+catalogs:
+- 'https://github.com/ismetanin/generamba-modules'
+- 'https://github.com/LastSprint/surf_service_templates'
+
+### Templates
+templates:
+- {name: swift_mvc_module}
+- {name: surf_service_module}
