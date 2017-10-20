@@ -19,3 +19,10 @@ enum Constants {
         static var userAccount = "InSearchUserAccount"
     }
 }
+
+// MARK: - NSNotification
+
+extension NSNotification.Name {
+    static let userLoggedIn = NSNotification.Name("InSearch.notifications.userLoggedIn")
+    static let userFailedLogIn = NSNotification.Name("InSearch.notifications.userFailedLogIn")
+}

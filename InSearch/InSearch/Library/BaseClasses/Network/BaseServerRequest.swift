@@ -23,6 +23,14 @@ open class BaseServerRequest<ResultValueType> {
         return self.createSyncServerRequest()
     }()
 
+    var token: String? {
+        let token: String? = KeychainStorage().loadData(
+            forUserAccount: Constants.Keys.userAccount,
+            byKey: Constants.Keys.accessToken
+        )
+        return token
+    }
+
     private var currentRequest: ServerRequest?
 
     // MARK: - Internal methods

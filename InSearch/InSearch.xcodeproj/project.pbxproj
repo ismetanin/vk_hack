@@ -8,16 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */; };
+		122572A9B0B8841FDF3A2587 /* AuthViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9A898A6753361A00059BB /* AuthViewControllerTests.swift */; };
 		1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */; };
 		150217DDF6F191B4B2E44FE4 /* UserListMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */; };
 		15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */; };
 		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
 		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
+		70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */; };
 		723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */; };
 		79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */; };
 		82932D77E115A9C8AA2CB741 /* AuthorizationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16092E590D95C053EB4D3508 /* AuthorizationServiceTests.swift */; };
 		8569C6EF55CA900CB0E8E00F /* MyServiceMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */; };
+		8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4647A734D281A9B991465AC /* AuthViewController.swift */; };
 		8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A4FB71F9A349E00B86005 /* .gitignore */; };
 		8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A4FCB1F9A349E00B86005 /* AppDelegate.swift */; };
 		8B0A4FCE1F9A349E00B86005 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A4FCD1F9A349E00B86005 /* LaunchScreen.xib */; };
@@ -44,13 +47,19 @@
 		8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */; };
 		8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A50211F9A811100B86005 /* KeychainStorage.swift */; };
 		8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */; };
+		8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B52CA151F9A9CAF00CC0DA2 /* Localizable.strings */; };
+		8B52CA181F9A9CDD00CC0DA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA171F9A9CDD00CC0DA2 /* String.swift */; };
+		8B52CA1A1F9A9DC100CC0DA2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA191F9A9DC100CC0DA2 /* Localizable.swift */; };
+		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
+		AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */; };
 		B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A81217B1653390955E4543 /* NotifiesViewController.xib */; };
 		B7F55A2E302DC8941C803894 /* ProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */; };
 		BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F845B25FA3369A3199F0139 /* ChatListViewController.xib */; };
 		C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC731D244DD949EEF5444726 /* ProfileViewController.swift */; };
 		D2E6CD134D67A62055249F42 /* UserListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F7DB97B7BFA8C6598441 /* UserListServiceTests.swift */; };
+		EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */; };
 		ED3C66E63F37EBAB32F19FB1 /* NotifiesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */; };
 		F0C55F877ED4978576D2BB26 /* Pods_InSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */; };
 		F57E03C32B408FDC1A89F23B /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35033645FFF63539C7A9AFB6 /* PickerViewController.xib */; };
@@ -76,12 +85,14 @@
 		22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
 		24A81217B1653390955E4543 /* NotifiesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NotifiesViewController.xib; sourceTree = "<group>"; };
 		279D218C281B66BAF96442A8 /* Pods-InSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		2AA9A898A6753361A00059BB /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
 		35033645FFF63539C7A9AFB6 /* PickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch_InSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
 		5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
+		68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SelectFavorsViewController.xib; sourceTree = "<group>"; };
 		69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationMappingTests.swift; path = ../Services/Authorization/AuthorizationMappingTests.swift; sourceTree = "<group>"; };
 		8B0A4FB21F9A349E00B86005 /* InSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A4FB61F9A349E00B86005 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
@@ -115,16 +126,24 @@
 		8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorable.swift; sourceTree = "<group>"; };
 		8B0A50211F9A811100B86005 /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTokenRequest.swift; sourceTree = "<group>"; };
+		8B52CA141F9A9CAF00CC0DA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B52CA161F9A9CBF00CC0DA2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B52CA171F9A9CDD00CC0DA2 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8B52CA191F9A9DC100CC0DA2 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewControllerTests.swift; sourceTree = "<group>"; };
 		A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		BE02FC7F6EA52D11D46D48C6 /* UserService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CECEF2B97387BFF79A13240A /* AuthViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
 		D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListMappingTests.swift; path = ../Services/UserList/UserListMappingTests.swift; sourceTree = "<group>"; };
 		E1C9349AEA75826FC1C61BFD /* Pods-InSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.release.xcconfig"; sourceTree = "<group>"; };
 		E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewControllerTests.swift; sourceTree = "<group>"; };
+		E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewController.swift; sourceTree = "<group>"; };
+		F4647A734D281A9B991465AC /* AuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		FC731D244DD949EEF5444726 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +167,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D7E9E8E5F4170EE8F00958 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				67C1CC2CE5BC5E23694DE7B1 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		0B03DDEB156890AD3B63F1E7 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,12 +226,30 @@
 			path = UserList;
 			sourceTree = "<group>";
 		};
+		5EDD5649913B1C791244EA99 /* SelectFavors */ = {
+			isa = PBXGroup;
+			children = (
+				7FD95EA06E0068EAA5D1CD20 /* View */,
+			);
+			name = SelectFavors;
+			path = SelectFavors;
+			sourceTree = "<group>";
+		};
 		60B04E289EFB4F47E298EAA4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				DFB3F07E97A1F7C5A09FB2E7 /* View */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		67C1CC2CE5BC5E23694DE7B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4647A734D281A9B991465AC /* AuthViewController.swift */,
+				CECEF2B97387BFF79A13240A /* AuthViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6C23875A6B8C963A9BF2344E /* Frameworks */ = {
@@ -216,12 +261,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B8932B8C9751D371D8C39BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2AA9A898A6753361A00059BB /* AuthViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FD95EA06E0068EAA5D1CD20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */,
+				68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		83B6AC6F72B6BB180005AD92 /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
 				D4D69DEF025F3E54C0036FBE /* View */,
 			);
 			path = ChatList;
+			sourceTree = "<group>";
+		};
+		8861143DEC1AD08513915CDE /* SelectFavors */ = {
+			isa = PBXGroup;
+			children = (
+				C720B66FBBB911E0BDFDF209 /* View */,
+			);
+			name = SelectFavors;
+			path = SelectFavors;
 			sourceTree = "<group>";
 		};
 		8B0A4FA91F9A349E00B86005 = {
@@ -291,10 +363,12 @@
 			children = (
 				8B0A4FEE1F9A379900B86005 /* TabBarController.swift */,
 				8B0A4FF21F9A399900B86005 /* TabBarController.xib */,
+				09D7E9E8E5F4170EE8F00958 /* Auth */,
 				C879FCE5F6745414F037152E /* Profile */,
 				9797399628FEA523F766F3BA /* Picker */,
 				83B6AC6F72B6BB180005AD92 /* ChatList */,
 				4503C9A411020C414BA38F32 /* Notifies */,
+				5EDD5649913B1C791244EA99 /* SelectFavors */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -313,6 +387,8 @@
 		8B0A4FBD1F9A349E00B86005 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				8B52CA151F9A9CAF00CC0DA2 /* Localizable.strings */,
+				8B52CA191F9A9DC100CC0DA2 /* Localizable.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -397,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0A501B1F9A63FD00B86005 /* UIImageView.swift */,
+				8B52CA171F9A9CDD00CC0DA2 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,6 +546,8 @@
 				C3564F9EBFF5F6791066762A /* Picker */,
 				0DD36A99E994F09CE299D01A /* ChatList */,
 				8B28C0F9EBC5C63EFB9B71A0 /* Notifies */,
+				BAEB983D3133DEF0C599883C /* Auth */,
+				8861143DEC1AD08513915CDE /* SelectFavors */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -563,6 +642,14 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
+		BAEB983D3133DEF0C599883C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7B8932B8C9751D371D8C39BC /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		BC2CB59901E3C14A657FB7A7 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +674,15 @@
 				0F97A91C56743466B1239674 /* View */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		C720B66FBBB911E0BDFDF209 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C879FCE5F6745414F037152E /* Profile */ = {
@@ -681,6 +777,7 @@
 				8B0A4FB01F9A349E00B86005 /* Resources */,
 				F53BE65DFF7A2E233C1E4451 /* [CP] Embed Pods Frameworks */,
 				9798E7B3BDBDEEDBC6D053DC /* [CP] Copy Pods Resources */,
+				8B52CA1B1F9A9DD000CC0DA2 /* Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -741,6 +838,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = 8B0A4FA91F9A349E00B86005;
 			productRefGroup = 8B0A4FB31F9A349E00B86005 /* Products */;
@@ -763,9 +861,12 @@
 				8B0A4FF31F9A399900B86005 /* TabBarController.xib in Resources */,
 				8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */,
 				15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */,
+				8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */,
 				F57E03C32B408FDC1A89F23B /* PickerViewController.xib in Resources */,
 				BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */,
 				B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */,
+				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
+				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +922,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8B52CA1B1F9A9DD000CC0DA2 /* Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Gen";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which $PODS_ROOT/SwiftGen/bin/swiftgen >/dev/null; then\n\n$PODS_ROOT/SwiftGen/bin/swiftgen strings -t dot-syntax-swift3 \"$PROJECT_DIR/InSearch/Resources/Strings/en.lproj/Localizable.strings\" --output \"$PROJECT_DIR/InSearch/Resources/Strings/Localizable.swift\"\n\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		9798E7B3BDBDEEDBC6D053DC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -908,6 +1023,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B52CA181F9A9CDD00CC0DA2 /* String.swift in Sources */,
 				8B0A50091F9A4D1B00B86005 /* MultipartData.swift in Sources */,
 				8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */,
 				8B0A500A1F9A4D1B00B86005 /* ServerRequest.swift in Sources */,
@@ -929,12 +1045,15 @@
 				8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */,
 				8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */,
 				8B0A50131F9A5E7600B86005 /* User.swift in Sources */,
+				8B52CA1A1F9A9DC100CC0DA2 /* Localizable.swift in Sources */,
 				29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */,
 				8B0A500C1F9A4D1B00B86005 /* SyncServerRequest.swift in Sources */,
 				8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
+				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
+				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,6 +1072,8 @@
 				150217DDF6F191B4B2E44FE4 /* UserListMappingTests.swift in Sources */,
 				82932D77E115A9C8AA2CB741 /* AuthorizationServiceTests.swift in Sources */,
 				723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */,
+				122572A9B0B8841FDF3A2587 /* AuthViewControllerTests.swift in Sources */,
+				70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,11 +1087,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		8B52CA151F9A9CAF00CC0DA2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B52CA141F9A9CAF00CC0DA2 /* en */,
+				8B52CA161F9A9CBF00CC0DA2 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		8B0A4FE61F9A349E00B86005 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1022,6 +1156,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

@@ -31,18 +31,17 @@ final class VKDelegateImpl: VKDelegate {
     }
 
     func vkDidAuthorizeWith(parameters: Dictionary<String, String>) {
-        // 
         if let accessToken = parameters[Constants.Keys.accessToken] {
             AuthorizationService().sendToken(token: accessToken, completion: { (result) in
-                debugPrint("yoyoyoyo")
+                debugPrint("Authorization was successfull")
+                NotificationCenter.default.post(name: Notification.Name.userLoggedIn, object: nil)
             })
         }
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "VkDidAuthorize"), object: nil)
     }
 
     func vkAutorizationFailedWith(error: AuthError) {
         print("Autorization failed with error: \n\(error)")
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "VkDidNotAuthorize"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name.userFailedLogIn, object: nil)
     }
 
     func vkDidUnauthorize() {}
