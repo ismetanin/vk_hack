@@ -76,7 +76,7 @@ class ServerRequest: NSObject {
         self.path = relativeUrl
         self.url = (URL(string: baseUrl)?.appendingPathComponent(self.path))!
         self.parameters = parameters
-        self.cachePolicy = .serverIfFailReadFromCahce
+        self.cachePolicy = .serverOnly
         self.customEncoding = customEncoding
         self.errorMapper = errorMapper
         super.init()

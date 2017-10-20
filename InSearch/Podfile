@@ -4,19 +4,17 @@ target 'InSearch' do
                 
     use_frameworks!
 
-    pod 'Crashlytics'
-    pod 'Fabric'
     pod 'Alamofire', '~> 4.0'
     pod 'AlamofireImage', '~> 3.2'
     pod 'AlamofireNetworkActivityIndicator', '~> 2.1'
-
+    pod 'Crashlytics'
+    pod 'Fabric'
+    pod 'Locksmith', '3.0.0'
+    pod 'ObjectMapper', '2.2.7'
+    pod 'SwiftyVK', :git => 'https://github.com/WE-St0r/SwiftyVK.git'
 
     target 'InSearchTests' do
         # Put pods used for both test targets here
-        
-        target 'InSearchUITests' do
-            # Put UI-testing-only pods here
-        end
     end
 
 end
