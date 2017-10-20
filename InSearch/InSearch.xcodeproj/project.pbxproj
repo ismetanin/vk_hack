@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */; };
+		15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */; };
 		2041BFB4C043EC44C1E2E27E /* MyServiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592BB7979FB6C16C8859B794 /* MyServiceService.swift */; };
+		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
-		4515832E69D040332A3B7E2E /* MyScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB470374470F93F6205673F /* MyScreenViewController.xib */; };
+		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
+		79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */; };
 		8569C6EF55CA900CB0E8E00F /* MyServiceMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */; };
 		8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A4FB71F9A349E00B86005 /* .gitignore */; };
 		8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A4FCB1F9A349E00B86005 /* AppDelegate.swift */; };
@@ -18,8 +22,13 @@
 		8B0A4FDE1F9A349E00B86005 /* InSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A4FDD1F9A349E00B86005 /* InSearchTests.swift */; };
 		8B0A4FF01F9A379900B86005 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A4FEE1F9A379900B86005 /* TabBarController.swift */; };
 		8B0A4FF31F9A399900B86005 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A4FF21F9A399900B86005 /* TabBarController.xib */; };
-		A9894F234240240C64FDFC3F /* MyScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939768C41628275F5D0B31DD /* MyScreenViewControllerTests.swift */; };
-		FF0911AA20CDAA95AE04FDDB /* MyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CAECEC3F99C1126995F23 /* MyScreenViewController.swift */; };
+		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
+		B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A81217B1653390955E4543 /* NotifiesViewController.xib */; };
+		B7F55A2E302DC8941C803894 /* ProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */; };
+		BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F845B25FA3369A3199F0139 /* ChatListViewController.xib */; };
+		C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC731D244DD949EEF5444726 /* ProfileViewController.swift */; };
+		ED3C66E63F37EBAB32F19FB1 /* NotifiesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */; };
+		F57E03C32B408FDC1A89F23B /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35033645FFF63539C7A9AFB6 /* PickerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,14 @@
 
 /* Begin PBXFileReference section */
 		14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceMappingTests.swift; path = ../Services/MyService/MyServiceMappingTests.swift; sourceTree = "<group>"; };
-		227CAECEC3F99C1126995F23 /* MyScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyScreenViewController.swift; sourceTree = "<group>"; };
+		1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
+		24A81217B1653390955E4543 /* NotifiesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NotifiesViewController.xib; sourceTree = "<group>"; };
+		35033645FFF63539C7A9AFB6 /* PickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
+		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
 		592BB7979FB6C16C8859B794 /* MyServiceService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyServiceService.swift; sourceTree = "<group>"; };
+		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		8B0A4FB21F9A349E00B86005 /* InSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A4FB61F9A349E00B86005 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		8B0A4FB71F9A349E00B86005 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
@@ -51,8 +65,12 @@
 		8B0A4FE51F9A349E00B86005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0A4FEE1F9A379900B86005 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B0A4FF21F9A399900B86005 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
-		8CB470374470F93F6205673F /* MyScreenViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MyScreenViewController.xib; sourceTree = "<group>"; };
-		939768C41628275F5D0B31DD /* MyScreenViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyScreenViewControllerTests.swift; sourceTree = "<group>"; };
+		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
+		A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
+		E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewControllerTests.swift; sourceTree = "<group>"; };
+		FC731D244DD949EEF5444726 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,37 +91,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D4AAE5142EAB268EEFC6307 /* View */ = {
+		0DD36A99E994F09CE299D01A /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
-				227CAECEC3F99C1126995F23 /* MyScreenViewController.swift */,
-				8CB470374470F93F6205673F /* MyScreenViewController.xib */,
+				FF9E5D09D69A27503A58E54A /* View */,
 			);
+			name = ChatList;
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		0F97A91C56743466B1239674 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */,
+			);
+			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
-		1B47BF9A5C252ACC55C16BED /* View */ = {
+		4503C9A411020C414BA38F32 /* Notifies */ = {
 			isa = PBXGroup;
 			children = (
-				939768C41628275F5D0B31DD /* MyScreenViewControllerTests.swift */,
+				F14688D83B30984BDC33F797 /* View */,
 			);
+			name = Notifies;
+			path = Notifies;
+			sourceTree = "<group>";
+		};
+		4811B89FB5D89FE2CCF73EA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */,
+				35033645FFF63539C7A9AFB6 /* PickerViewController.xib */,
+			);
+			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
-		67C4DE63FBE0E238CBCF217D /* MyScreen */ = {
+		60B04E289EFB4F47E298EAA4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				0D4AAE5142EAB268EEFC6307 /* View */,
+				DFB3F07E97A1F7C5A09FB2E7 /* View */,
 			);
-			path = MyScreen;
+			path = Profile;
 			sourceTree = "<group>";
 		};
-		84DBCFBE99F260FF59601C81 /* MyScreen */ = {
+		83B6AC6F72B6BB180005AD92 /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
-				1B47BF9A5C252ACC55C16BED /* View */,
+				D4D69DEF025F3E54C0036FBE /* View */,
 			);
-			path = MyScreen;
+			name = ChatList;
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 		8B0A4FA91F9A349E00B86005 = {
@@ -168,9 +207,12 @@
 		8B0A4FBB1F9A349E00B86005 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				67C4DE63FBE0E238CBCF217D /* MyScreen */,
 				8B0A4FEE1F9A379900B86005 /* TabBarController.swift */,
 				8B0A4FF21F9A399900B86005 /* TabBarController.xib */,
+				C879FCE5F6745414F037152E /* Profile */,
+				9797399628FEA523F766F3BA /* Picker */,
+				83B6AC6F72B6BB180005AD92 /* ChatList */,
+				4503C9A411020C414BA38F32 /* Notifies */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -334,7 +376,10 @@
 		8B0A4FE21F9A349E00B86005 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				84DBCFBE99F260FF59601C81 /* MyScreen */,
+				60B04E289EFB4F47E298EAA4 /* Profile */,
+				C3564F9EBFF5F6791066762A /* Picker */,
+				0DD36A99E994F09CE299D01A /* ChatList */,
+				8B28C0F9EBC5C63EFB9B71A0 /* Notifies */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -354,6 +399,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8B28C0F9EBC5C63EFB9B71A0 /* Notifies */ = {
+			isa = PBXGroup;
+			children = (
+				D1474566747D2A3291AF3456 /* View */,
+			);
+			name = Notifies;
+			path = Notifies;
+			sourceTree = "<group>";
+		};
+		9797399628FEA523F766F3BA /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4811B89FB5D89FE2CCF73EA0 /* View */,
+			);
+			name = Picker;
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		BDBA0C33CE94DE28CB14E45F /* MyService */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,12 +426,84 @@
 			path = MyService;
 			sourceTree = "<group>";
 		};
+		C3564F9EBFF5F6791066762A /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				0F97A91C56743466B1239674 /* View */,
+			);
+			name = Picker;
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		C879FCE5F6745414F037152E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DD829A060BC992982D6BEC1A /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D1474566747D2A3291AF3456 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4D69DEF025F3E54C0036FBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */,
+				8F845B25FA3369A3199F0139 /* ChatListViewController.xib */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD829A060BC992982D6BEC1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC731D244DD949EEF5444726 /* ProfileViewController.swift */,
+				ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFB3F07E97A1F7C5A09FB2E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E065A23D8F2AF4F8F13D98AE /* MyService */ = {
 			isa = PBXGroup;
 			children = (
 				592BB7979FB6C16C8859B794 /* MyServiceService.swift */,
 			);
 			path = MyService;
+			sourceTree = "<group>";
+		};
+		F14688D83B30984BDC33F797 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */,
+				24A81217B1653390955E4543 /* NotifiesViewController.xib */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF9E5D09D69A27503A58E54A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +594,10 @@
 				8B0A4FD01F9A349E00B86005 /* Assets.xcassets in Resources */,
 				8B0A4FF31F9A399900B86005 /* TabBarController.xib in Resources */,
 				8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */,
-				4515832E69D040332A3B7E2E /* MyScreenViewController.xib in Resources */,
+				15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */,
+				F57E03C32B408FDC1A89F23B /* PickerViewController.xib in Resources */,
+				BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */,
+				B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,9 +616,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */,
-				FF0911AA20CDAA95AE04FDDB /* MyScreenViewController.swift in Sources */,
 				8B0A4FF01F9A379900B86005 /* TabBarController.swift in Sources */,
 				2041BFB4C043EC44C1E2E27E /* MyServiceService.swift in Sources */,
+				C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */,
+				79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */,
+				1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */,
+				29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,9 +630,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0A4FDE1F9A349E00B86005 /* InSearchTests.swift in Sources */,
-				A9894F234240240C64FDFC3F /* MyScreenViewControllerTests.swift in Sources */,
 				44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */,
 				8569C6EF55CA900CB0E8E00F /* MyServiceMappingTests.swift in Sources */,
+				B7F55A2E302DC8941C803894 /* ProfileViewControllerTests.swift in Sources */,
+				A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */,
+				64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */,
+				ED3C66E63F37EBAB32F19FB1 /* NotifiesViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

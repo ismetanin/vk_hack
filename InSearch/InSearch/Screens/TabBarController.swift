@@ -8,14 +8,64 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+
+final class TabBarController: UITabBarController {
+
+    // MARK: - Enums
+
+    enum Tab: Int {
+        case notifies
+        case chatList
+        case picker
+        case profile
+    }
+
+    // MARK: - Properties
+
+    class var tabBarController: UITabBarController? {
+        return UIApplication.shared.delegate?.window??.rootViewController as? UITabBarController
+    }
+
+    // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let c = MyScreenViewController()
-        c.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        let nav = UINavigationController(rootViewController: c)
-        self.setViewControllers([nav], animated: true)
+
+        // Notifies
+        let notifiesViewController = NotifiesViewController()
+        notifiesViewController.tabBarItem = UITabBarItem(title: "Notifies", image: UIImage(), selectedImage: UIImage())
+        let notifiesViewNavigationController = UINavigationController(rootViewController: notifiesViewController)
+
+        // Chat list
+        let chatListViewController = ChatListViewController()
+        chatListViewController.tabBarItem = UITabBarItem(title: "Chats", image: UIImage(), selectedImage: UIImage())
+        let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
+
+        // Picker
+        let pickerViewController = PickerViewController()
+        pickerViewController.tabBarItem = UITabBarItem(title: "Picker", image: UIImage(), selectedImage: UIImage())
+        let pickerViewNavigationController = UINavigationController(rootViewController: pickerViewController)
+
+        // Profile
+        let profileViewController = ProfileViewController()
+        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(), selectedImage: UIImage())
+        let profileViewNavigationController = UINavigationController(rootViewController: profileViewController)
+
+        // Set to tab bar
+        self.setViewControllers(
+            [   notifiesViewNavigationController,
+                chatListViewNavigationController,
+                pickerViewNavigationController,
+                profileViewNavigationController
+            ],
+            animated: true
+        )
+    }
+
+    // MARK: - Static methods
+
+    static func select(tab: Tab) {
+        tabBarController?.selectedIndex = tab.rawValue
     }
 
 }

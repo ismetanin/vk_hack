@@ -1,5 +1,5 @@
 //
-//  MyScreenViewControllerTests.swift
+//  NotifiesViewControllerTests.swift
 //  InSearch
 //
 //  Created by Ivan Smetanin on 20/10/2017.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import InSearch
 
-final class MyScreenViewControllerTests: XCTestCase {
+final class NotifiesViewControllerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

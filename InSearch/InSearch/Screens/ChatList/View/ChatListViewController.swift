@@ -1,5 +1,5 @@
 //
-//  MyScreenViewController.swift
+//  ChatListViewController.swift
 //  InSearch
 //
 //  Created by Ivan Smetanin on 20/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MyScreenViewController: UIViewController {
+final class ChatListViewController: UIViewController {
 
     // MARK: - Properties
 
