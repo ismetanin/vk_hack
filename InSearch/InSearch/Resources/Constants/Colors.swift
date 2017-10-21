@@ -15,5 +15,10 @@ extension UIColor {
 
     enum Gray {
         static let main = UIColor(red: 0.67, green: 0.67, blue: 0.67, alpha: 1)
+        static let text = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1)
+    }
+    
+    enum Black {
+        static let text = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
 }
