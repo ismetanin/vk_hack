@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
 
+        // Init appearance
+        UITabBar.appearance().tintColor = UIColor.Red.main
+        UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().shadowImage = nil
+        UITabBar.appearance().clipsToBounds = true
+        UITabBar.appearance().isTranslucent = false
+
         // Init vk delegate
         vkDelegateReference = VKDelegateImpl()
 
