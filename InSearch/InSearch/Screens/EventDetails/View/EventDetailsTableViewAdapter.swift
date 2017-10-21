@@ -10,17 +10,27 @@ import UIKit
 
 class EventDetailsTableViewAdapter: NSObject {
     
+    enum CellType {
+        case header
+        case description
+        case field(String)
+        
+        var cellClass: String {
+            switch self {
+            case .header: return "EventDetailsHeaderTableViewCell"
+            case .description: return "EventDescriptionTableViewCell"
+            case .field(_): return "EventDescriptionTableViewCell"
+            }
+        }
+    }
+    
     // MARK: - Constants
-    
-    fileprivate let headerCellName: String = "EventDetailsHeaderTableViewCell"
-    
+
     // MARK: - Properties
     
     fileprivate var event: Event
     fileprivate (set) var tableView: UITableView
-    fileprivate var cellsCount: Int {
-        return 1
-    }
+    fileprivate var cellTypes: [CellType]
     
     // MARK: - Initialization and deinitialization
     
@@ -28,15 +38,32 @@ class EventDetailsTableViewAdapter: NSObject {
         self.event = event
         self.tableView = tableView
         self.tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: headerCellName, bundle: nil), forCellReuseIdentifier: headerCellName)
+        tableView.register(UINib(nibName: CellType.header.cellClass, bundle: nil), forCellReuseIdentifier: CellType.header.cellClass)
+        tableView.register(UINib(nibName: CellType.description.cellClass, bundle: nil), forCellReuseIdentifier: CellType.description.cellClass)
+
+        
+        cellTypes = [
+            .header,
+            .description
+        ]
     }
     
     // MARK: - Cells generation
     
     fileprivate func getHeaderCell(_ tableView: UITableView,  indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: headerCellName, for: indexPath) as! EventDetailsHeaderTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellType.header.cellClass, for: indexPath) as! EventDetailsHeaderTableViewCell
         
         let model = EventDetailsHeaderTableViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/event/52/74/5274e20a71af854d3664cdfbbcbaa0ab.jpg", title: "Вечер живого джаза в Музее советских игровых автоматов", actionTitle: "Пригласить")
+        
+        cell.configure(with: model)
+        
+        return cell
+    }
+    
+    fileprivate func getDescriptionCell(_ tableView: UITableView,  indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellType.description.cellClass, for: indexPath) as! EventDescriptionTableViewCell
+        
+        let model = EventDescriptionTableViewCell.Model(description: "Не пропустите вечер живого джаза в Музее советских игровых автоматов — вот где свобода самовыражения! Организаторы придерживаются правила «Главное — атмосфера», поэтому обстановка здесь очень душевная. Коллективы виртуозно импровизируют на радость публике.")
         
         cell.configure(with: model)
         
@@ -49,11 +76,19 @@ class EventDetailsTableViewAdapter: NSObject {
 
 extension EventDetailsTableViewAdapter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellsCount
+        return cellTypes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.getHeaderCell(tableView, indexPath: indexPath)
+        let cellType = self.cellTypes[indexPath.row]
+        
+        let cell = {() -> UITableViewCell in
+            switch cellType {
+            case .header: return self.getHeaderCell(tableView, indexPath: indexPath)
+            case .description: return self.getDescriptionCell(tableView, indexPath: indexPath)
+            case .field(_): return self.getDescriptionCell(tableView, indexPath: indexPath)
+            }
+        }()
         
         cell.selectionStyle = .none
         return cell

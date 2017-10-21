@@ -29,6 +29,7 @@ class EventDescriptionTableViewCell: UITableViewCell {
         
         self.descriptionLabel.font = UIFont.systemFont(ofSize: 14.0, weight: UIFontWeightRegular)
         self.descriptionLabel.textColor = UIColor.Gray.text
+        self.descriptionLabel.numberOfLines = 0
     }
     
     // MARK: - Public
