@@ -44,6 +44,7 @@ final class User: Mappable {
         chatId <- map[MappingKeys.chatId]
         city <- map[MappingKeys.city]
         age <- map[MappingKeys.age]
+        id <- map[MappingKeys.id]
     }
 }
 
