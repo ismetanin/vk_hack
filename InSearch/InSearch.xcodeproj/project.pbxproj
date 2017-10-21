@@ -13,6 +13,8 @@
 		150217DDF6F191B4B2E44FE4 /* UserListMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */; };
 		15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */; };
 		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
+		3132DEC51F9BF3CF00F1290D /* EventFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132DEC31F9BF3CF00F1290D /* EventFieldTableViewCell.swift */; };
+		3132DEC61F9BF3CF00F1290D /* EventFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */; };
 		316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700DE1F9B86C700FB451D /* EventsViewController.swift */; };
 		316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316700DF1F9B86C700FB451D /* EventsViewController.xib */; };
 		316700E31F9B872200FB451D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700E21F9B872200FB451D /* Event.swift */; };
@@ -126,6 +128,8 @@
 		24A81217B1653390955E4543 /* NotifiesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NotifiesViewController.xib; sourceTree = "<group>"; };
 		279D218C281B66BAF96442A8 /* Pods-InSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		2AA9A898A6753361A00059BB /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
+		3132DEC31F9BF3CF00F1290D /* EventFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFieldTableViewCell.swift; sourceTree = "<group>"; };
+		3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventFieldTableViewCell.xib; sourceTree = "<group>"; };
 		316700DE1F9B86C700FB451D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		316700DF1F9B86C700FB451D /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		316700E21F9B872200FB451D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 				3184363A1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib */,
 				3184363F1F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift */,
 				318436401F9BEE8200D4DC0F /* EventDescriptionTableViewCell.xib */,
+				3132DEC31F9BF3CF00F1290D /* EventFieldTableViewCell.swift */,
+				3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1107,6 +1113,7 @@
 				8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */,
 				B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */,
 				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
+				3132DEC61F9BF3CF00F1290D /* EventFieldTableViewCell.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
 				31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */,
 				9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */,
@@ -1307,6 +1314,7 @@
 				8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */,
 				31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */,
 				8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */,
+				3132DEC51F9BF3CF00F1290D /* EventFieldTableViewCell.swift in Sources */,
 				8B6E2B251F9B4815008E1DCC /* GradientView.swift in Sources */,
 				8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */,
 				8B0A50131F9A5E7600B86005 /* User.swift in Sources */,

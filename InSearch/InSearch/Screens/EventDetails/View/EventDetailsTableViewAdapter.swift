@@ -13,13 +13,14 @@ class EventDetailsTableViewAdapter: NSObject {
     enum CellType {
         case header
         case description
-        case field(String)
+        case fieldEmpty
+        case field(EventFieldTableViewCell.Model)
         
         var cellClass: String {
             switch self {
             case .header: return "EventDetailsHeaderTableViewCell"
             case .description: return "EventDescriptionTableViewCell"
-            case .field(_): return "EventDescriptionTableViewCell"
+            case .fieldEmpty, .field(_): return "EventFieldTableViewCell"
             }
         }
     }
@@ -40,11 +41,14 @@ class EventDetailsTableViewAdapter: NSObject {
         self.tableView.separatorStyle = .none
         tableView.register(UINib(nibName: CellType.header.cellClass, bundle: nil), forCellReuseIdentifier: CellType.header.cellClass)
         tableView.register(UINib(nibName: CellType.description.cellClass, bundle: nil), forCellReuseIdentifier: CellType.description.cellClass)
+        tableView.register(UINib(nibName: CellType.fieldEmpty.cellClass, bundle: nil), forCellReuseIdentifier: CellType.fieldEmpty.cellClass)
 
         
         cellTypes = [
             .header,
-            .description
+            .description,
+            .field(EventFieldTableViewCell.Model(title: "Режиссер", value: "Дени Вильнев")),
+            .field(EventFieldTableViewCell.Model(title: "Жанр", value: "Фантастика"))
         ]
     }
     
@@ -69,6 +73,14 @@ class EventDetailsTableViewAdapter: NSObject {
         
         return cell
     }
+    
+    fileprivate func getFieldCell(_ tableView: UITableView,  indexPath: IndexPath, model: EventFieldTableViewCell.Model) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellType.fieldEmpty.cellClass, for: indexPath) as! EventFieldTableViewCell
+        
+        cell.configure(with: model)
+        
+        return cell
+    }
 }
     
     
@@ -86,7 +98,8 @@ extension EventDetailsTableViewAdapter: UITableViewDataSource {
             switch cellType {
             case .header: return self.getHeaderCell(tableView, indexPath: indexPath)
             case .description: return self.getDescriptionCell(tableView, indexPath: indexPath)
-            case .field(_): return self.getDescriptionCell(tableView, indexPath: indexPath)
+            case let .field(model): return self.getFieldCell(tableView, indexPath: indexPath, model: model)
+            default: return UITableViewCell()
             }
         }()
         
