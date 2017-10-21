@@ -32,7 +32,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // Notifies
-        let notifiesViewController = NotifiesViewController()
+        let notifiesViewController = EventsViewController()
         notifiesViewController.tabBarItem = UITabBarItem(title: "Notifies", image: UIImage(), selectedImage: UIImage())
         let notifiesViewNavigationController = UINavigationController(rootViewController: notifiesViewController)
 
