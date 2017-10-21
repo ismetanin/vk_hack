@@ -27,7 +27,7 @@ open ~/.gitconfig
 ```
 
 3.   Снова в терминале
-`git mergetool --tool=mergepbx Spirit.xcodeproj/project.pbxproj`
+`git mergetool --tool=mergepbx InSearch.xcodeproj/project.pbxproj`
 
 4.   Успех!
 
