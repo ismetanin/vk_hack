@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customModule="InSearch" customClass="PickerViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerViewController" customModule="InSearch" customModuleProvider="target">
             <connections>
+                <outlet property="dislikeButton" destination="2yy-qs-KhR" id="zDv-Hl-jFs"/>
+                <outlet property="emptyView" destination="3GI-1d-2p4" id="2aW-aw-lVn"/>
+                <outlet property="emptyViewLabel" destination="BRv-jy-TRE" id="41Z-mW-tVR"/>
+                <outlet property="inviteButton" destination="Flf-iU-5h5" id="vS1-OK-O4M"/>
+                <outlet property="likeButton" destination="NvR-5X-lJg" id="aYL-2y-wWA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q3p-Ee-1CD"/>
             </connections>
         </placeholder>
@@ -17,7 +24,94 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oVy-h3-wv2">
+                    <rect key="frame" x="32" y="603" width="311" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flf-iU-5h5">
+                            <rect key="frame" x="0.0" y="0.0" width="131" height="56"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.2627450980392157" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                            <state key="normal" title="Пригласить">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="inviteButtonAction:" destination="-1" eventType="touchUpInside" id="Vgc-DU-ZKL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yy-qs-KhR">
+                            <rect key="frame" x="165" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2yy-qs-KhR" secondAttribute="height" multiplier="1:1" id="0Te-ZY-99r"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <state key="normal" image="img_picker_view_cross"/>
+                            <connections>
+                                <action selector="dislikeButtonAction:" destination="-1" eventType="touchUpInside" id="cQ1-Al-3D1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-5X-lJg">
+                            <rect key="frame" x="255" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="NvR-5X-lJg" secondAttribute="height" multiplier="1:1" id="XB8-lP-vyH"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <state key="normal" image="img_picker_view_heart"/>
+                            <connections>
+                                <action selector="likeButtonAction:" destination="-1" eventType="touchUpInside" id="IDG-9Z-7s3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="jC3-1g-vGd"/>
+                    </constraints>
+                </stackView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GI-1d-2p4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список иссяк, попробуйте немного позже" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRv-jy-TRE">
+                            <rect key="frame" x="16" y="309.5" width="343" height="48"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-A9-iKq">
+                            <rect key="frame" x="72" y="365.5" width="231" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="R6m-qf-6iX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="BRv-jy-TRE" firstAttribute="centerY" secondItem="3GI-1d-2p4" secondAttribute="centerY" id="QLC-hi-j1F"/>
+                        <constraint firstAttribute="trailing" secondItem="oNN-A9-iKq" secondAttribute="trailing" constant="72" id="dYv-m0-p9Z"/>
+                        <constraint firstItem="BRv-jy-TRE" firstAttribute="leading" secondItem="3GI-1d-2p4" secondAttribute="leading" constant="16" id="evJ-qv-CEN"/>
+                        <constraint firstItem="oNN-A9-iKq" firstAttribute="leading" secondItem="3GI-1d-2p4" secondAttribute="leading" constant="72" id="l7m-2l-7XY"/>
+                        <constraint firstItem="oNN-A9-iKq" firstAttribute="top" secondItem="BRv-jy-TRE" secondAttribute="bottom" constant="8" id="s5n-XT-gsP"/>
+                        <constraint firstAttribute="trailing" secondItem="BRv-jy-TRE" secondAttribute="trailing" constant="16" id="w4n-P2-MLq"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oVy-h3-wv2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="2Dk-Ec-wOO"/>
+                <constraint firstItem="3GI-1d-2p4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="G1R-eb-EGR"/>
+                <constraint firstAttribute="bottom" secondItem="oVy-h3-wv2" secondAttribute="bottom" constant="8" id="Jgo-IT-zOn"/>
+                <constraint firstItem="3GI-1d-2p4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="hhS-DJ-7u5"/>
+                <constraint firstAttribute="trailing" secondItem="oVy-h3-wv2" secondAttribute="trailing" constant="32" id="jBz-mh-RJM"/>
+                <constraint firstItem="3GI-1d-2p4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tFc-kA-prd"/>
+                <constraint firstItem="3GI-1d-2p4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wQN-8T-YKf"/>
+            </constraints>
+            <point key="canvasLocation" x="39.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="img_picker_view_cross" width="23" height="23"/>
+        <image name="img_picker_view_heart" width="25" height="23"/>
+    </resources>
 </document>
