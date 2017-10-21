@@ -34,25 +34,41 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-zl-puH">
-                    <rect key="frame" x="24" y="613" width="327" height="34"/>
+                    <rect key="frame" x="24" y="613" width="285" height="34"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9s-e7-eq2">
+                    <rect key="frame" x="309" y="598" width="57" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="Lxg-qF-WAc"/>
+                        <constraint firstAttribute="width" constant="57" id="iLf-4i-g53"/>
+                    </constraints>
+                    <state key="normal" image="img_send_button"/>
+                    <connections>
+                        <action selector="sendButtonAction:" destination="-1" eventType="touchUpInside" id="BMD-jr-jn1"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Arh-zl-puH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="07W-AF-HHU"/>
                 <constraint firstItem="Arh-zl-puH" firstAttribute="top" secondItem="KjE-Dq-lde" secondAttribute="bottom" constant="40" id="1e3-Qd-BKS"/>
-                <constraint firstAttribute="trailing" secondItem="Arh-zl-puH" secondAttribute="trailing" constant="24" id="5hm-PF-GGK"/>
+                <constraint firstAttribute="trailing" secondItem="s9s-e7-eq2" secondAttribute="trailing" constant="9" id="8Dq-uq-FTM"/>
                 <constraint firstAttribute="bottom" secondItem="Arh-zl-puH" secondAttribute="bottom" constant="20" id="8k1-du-0Vj"/>
+                <constraint firstAttribute="bottom" secondItem="s9s-e7-eq2" secondAttribute="bottom" constant="6" id="ERX-GY-ZDZ"/>
                 <constraint firstAttribute="trailing" secondItem="Udb-4m-CgZ" secondAttribute="trailing" constant="24" id="L8j-21-9YY"/>
                 <constraint firstAttribute="trailing" secondItem="KjE-Dq-lde" secondAttribute="trailing" id="LCZ-aT-x0O"/>
                 <constraint firstItem="KjE-Dq-lde" firstAttribute="top" secondItem="Udb-4m-CgZ" secondAttribute="bottom" constant="20" id="Ror-kc-UcO"/>
+                <constraint firstItem="s9s-e7-eq2" firstAttribute="leading" secondItem="Arh-zl-puH" secondAttribute="trailing" id="Yo8-Kb-wdA"/>
                 <constraint firstItem="KjE-Dq-lde" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZJk-ac-QHD"/>
                 <constraint firstItem="Udb-4m-CgZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="c1B-0P-kK0"/>
             </constraints>
             <point key="canvasLocation" x="58.5" y="52.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="img_send_button" width="27" height="27"/>
+    </resources>
 </document>

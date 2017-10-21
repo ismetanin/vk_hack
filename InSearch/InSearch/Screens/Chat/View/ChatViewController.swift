@@ -41,7 +41,8 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     // MARK: - IBOutlets
 
-    @IBOutlet private weak var messageTextView: UITextView!
+    @IBOutlet private
+    weak var messageTextView: UITextView!
     @IBOutlet private weak var carousel: iCarousel!
 
     // MARK: - Constants
@@ -52,13 +53,11 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
     // MARK: - Properties
 
     private var tips: [String] = [
-        "Я заметил, что ты много сидишь в VK. Может, лучше погуляем?",
         "Как тебе последний альбом группы Мальбэк?",
         "Пойдешь на выборы 20!8?",
         "Кажется, ты в группе Хакатона ВК 2017, едешь туда?",
         "Ого, ты слушаешь Хлеб? Что ты думаешь об их творчестве?",
         "Должно быть, это больно… падать с небес.",
-        "Ты не боишься, что кто-нибудь вот так с тобой познакомится?",
         "Время не подскажете?.. А свободного?",
         "А что ты делаешь всю оставшуюся жизнь?",
         "Привет, как погодка?",
@@ -74,26 +73,24 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
         "Как насчет провести завтрашний вот тут?"
     ]
 
+    // MARK: - IBActions
+
+    @IBAction func sendButtonAction(_ sender: UIButton) {
+    }
+
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        carousel.type = .linear
-        carousel.bounceDistance = 0.2
-        carousel.delegate = self
-        carousel.dataSource = self
+        setupViews()
 
-        messageTextView.layer.cornerRadius = 12
-        messageTextView.layer.borderColor = UIColor.gray.cgColor
-        messageTextView.layer.borderWidth = 1
-
+        // make random sorted array of tips
 //        tips = tips.shuffled
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         IQKeyboardManager.shared().isEnabled = true
-        setupScrollView()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -103,8 +100,15 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     // MARK: - Private helpers
 
-    private func setupScrollView() {
+    private func setupViews() {
+        carousel.type = .linear
+        carousel.bounceDistance = 0.2
+        carousel.delegate = self
+        carousel.dataSource = self
 
+        messageTextView.layer.cornerRadius = 12
+        messageTextView.layer.borderColor = UIColor.gray.cgColor
+        messageTextView.layer.borderWidth = 1
     }
 
     // MARK: - iCarousel
@@ -119,7 +123,7 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
         if let tipView = Bundle.main.loadNibNamed("TipView", owner: self, options: nil)?.first as? TipView {
             // Configure tip view
-            tipView.frame = CGRect(x: 25, y: 0, width: self.messageTextView.frame.width, height: 63)
+            tipView.frame = CGRect(x: 25, y: 0, width: self.view.frame.width - 50, height: 63)
             tipView.backgroundColor = .white
             tipView.layer.borderWidth = 1
             tipView.layer.borderColor = UIColor.Gray.main.cgColor
