@@ -12,6 +12,7 @@
 		1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */; };
 		150217DDF6F191B4B2E44FE4 /* UserListMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */; };
 		15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */; };
+		1B58B1ADA7F253B92F4DD7EA /* ChatViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */; };
 		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
 		316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700DE1F9B86C700FB451D /* EventsViewController.swift */; };
 		316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316700DF1F9B86C700FB451D /* EventsViewController.xib */; };
@@ -21,7 +22,9 @@
 		31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */; };
 		31ECF6C91F9BA25700CB9A34 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C71F9BA25700CB9A34 /* EventCollectionViewCell.swift */; };
 		31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF6C81F9BA25700CB9A34 /* EventCollectionViewCell.xib */; };
+		37864D002F8F9EC162CE3D02 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
+		4F25B05C8619AE68106BE339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */; };
 		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
 		70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */; };
 		723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */; };
@@ -71,6 +74,8 @@
 		8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */; };
 		8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */; };
 		8BBDC7A81F9BBB4500113DA9 /* ActivityIndicated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A71F9BBB4500113DA9 /* ActivityIndicated.swift */; };
+		8BBDC7AC1F9BD69D00113DA9 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */; };
+		8BBDC7AE1F9BD6A800113DA9 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
@@ -118,7 +123,9 @@
 		35033645FFF63539C7A9AFB6 /* PickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch_InSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
+		3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
+		4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewControllerTests.swift; sourceTree = "<group>"; };
 		5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SelectFavorsViewController.xib; sourceTree = "<group>"; };
@@ -172,12 +179,15 @@
 		8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactionTableViewCell.xib; sourceTree = "<group>"; };
 		8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesTableViewAdapter.swift; sourceTree = "<group>"; };
 		8BBDC7A71F9BBB4500113DA9 /* ActivityIndicated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicated.swift; sourceTree = "<group>"; };
+		8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewControllerTests.swift; sourceTree = "<group>"; };
 		A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BE02FC7F6EA52D11D46D48C6 /* UserService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CECEF2B97387BFF79A13240A /* AuthViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -269,6 +279,33 @@
 				31ECF6C81F9BA25700CB9A34 /* EventCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3667D0E0FE4B55C2CE5EF517 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				38C84EE4CA427C652094A7AB /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		38C84EE4CA427C652094A7AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40A694050AB3950C2E4A573E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */,
+				3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */,
+				8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */,
+				8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4503C9A411020C414BA38F32 /* Notifies */ = {
@@ -441,6 +478,7 @@
 				83B6AC6F72B6BB180005AD92 /* ChatList */,
 				4503C9A411020C414BA38F32 /* Notifies */,
 				5EDD5649913B1C791244EA99 /* SelectFavors */,
+				94C936673A8117AE663B525C /* Chat */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -626,6 +664,7 @@
 				8B28C0F9EBC5C63EFB9B71A0 /* Notifies */,
 				BAEB983D3133DEF0C599883C /* Auth */,
 				8861143DEC1AD08513915CDE /* SelectFavors */,
+				3667D0E0FE4B55C2CE5EF517 /* Chat */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -746,6 +785,14 @@
 				8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */,
 			);
 			name = Reuse;
+			sourceTree = "<group>";
+		};
+		94C936673A8117AE663B525C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				40A694050AB3950C2E4A573E /* View */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		9797399628FEA523F766F3BA /* Picker */ = {
@@ -977,6 +1024,7 @@
 				8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */,
 				8B52CA211F9B235700CC0DA2 /* FavorsTableViewCell.xib in Resources */,
 				31ECF6C41F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib in Resources */,
+				8BBDC7AE1F9BD6A800113DA9 /* TipView.xib in Resources */,
 				15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */,
 				8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */,
 				316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */,
@@ -987,6 +1035,7 @@
 				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
 				31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */,
+				37864D002F8F9EC162CE3D02 /* ChatViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,18 +1074,22 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1082,18 +1135,22 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1178,6 +1235,7 @@
 				8B6E2B251F9B4815008E1DCC /* GradientView.swift in Sources */,
 				8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */,
 				8B0A50131F9A5E7600B86005 /* User.swift in Sources */,
+				8BBDC7AC1F9BD69D00113DA9 /* TipView.swift in Sources */,
 				8B52CA1A1F9A9DC100CC0DA2 /* Localizable.swift in Sources */,
 				8B6E2B311F9B8873008E1DCC /* Reaction.swift in Sources */,
 				29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */,
@@ -1190,6 +1248,7 @@
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
 				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
+				4F25B05C8619AE68106BE339 /* ChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,6 +1269,7 @@
 				723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */,
 				122572A9B0B8841FDF3A2587 /* AuthViewControllerTests.swift in Sources */,
 				70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */,
+				1B58B1ADA7F253B92F4DD7EA /* ChatViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

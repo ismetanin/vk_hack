@@ -32,7 +32,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // Notifies
-        let notifiesViewController = EventsViewController()
+        let notifiesViewController = ChatViewController()
         notifiesViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: #imageLiteral(resourceName: "logo_notifies_tab"),
