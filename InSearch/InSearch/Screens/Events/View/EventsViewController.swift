@@ -50,6 +50,8 @@ class EventsViewController: UIViewController {
         self.pageSelectorCollectionView.reloadData()
     }
     
+    // MARK: - Private
+    
     private func configurePageSelectorCollectionView() {
     
         self.pageSelectorCollectionView.backgroundColor = .clear
@@ -61,46 +63,64 @@ class EventsViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
+        layout.itemSize = CGSize(width: 66.0, height: 55.0)
         
         self.pageSelectorCollectionView.collectionViewLayout = layout
     }
-
-}
-
-extension EventsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+    private func configureEventsCollectionView() {
+        
+        self.eventsCollectionView.backgroundColor = .clear
+        self.eventsCollectionView.delegate = self
+        self.eventsCollectionView.dataSource = self
+        self.eventsCollectionView.register(UINib(nibName:"EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EventCollectionViewCell")
+        self.eventsCollectionView.showsVerticalScrollIndicator = false
+        self.eventsCollectionView.showsHorizontalScrollIndicator = false
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        self.pageSelectorCollectionView.collectionViewLayout = layout
+    }
+    
+    fileprivate func getPageSelectorCell(_ collectionView: UICollectionView, fotItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageIndicatorCollectionViewCell", for: indexPath) as! PageIndicatorCollectionViewCell
         let model = pageModels[indexPath.item]
         cell.configure(with: model)
         return cell
     }
     
+    fileprivate func getEventCell(_ collectionView: UICollectionView, fotItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
+        let model = events[indexPath.item]
+//        cell.configure(with: model)
+        return cell
+    }
+
+}
+
+extension EventsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.pageSelectorCollectionView {
+            return self.getPageSelectorCell(collectionView, fotItemAt: indexPath)
+        } else if collectionView == self.eventsCollectionView {
+            return self.getEventCell(collectionView, fotItemAt: indexPath)
+        }
+        return UICollectionViewCell()
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.pageModels.count
+        if collectionView == self.pageSelectorCollectionView {
+            return self.pageModels.count
+        } else if collectionView == self.eventsCollectionView {
+            return self.events.count
+        }
+        return 0
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-}
-
-extension EventsViewController: UICollectionViewDelegateFlowLayout {
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 66.0, height: 55.0)
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
-    
 }
