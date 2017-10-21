@@ -18,14 +18,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-V1-PU8">
-                        <rect key="frame" x="50" y="8" width="220" height="50"/>
+                        <rect key="frame" x="24" y="8" width="272" height="50"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ct-4w-sxK" customClass="GradientView" customModule="InSearch" customModuleProvider="target">
-                                <rect key="frame" x="-2" y="-2" width="224" height="54"/>
+                                <rect key="frame" x="-2" y="-2" width="276" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                         <color key="value" red="0.94509803921568625" green="0.25882352941176467" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,37 +51,46 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кино" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhS-Bc-MgQ">
-                                <rect key="frame" x="61" y="15" width="151" height="21"/>
+                                <rect key="frame" x="61" y="15" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_shevron" translatesAutoresizingMaskIntoConstraints="NO" id="3it-Ef-PLq">
+                                <rect key="frame" x="236" y="17" width="22" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="0P1-xX-HkE"/>
+                                    <constraint firstAttribute="height" constant="16" id="oG4-sk-V2A"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="GhS-Bc-MgQ" secondAttribute="bottom" constant="14" id="1Tc-ZK-iCO"/>
                             <constraint firstAttribute="trailing" secondItem="6ct-4w-sxK" secondAttribute="trailing" constant="-2" id="6rT-Re-f49"/>
                             <constraint firstItem="GhS-Bc-MgQ" firstAttribute="leading" secondItem="P3U-og-dZA" secondAttribute="trailing" constant="16" id="IyJ-5s-ir0"/>
-                            <constraint firstAttribute="trailing" secondItem="GhS-Bc-MgQ" secondAttribute="trailing" constant="8" id="Jbt-L8-hEj"/>
                             <constraint firstItem="6ct-4w-sxK" firstAttribute="top" secondItem="0bH-V1-PU8" secondAttribute="top" constant="-2" id="Mhp-nE-8fF"/>
+                            <constraint firstAttribute="trailing" secondItem="3it-Ef-PLq" secondAttribute="trailing" constant="14" id="Mms-MX-Df2"/>
+                            <constraint firstItem="3it-Ef-PLq" firstAttribute="leading" secondItem="GhS-Bc-MgQ" secondAttribute="trailing" constant="8" id="Xyq-eP-1iE"/>
                             <constraint firstItem="GhS-Bc-MgQ" firstAttribute="top" secondItem="0bH-V1-PU8" secondAttribute="top" constant="15" id="eIq-qx-gdc"/>
                             <constraint firstItem="P3U-og-dZA" firstAttribute="leading" secondItem="0bH-V1-PU8" secondAttribute="leading" constant="15" id="gHL-J7-wCw"/>
+                            <constraint firstItem="3it-Ef-PLq" firstAttribute="centerY" secondItem="0bH-V1-PU8" secondAttribute="centerY" id="irK-ot-pcT"/>
                             <constraint firstItem="P3U-og-dZA" firstAttribute="centerY" secondItem="0bH-V1-PU8" secondAttribute="centerY" id="l6R-5e-A7A"/>
                             <constraint firstItem="6ct-4w-sxK" firstAttribute="leading" secondItem="0bH-V1-PU8" secondAttribute="leading" constant="-2" id="lkA-n0-OlR"/>
                             <constraint firstAttribute="bottom" secondItem="6ct-4w-sxK" secondAttribute="bottom" constant="-2" id="qMk-SZ-JWr"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="15"/>
+                                <integer key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="0bH-V1-PU8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="8WL-Lu-EgT"/>
+                    <constraint firstItem="0bH-V1-PU8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="8WL-Lu-EgT"/>
                     <constraint firstItem="0bH-V1-PU8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NcF-d0-gTS"/>
-                    <constraint firstAttribute="trailing" secondItem="0bH-V1-PU8" secondAttribute="trailing" constant="50" id="Ugb-ky-RVP"/>
+                    <constraint firstAttribute="trailing" secondItem="0bH-V1-PU8" secondAttribute="trailing" constant="24" id="Ugb-ky-RVP"/>
                     <constraint firstAttribute="bottom" secondItem="0bH-V1-PU8" secondAttribute="bottom" constant="7.5" id="t54-D2-777"/>
                 </constraints>
             </tableViewCellContentView>
@@ -89,6 +98,7 @@
             <connections>
                 <outlet property="gradientView" destination="6ct-4w-sxK" id="p57-uC-6EY"/>
                 <outlet property="iconImageView" destination="P3U-og-dZA" id="hKi-Xj-dMP"/>
+                <outlet property="shevronImage" destination="3it-Ef-PLq" id="9R9-fS-03z"/>
                 <outlet property="titleLabel" destination="GhS-Bc-MgQ" id="WmE-l1-RMx"/>
             </connections>
             <point key="canvasLocation" x="34" y="65"/>
@@ -96,5 +106,6 @@
     </objects>
     <resources>
         <image name="icon_cinema" width="29" height="20"/>
+        <image name="img_shevron" width="22" height="16"/>
     </resources>
 </document>

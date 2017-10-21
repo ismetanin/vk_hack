@@ -49,7 +49,7 @@ extension SelectFavorsTableViewAdapter: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: favorsCellName,
             for: indexPath
-            ) as? FavorsTableViewCell
+        ) as? FavorsTableViewCell
         cell?.fill(category: items[indexPath.row], isSelected: isSelected[indexPath.row])
         return cell ?? UITableViewCell()
     }
@@ -60,6 +60,7 @@ extension SelectFavorsTableViewAdapter: UITableViewDataSource {
 
 extension SelectFavorsTableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        isSelected[indexPath.row] = !isSelected[indexPath.row]
+        tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
     }
 }

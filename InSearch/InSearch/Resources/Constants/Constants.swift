@@ -10,6 +10,7 @@ import Foundation
 
 enum URLs {
     static var base = "https://77.244.217.34/v1/"
+    static var categories = "categories"
     static var auth = "auth"
 }
 

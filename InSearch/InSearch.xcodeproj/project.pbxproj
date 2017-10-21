@@ -55,7 +55,8 @@
 		8B52CA211F9B235700CC0DA2 /* FavorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B52CA1F1F9B235700CC0DA2 /* FavorsTableViewCell.xib */; };
 		8B6E2B251F9B4815008E1DCC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B241F9B4815008E1DCC /* GradientView.swift */; };
 		8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B261F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift */; };
-		8B6E2B291F9B595A008E1DCC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B281F9B595A008E1DCC /* Categories.swift */; };
+		8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */; };
+		8B6E2B2C1F9B59F6008E1DCC /* GetCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
@@ -141,7 +142,8 @@
 		8B52CA1F1F9B235700CC0DA2 /* FavorsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavorsTableViewCell.xib; sourceTree = "<group>"; };
 		8B6E2B241F9B4815008E1DCC /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8B6E2B261F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFavorsTableViewAdapter.swift; sourceTree = "<group>"; };
-		8B6E2B281F9B595A008E1DCC /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesRequest.swift; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewControllerTests.swift; sourceTree = "<group>"; };
@@ -365,7 +367,7 @@
 			children = (
 				55373BA99C4F5E973CC0947D /* UserList */,
 				0B03DDEB156890AD3B63F1E7 /* Authorization */,
-				8B6E2B281F9B595A008E1DCC /* Categories.swift */,
+				8B6E2B2A1F9B59DB008E1DCC /* Categories */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -655,6 +657,23 @@
 				8B52CA1F1F9B235700CC0DA2 /* FavorsTableViewCell.xib */,
 			);
 			name = Reuse;
+			sourceTree = "<group>";
+		};
+		8B6E2B2A1F9B59DB008E1DCC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */,
+				8B6E2B2D1F9B59FA008E1DCC /* Categories */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		8B6E2B2D1F9B59FA008E1DCC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		9797399628FEA523F766F3BA /* Picker */ = {
@@ -1051,7 +1070,7 @@
 				8B0A50091F9A4D1B00B86005 /* MultipartData.swift in Sources */,
 				8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */,
 				8B0A500A1F9A4D1B00B86005 /* ServerRequest.swift in Sources */,
-				8B6E2B291F9B595A008E1DCC /* Categories.swift in Sources */,
+				8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */,
 				8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */,
 				8B0A500F1F9A4D7400B86005 /* Colors.swift in Sources */,
 				8B0A50081F9A4D1B00B86005 /* ServerResponse.swift in Sources */,
@@ -1063,6 +1082,7 @@
 				8B0A50151F9A5F8300B86005 /* GetUserListRequest.swift in Sources */,
 				8B0A500B1F9A4D1B00B86005 /* ServerRequest+SupportedClasses.swift in Sources */,
 				C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */,
+				8B6E2B2C1F9B59F6008E1DCC /* GetCategoriesRequest.swift in Sources */,
 				8B0A501A1F9A60BB00B86005 /* Constants.swift in Sources */,
 				8B0A500D1F9A4D1B00B86005 /* ErrorMapperAdapter.swift in Sources */,
 				79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */,

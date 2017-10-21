@@ -34,15 +34,27 @@ final class SelectFavorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInitialState()
+        loadCategoriesAndSetupView()
     }
 
     // MARK: - Private helpers
+
+    private func loadCategoriesAndSetupView() {
+        CategoriesService.getCategoryList { [weak self] (result) in
+            if let categories = result.value?.value {
+                self?.configureView(with: categories)
+            } else {
+                // TODO: show error
+            }
+        }
+    }
 
     private func configureView(with categories: [Category]) {
         let adapter = SelectFavorsTableViewAdapter(items: categories, tableView: tableView)
         tableView.delegate = adapter
         tableView.dataSource = adapter
         self.adapter = adapter
+        tableView.reloadData()
     }
 
     private func setupInitialState() {

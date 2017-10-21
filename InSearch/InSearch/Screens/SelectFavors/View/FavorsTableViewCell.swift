@@ -15,11 +15,7 @@ final class FavorsTableViewCell: UITableViewCell {
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var gradientView: GradientView!
-
-    // MARK: - Properties
-
-    private var category: Category?
-    private var isCellSelected: Bool = false
+    @IBOutlet private weak var shevronImage: UIImageView!
 
     // MARK: - UITableViewCell
 
@@ -28,26 +24,14 @@ final class FavorsTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        guard let category = category else {
-            return
-        }
-//        if highlighted {
-            fill(category: category, isSelected: !isCellSelected)
-//        } else {
-//
-//        }
-    }
-
     // MARK: - Internal methods
 
     func fill(category: Category, isSelected: Bool) {
-        self.category = category
-        self.isCellSelected = isSelected
         titleLabel.text = category.title
-        gradientView.isHidden = isSelected
-        iconImageView.image = isSelected ? category.normalImage : category.selectedImage
-        titleLabel.textColor = isSelected ? UIColor.Gray.main : UIColor.white
+        gradientView.isHidden = !isSelected
+        shevronImage.isHidden = !isSelected
+        iconImageView.image = isSelected ? category.selectedImage : category.normalImage
+        titleLabel.textColor = isSelected ? UIColor.white : UIColor.Gray.main
     }
 
 }
