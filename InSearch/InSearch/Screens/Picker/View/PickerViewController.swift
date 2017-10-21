@@ -15,19 +15,29 @@ final class PickerViewController: UIViewController {
     @IBOutlet weak var inviteButton: UIButton!
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var emptyViewLabel: UILabel!
     
     // MARK: - IBActions
     
     @IBAction func inviteButtonAction(_ sender: Any) {
-        changeViews()
+        
     }
     
     @IBAction func dislikeButtonAction(_ sender: Any) {
-    
+        guard let id = topView?.user?.id else { return }
+        UserService.postDislikes(id: id) { [weak self] result in
+            guard let _ = result.value else { return }
+            self?.changeViews()
+        }
     }
     
     @IBAction func likeButtonAction(_ sender: Any) {
-    
+        guard let id = topView?.user?.id else { return }
+        UserService.postLikes(id: id) { [weak self] result in
+            guard let _ = result.value else { return }
+            self?.changeViews()
+        }
     }
     
     // MARK: - Enums
@@ -61,48 +71,91 @@ final class PickerViewController: UIViewController {
         static let nameLabelBottomPadding: CGFloat = 16.0
         static let ageLabelFontSize: CGFloat = 20.0
         static let nameLabelFontSize: CGFloat = 28.0
+        static let nameLabelRightPadding: CGFloat = 32.0
     }
     
     // MARK: - Properties
     
-    private var topView: UIView?
-    private var midView: UIView?
-    private var bottomView: UIView?
+    private var topView: CardView?
+    private var midView: CardView?
+    private var bottomView: CardView?
+    private var users: [User]?
     
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInitialState()
+        loadUsers()
     }
     
     // MARK: - Private helpers
     
+    /// Загружает список пользователей
+    private func loadUsers() {
+        UserService.getUsers { [weak self] result in
+            guard
+                let `self` = self,
+                let users = result.value?.value
+            else {
+                return
+            }
+            self.configure(with: users)
+            self.emptyView.isHidden = !users.isEmpty
+        }
+    }
+    
+    /// Конфигурирует вью полученными модельными объектами
+    ///
+    /// - Parameter users: пользователи
+    private func configure(with users: [User]) {
+        self.users = users
+        guard var newUsers = self.users else { return }
+        if !newUsers.isEmpty {
+            addTopView(with: newUsers[0])
+            newUsers.removeFirst()
+        }
+        if !newUsers.isEmpty {
+            addMidView(with: newUsers[0])
+            newUsers.removeFirst()
+        }
+        if !newUsers.isEmpty {
+            addBottomView(with: newUsers[0])
+            newUsers.removeFirst()
+        }
+        self.users = newUsers
+    }
+    
+    /// Конфигурирует начальное состояние экрана
     private func setupInitialState() {
         edgesForExtendedLayout = []
-        addBottomView()
-        addMidView()
-        addTopView()
         inviteButton.round(to: Constants.inviteButtonCornerRadius)
         inviteButton.setTitle(L10n.Pickerview.inviteButtonTitle, for: .normal)
         dislikeButton.roundSquare()
         dislikeButton.addBorder(width: Constants.circleButtonBorderWidth, color: UIColor.Gray.light)
         likeButton.roundSquare()
         likeButton.addBorder(width: Constants.circleButtonBorderWidth, color: UIColor.Gray.light)
+        emptyViewLabel.text = L10n.Pickerview.emptyScreenLabel
     }
     
     /// Добавляет в первую вьюшку
-    private func addTopView() {
-        topView = UIView()
+    ///
+    /// - Parameter user: пользователь
+    private func addTopView(with user: User) {
+        topView = CardView()
+        topView?.user = user
         topView?.backgroundColor = UIColor.Red.main
         guard let topView = topView else { return }
         self.view.insertSubview(topView, at: CardPosition.top.rawValue)
-        configure(topView)
+        configure(topView, with: user)
     }
     
     /// Добавляет вторую вьюшку
-    private func addMidView() {
-        midView = UIView()
+    ///
+    /// - Parameter user: пользователь
+    private func addMidView(with user: User) {
+        midView = CardView()
+        midView?.user = user
         midView?.backgroundColor = UIColor.Red.main
         midView?.transform = CGAffineTransform(
             scaleX: Constants.midViewScale,
@@ -114,12 +167,15 @@ final class PickerViewController: UIViewController {
         )
         guard let midView = midView else { return }
         self.view.insertSubview(midView, at: CardPosition.mid.rawValue)
-        configure(midView)
+        configure(midView, with: user)
     }
     
     /// Добавляет третью вьюшку
-    private func addBottomView() {
-        bottomView = UIView()
+    ///
+    /// - Parameter user: пользователь
+    private func addBottomView(with user: User) {
+        bottomView = CardView()
+        bottomView?.user = user
         bottomView?.backgroundColor = UIColor.Red.main
         bottomView?.transform = CGAffineTransform(
             scaleX: Constants.bottomViewScale,
@@ -131,17 +187,26 @@ final class PickerViewController: UIViewController {
         )
         guard let bottomView = bottomView else { return }
         self.view.insertSubview(bottomView, at: CardPosition.bottom.rawValue)
-        configure(bottomView)
+        configure(bottomView, with: user)
     }
     
     /// Добавляет лейблы возраста и имени ко вьюшке
     ///
-    /// - Parameter view: вью
-    private func addLabels(to view: UIView) {
+    /// - Parameters:
+    ///   - view: вью
+    ///   - age: возраст пользователя
+    ///   - name: имя пользователя
+    private func addLabels(to view: UIView, age: Int?, name: String?) {
         let ageLabel = UILabel()
         let nameLabel = UILabel()
-        ageLabel.text = "21 год"
-        nameLabel.text = "Алиса"
+        ageLabel.text = age?.getWordForPluralNumber(
+            with: [
+                L10n.Pickerview.ageLabelNominative,
+                L10n.Pickerview.ageLabelGenitiveSingular,
+                L10n.Pickerview.ageLabelGenitivePlural
+            ]
+        )
+        nameLabel.text = name
         ageLabel.font = UIFont.boldSystemFont(ofSize: Constants.ageLabelFontSize)
         nameLabel.font = UIFont.boldSystemFont(ofSize: Constants.nameLabelFontSize)
         ageLabel.textColor = .white
@@ -169,7 +234,7 @@ final class PickerViewController: UIViewController {
             ),
             nameLabel.trailingAnchor.constraint(
                 equalTo: view.trailingAnchor,
-                constant: -Constants.labelHorizontalPadding
+                constant: -Constants.nameLabelRightPadding
             ),
             nameLabel.bottomAnchor.constraint(
                 equalTo: view.bottomAnchor,
@@ -178,35 +243,18 @@ final class PickerViewController: UIViewController {
         ])
     }
     
-    /// Добавляет кнопку для перехода к профилю пользователя
-    ///
-    /// - Parameter view: вью
-    private func addProfileButton(to view: UIView) {
-        let button = UIButton(type: .custom)
-        button.setImage(#imageLiteral(resourceName: "img_picker_view_disclosure"), for: .normal)
-        button.contentEdgeInsets = UIEdgeInsets(top: Constants.nameLabelBottomPadding,
-                                                left: Constants.nameLabelBottomPadding,
-                                                bottom: Constants.nameLabelBottomPadding,
-                                                right: Constants.nameLabelBottomPadding)
-        view.addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            button.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        ])
-    }
-    
     /// Конфигурирует вьюшку
     ///
-    /// - Parameter view: вью для конфигурации
-    private func configure(_ view: UIView) {
+    /// - Parameters:
+    ///   - view: вью
+    ///   - user: пользователь
+    private func configure(_ view: UIView, with user: User) {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.round(to: Constants.cardViewCornerRadius)
         view.addShadow(opacity: Constants.cardViewCornerShadowOpacity)
         setupConstraints(to: view)
-        addLabels(to: view)
-        addProfileButton(to: view)
-        addPhotoSlider(to: view)
+        addPhotoSlider(to: view, photosURLs: user.avatarURLStrings ?? [])
+        addLabels(to: view, age: user.age, name: user.name)
     }
     
     /// Устанавливает констреинты для вьюшек
@@ -235,18 +283,30 @@ final class PickerViewController: UIViewController {
     
     /// Добавляет слайдер для фото пользователя во вью
     ///
-    /// - Parameter view: вью
-    private func addPhotoSlider(to view: UIView) {
+    /// - Parameters:
+    ///   - view: вью
+    ///   - photosURSs: ссылки на фотографии
+    private func addPhotoSlider(to view: UIView, photosURLs: [String]) {
         let photoSlider = PhotoSlider.instanceFromNib()
+        view.clipsToBounds = true
         photoSlider.frame = view.bounds
-        photoSlider.configure(with: ["", "", ""])
+        photoSlider.configure(with: photosURLs)
         view.addSubview(photoSlider)
     }
     
     /// Перестановка вьюшек
     private func changeViews() {
-        guard let midViewTransform = self.midView?.transform else { return }
+        self.dislikeButton.isEnabled = false
+        self.likeButton.isEnabled = false
+        guard
+            let users = self.users
+        else {
+            self.dislikeButton.isEnabled = true
+            self.likeButton.isEnabled = true
+            return
+        }
         topView?.isHidden = true
+        let midViewTransform = self.midView?.transform
         UIView.animate(
             withDuration: Constants.animationDuration,
             animations: { [weak self] in
@@ -256,14 +316,27 @@ final class PickerViewController: UIViewController {
                 UIView.animate(
                     withDuration: Constants.animationDuration,
                     animations: { [weak self] in
-                        self?.bottomView?.transform = midViewTransform
+                        if let midViewTransform = midViewTransform{
+                            self?.bottomView?.transform = midViewTransform
+                        }
                     },
                     completion: { [weak self] _ in
                         self?.topView?.removeFromSuperview()
                         self?.topView = self?.midView
                         self?.midView = self?.bottomView
-                        self?.addBottomView()
+                        self?.bottomView = nil
+                        guard users.count > 0
+                        else {
+                            self?.emptyView.isHidden = self?.topView != nil
+                            self?.dislikeButton.isEnabled = true
+                            self?.likeButton.isEnabled = true
+                            return
+                        }
+                        self?.addBottomView(with: users[0])
+                        self?.users?.removeFirst()
                         self?.bottomView?.alpha = 0
+                        self?.dislikeButton.isEnabled = true
+                        self?.likeButton.isEnabled = true
                         UIView.animate(
                             withDuration: Constants.animationDuration,
                             animations: { [weak self] in

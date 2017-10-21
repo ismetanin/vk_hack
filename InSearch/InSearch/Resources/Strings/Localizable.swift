@@ -25,6 +25,14 @@ enum L10n {
   }
 
   enum Pickerview {
+    /// Years
+    static let ageLabelGenitivePlural = L10n.tr("PickerView.AgeLabelGenitivePlural")
+    /// Years
+    static let ageLabelGenitiveSingular = L10n.tr("PickerView.AgeLabelGenitiveSingular")
+    /// Years
+    static let ageLabelNominative = L10n.tr("PickerView.AgeLabelNominative")
+    /// The list is empty, try again later
+    static let emptyScreenLabel = L10n.tr("PickerView.EmptyScreenLabel")
     /// Invite
     static let inviteButtonTitle = L10n.tr("PickerView.InviteButtonTitle")
   }

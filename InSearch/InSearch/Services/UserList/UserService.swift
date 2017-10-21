@@ -9,8 +9,8 @@
 import Foundation
 
 final class UserService {
-    class func getUserList(completion: @escaping (BaseResult<[User]>) -> Void) {
-        let request = GetUserListRequest()
+    class func getUsers(completion: @escaping (BaseResult<[User]>) -> Void) {
+        let request = GetUsersRequest()
         request.performAsync { (result) in
             switch result {
             case .failure(let error):
@@ -23,5 +23,29 @@ final class UserService {
 
     class func getUser(completion: @escaping (BaseResult<[User]>) -> Void) {
         
+    }
+    
+    class func postLikes(id: String, completion: @escaping (BaseResult<Void>) -> Void) {
+        let request = PostLikesRequest(id: id)
+        request.performAsync { (result) in
+            switch result {
+            case .failure(let error):
+                completion(.error(error))
+            case .success(_, let flag):
+                completion(.value((), flag))
+            }
+        }
+    }
+    
+    class func postDislikes(id: String, completion: @escaping (BaseResult<Void>) -> Void) {
+        let request = PostDislikesRequest(id: id)
+        request.performAsync { (result) in
+            switch result {
+            case .failure(let error):
+                completion(.error(error))
+            case .success(_, let flag):
+                completion(.value((), flag))
+            }
+        }
     }
 }

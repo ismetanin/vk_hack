@@ -15,3 +15,7 @@
 
 // MARK: - Picker View
 "PickerView.InviteButtonTitle" = "Invite";
+"PickerView.AgeLabelNominative" = "Years";
+"PickerView.AgeLabelGenitiveSingular" = "Years";
+"PickerView.AgeLabelGenitivePlural" = "Years";
+"PickerView.EmptyScreenLabel" = "The list is empty, try again later";

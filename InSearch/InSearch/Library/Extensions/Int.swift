@@ -26,24 +26,24 @@ extension Int {
         var cnt = self
         if (cnt > 0) {
             if (cnt > 10 && cnt < 20) {
-                return words[2]
+                return self.description + " " + words[2]
             }
             if (cnt % 100 > 0) {
                 cnt = cnt % 100
                 if (cnt > 10 && cnt < 20) {
-                    return words[2]
+                    return self.description + " " + words[2]
                 }
             }
             cnt = cnt % 10
             if (cnt == 1) {
-                return words[0]
+                return self.description + " " + words[0]
             } else if (cnt < 5 && cnt > 0) {
-                return words[1]
+                return self.description + " " + words[1]
             } else {
-                return words[2]
+                return self.description + " " + words[2]
             }
         } else {
-            return words[2]
+            return self.description + " " + words[2]
         }
     }
 }

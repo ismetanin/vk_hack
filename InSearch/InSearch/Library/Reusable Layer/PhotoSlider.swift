@@ -30,6 +30,7 @@ final class PhotoSlider: UIView {
         scrollView.delegate = self
         pageControl.numberOfPages = urlStrings.count
         pageControl.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        pageControl.subviews.forEach { $0.addShadow(opacity: 0.2) }
         urlStrings.forEach { string in
             let imageView = UIImageView()
             imageView.translatesAutoresizingMaskIntoConstraints = false
