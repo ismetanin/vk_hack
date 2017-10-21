@@ -57,6 +57,9 @@
                             <constraint firstAttribute="height" constant="34" id="kqg-g0-Cy9"/>
                         </constraints>
                         <state key="normal" title="Title"/>
+                        <connections>
+                            <action selector="actionButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="HX1-hm-d64"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

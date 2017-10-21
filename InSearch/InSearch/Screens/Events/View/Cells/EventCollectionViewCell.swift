@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventCollectionCellDelegate: class {
+    func eventCollectionCellDidPressedActionButton(_ eventCell: EventCollectionViewCell)
+}
+
 class EventCollectionViewCell: UICollectionViewCell {
 
     struct Model {
@@ -26,8 +30,16 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var actionButton: RoundedButton!
     
+    // MARK: - IBActions
+    
+    @IBAction func actionButtonPressed(_ sender: Any) {
+        self.delegate?.eventCollectionCellDidPressedActionButton(self)
+    }
+    
     // MARK: - Properties
     
+    weak var delegate: EventCollectionCellDelegate?
+
     // MARK: - UIView
     
     override func awakeFromNib() {

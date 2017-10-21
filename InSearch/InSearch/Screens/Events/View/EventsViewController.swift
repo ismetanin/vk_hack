@@ -70,11 +70,32 @@ class EventsViewController: UIViewController {
         self.updateEventsCollectionViewLayout()
     }
     
+    // MARK: - User Actions
+    
+    fileprivate func inviteActionPerformed(eventModel: EventCollectionViewCell.Model) {
+        // TODO: Implement me
+    }
+    
+    fileprivate func openEventDetailsActionPerformed(eventModel: EventCollectionViewCell.Model) {
+        // TODO: Implement me
+    }
+    
+    fileprivate func selectPageActionPerformed(pageModel: PageModel, with index: Int) {
+        // TODO: Implement me
+        
+        self.selectPage(at: index)
+    }
+    
     // MARK: - Private
     
+    fileprivate func eventModel(byIndexPath indexPath: IndexPath) -> EventCollectionViewCell.Model {
+        return self.eventsModels[indexPath.item]
+    }
+    
     private func selectPage(at index: Int) {
+        self.eventsCollectionView.deselectItem(at: IndexPath(item: self.selectedPageIndex, section: 0), animated: true)
         self.selectedPageIndex = index
-        self.pageSelectorCollectionView.selectItem(at: IndexPath(item: index, section: 1), animated: true, scrollPosition: .left)
+        self.pageSelectorCollectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: .left)
     }
     
     private func removeNavigationBarBackground() {
@@ -142,7 +163,18 @@ class EventsViewController: UIViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
         let model = eventsModels[indexPath.item]
         cell.configure(with: model)
+        cell.delegate = self
         return cell
+    }
+    
+    fileprivate func didSelectEvent(with indexPath: IndexPath) {
+        let model = self.eventModel(byIndexPath: indexPath)
+        self.openEventDetailsActionPerformed(eventModel: model)
+    }
+    
+    fileprivate func didSelectPage(with indexPath: IndexPath) {
+        let model = self.pageModels[indexPath.item]
+        self.selectPageActionPerformed(pageModel: model, with: indexPath.item)
     }
 
 }
@@ -170,4 +202,23 @@ extension EventsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.pageSelectorCollectionView {
+            self.didSelectPage(with: indexPath)
+        } else if collectionView == self.eventsCollectionView {
+            self.didSelectEvent(with: indexPath)
+        }
+    }
+}
+
+extension EventsViewController: EventCollectionCellDelegate {
+    
+    func eventCollectionCellDidPressedActionButton(_ eventCell: EventCollectionViewCell) {
+        if let indexPath = self.eventsCollectionView.indexPath(for: eventCell) {
+            let model = self.eventModel(byIndexPath: indexPath)
+            self.inviteActionPerformed(eventModel: model)
+        }
+    }
+    
 }
