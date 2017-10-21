@@ -13,22 +13,22 @@ final class SendTokenRequest: BaseServerRequest<Void> {
 
     // MARK: - Constants
 
-    private let token: String
+    private let accessToken: String
     private struct Keys {
         public static let token = "token"
     }
 
     // MARK: - Initialization and deinitialization
 
-    init(token: String) {
-        self.token = token
+    init(accessToken: String) {
+        self.accessToken = accessToken
     }
 
     // MARK: - BaseServerRequest
 
     override func createAsyncServerRequest() -> ServerRequest {
         var params = [String: Any]()
-        params[Keys.token] = token
+        params[Keys.token] = accessToken
         return ServerRequest(method: .post,
                              relativeUrl: URLs.auth,
                              baseUrl: URLs.base,

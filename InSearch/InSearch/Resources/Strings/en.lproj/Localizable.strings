@@ -7,5 +7,8 @@
 */
 
 // MARK: - Authorization
-
 "Auth.EnterButtonTitle" = "Enter";
+
+// MARK: - Select favors
+"Favors.Title" = "What do you love?";
+"Favors.Done" = "Done";
