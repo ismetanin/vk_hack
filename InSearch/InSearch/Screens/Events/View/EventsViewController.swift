@@ -78,6 +78,16 @@ class EventsViewController: UIViewController {
     
     fileprivate func openEventDetailsActionPerformed(eventModel: EventCollectionViewCell.Model) {
         // TODO: Implement me
+        
+        let event = Event(JSON: [
+            "id": "123",
+            "title": "124254242",
+            "type": "cinema"
+            ])!
+        
+        let eventDetailsViewController = EventDetailsViewController()
+        eventDetailsViewController.event = event
+        self.navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
     
     fileprivate func selectPageActionPerformed(pageModel: PageModel, with index: Int) {

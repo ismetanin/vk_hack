@@ -10,10 +10,56 @@ import UIKit
 
 class EventDetailsViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    private var adapter: EventDetailsTableViewAdapter?
+    
+    public var event: Event?
+    
+    // MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupInitialState()
+        removeNavigationBarBackground()
+        
+        if let event = self.event {
+            configureView(with: event)
+        }
+    }
+    
+    // MARK: - Private helpers
+    
+    private func configureView(with event: Event) {
+        let adapter = EventDetailsTableViewAdapter(event: event, tableView: tableView)
+        tableView.delegate = adapter
+        tableView.dataSource = adapter
+        self.adapter = adapter
+        tableView.reloadData()
+    }
+    
+    private func setupInitialState() {
+        tableView.estimatedRowHeight = 66
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func removeNavigationBarBackground() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        self.navigationController?.navigationBar.tintColor = .white
+        
     }
 
 }
