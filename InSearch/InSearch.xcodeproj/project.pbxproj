@@ -231,7 +231,6 @@
 			children = (
 				7FD95EA06E0068EAA5D1CD20 /* View */,
 			);
-			name = SelectFavors;
 			path = SelectFavors;
 			sourceTree = "<group>";
 		};
@@ -275,7 +274,6 @@
 				E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */,
 				68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -292,7 +290,6 @@
 			children = (
 				C720B66FBBB911E0BDFDF209 /* View */,
 			);
-			name = SelectFavors;
 			path = SelectFavors;
 			sourceTree = "<group>";
 		};
@@ -681,7 +678,6 @@
 			children = (
 				9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1142,7 +1138,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1188,7 +1184,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1204,6 +1200,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A4NNFV669G;
 				INFOPLIST_FILE = InSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.9thbit.InSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1218,6 +1215,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A4NNFV669G;
 				INFOPLIST_FILE = InSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.9thbit.InSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

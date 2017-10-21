@@ -10,7 +10,7 @@ import Foundation
 
 final class AuthorizationService {
     func sendToken(token: String, completion: @escaping (BaseResult<Void>) -> Void) {
-        let request = SendTokenRequest(token: token)
+        let request = SendTokenRequest(accessToken: token)
         request.performAsync { (result) in
             switch result {
             case .failure(let error):
