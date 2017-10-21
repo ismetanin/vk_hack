@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Init appearance
         UITabBar.appearance().tintColor = UIColor.Red.main
         UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().shadowImage = nil
+        UITabBar.appearance().clipsToBounds = true
+        UITabBar.appearance().isTranslucent = false
 
         // Init vk delegate
         vkDelegateReference = VKDelegateImpl()
