@@ -88,7 +88,10 @@
 		8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */; };
 		8BBDC7A81F9BBB4500113DA9 /* ActivityIndicated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A71F9BBB4500113DA9 /* ActivityIndicated.swift */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
+		8F7B0410C03ADB52E2857FAC /* PartnerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */; };
+		9035572AB47AACB3B9A8604F /* PartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
+		9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
 		AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */; };
 		B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A81217B1653390955E4543 /* NotifiesViewController.xib */; };
@@ -143,6 +146,8 @@
 		35033645FFF63539C7A9AFB6 /* PickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch_InSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
+		3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewControllerTests.swift; sourceTree = "<group>"; };
+		43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PartnerViewController.xib; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
 		4A3AC3C91F9BEB0A002D6E4F /* PostLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLikesRequest.swift; sourceTree = "<group>"; };
 		4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -214,6 +219,7 @@
 		CECEF2B97387BFF79A13240A /* AuthViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
 		D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListMappingTests.swift; path = ../Services/UserList/UserListMappingTests.swift; sourceTree = "<group>"; };
+		DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewController.swift; sourceTree = "<group>"; };
 		E1C9349AEA75826FC1C61BFD /* Pods-InSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.release.xcconfig"; sourceTree = "<group>"; };
 		E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewControllerTests.swift; sourceTree = "<group>"; };
 		E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +339,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		38F48619FF9015925F4C8A3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D8C6F7FA3A5BDFA83BE57B0 /* Partner */ = {
+			isa = PBXGroup;
+			children = (
+				38F48619FF9015925F4C8A3F /* View */,
+			);
+			name = Partner;
+			path = Partner;
+			sourceTree = "<group>";
+		};
 		4503C9A411020C414BA38F32 /* Notifies */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +417,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B0F0055827C0DE526F1D739 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */,
+				43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		7B8932B8C9751D371D8C39BC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +452,15 @@
 				D4D69DEF025F3E54C0036FBE /* View */,
 			);
 			path = ChatList;
+			sourceTree = "<group>";
+		};
+		86FEDD8B268E5C99BF4C1A77 /* Partner */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F0055827C0DE526F1D739 /* View */,
+			);
+			name = Partner;
+			path = Partner;
 			sourceTree = "<group>";
 		};
 		8861143DEC1AD08513915CDE /* SelectFavors */ = {
@@ -504,6 +547,7 @@
 				83B6AC6F72B6BB180005AD92 /* ChatList */,
 				4503C9A411020C414BA38F32 /* Notifies */,
 				5EDD5649913B1C791244EA99 /* SelectFavors */,
+				86FEDD8B268E5C99BF4C1A77 /* Partner */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -611,7 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0A501B1F9A63FD00B86005 /* UIImageView.swift */,
-				8B52CA171F9A9CDD00CC0DA2 /* String.swift */,
+				8B52CA171F9A9CDD00CC0DA2 /* Int.swift */,
 				31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */,
 				3184363D1F9BEA5A00D4DC0F /* UINavigationController.swift */,
 				4AAD6F7A1F9A870A00633119 /* UIView.swift */,
@@ -697,6 +741,7 @@
 				8B28C0F9EBC5C63EFB9B71A0 /* Notifies */,
 				BAEB983D3133DEF0C599883C /* Auth */,
 				8861143DEC1AD08513915CDE /* SelectFavors */,
+				3D8C6F7FA3A5BDFA83BE57B0 /* Partner */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -1064,6 +1109,7 @@
 				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
 				31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */,
+				9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,6 +1325,7 @@
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
 				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
+				9035572AB47AACB3B9A8604F /* PartnerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1299,6 +1346,7 @@
 				723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */,
 				122572A9B0B8841FDF3A2587 /* AuthViewControllerTests.swift in Sources */,
 				70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */,
+				8F7B0410C03ADB52E2857FAC /* PartnerViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
