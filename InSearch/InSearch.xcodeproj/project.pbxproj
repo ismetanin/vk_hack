@@ -23,6 +23,8 @@
 		3184363B1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318436391F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.swift */; };
 		3184363C1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3184363A1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib */; };
 		3184363E1F9BEA5A00D4DC0F /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184363D1F9BEA5A00D4DC0F /* UINavigationController.swift */; };
+		318436411F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184363F1F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift */; };
+		318436421F9BEE8200D4DC0F /* EventDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318436401F9BEE8200D4DC0F /* EventDescriptionTableViewCell.xib */; };
 		31ECF6C31F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C11F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift */; };
 		31ECF6C41F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF6C21F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib */; };
 		31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */; };
@@ -124,6 +126,8 @@
 		318436391F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3184363A1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		3184363D1F9BEA5A00D4DC0F /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		3184363F1F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		318436401F9BEE8200D4DC0F /* EventDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		31ECF6C11F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		31ECF6C21F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageIndicatorCollectionViewCell.xib; sourceTree = "<group>"; };
 		31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 			children = (
 				318436391F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.swift */,
 				3184363A1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib */,
+				3184363F1F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift */,
+				318436401F9BEE8200D4DC0F /* EventDescriptionTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1021,6 +1027,7 @@
 				8B0A4FF31F9A399900B86005 /* TabBarController.xib in Resources */,
 				8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */,
 				8B52CA211F9B235700CC0DA2 /* FavorsTableViewCell.xib in Resources */,
+				318436421F9BEE8200D4DC0F /* EventDescriptionTableViewCell.xib in Resources */,
 				31ECF6C41F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib in Resources */,
 				318436351F9BDBE300D4DC0F /* EventDetailsViewController.xib in Resources */,
 				15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */,
@@ -1218,6 +1225,7 @@
 				316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */,
 				79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */,
 				8B0A50041F9A4D1B00B86005 /* BaseServerRequest.swift in Sources */,
+				318436411F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift in Sources */,
 				318436371F9BDD4300D4DC0F /* EventDetailsTableViewAdapter.swift in Sources */,
 				1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */,
 				316700E31F9B872200FB451D /* Event.swift in Sources */,
