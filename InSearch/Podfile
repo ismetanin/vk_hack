@@ -14,9 +14,6 @@ target 'InSearch' do
     target 'InSearchTests' do
         # Put pods used for both test targets here
         
-        target 'InSearchUITests' do
-            # Put UI-testing-only pods here
-        end
     end
 
 end
