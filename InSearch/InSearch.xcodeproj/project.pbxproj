@@ -12,6 +12,10 @@
 		15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */; };
 		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
+		4AAD6F7B1F9A870A00633119 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F7A1F9A870A00633119 /* UIView.swift */; };
+		4AAD6F7D1F9B39C400633119 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */; };
+		4AAD6F811F9B420000633119 /* PhotoSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F801F9B420000633119 /* PhotoSlider.swift */; };
+		4AAD6F831F9B422900633119 /* PhotoSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD6F821F9B422900633119 /* PhotoSlider.xib */; };
 		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
 		79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */; };
 		8569C6EF55CA900CB0E8E00F /* MyServiceMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */; };
@@ -72,6 +76,10 @@
 		3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch_InSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
+		4AAD6F7A1F9A870A00633119 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
+		4AAD6F801F9B420000633119 /* PhotoSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlider.swift; sourceTree = "<group>"; };
+		4AAD6F821F9B422900633119 /* PhotoSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSlider.xib; sourceTree = "<group>"; };
 		5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		8B0A4FB21F9A349E00B86005 /* InSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -373,6 +381,8 @@
 			isa = PBXGroup;
 			children = (
 				8B0A501B1F9A63FD00B86005 /* UIImageView.swift */,
+				4AAD6F7A1F9A870A00633119 /* UIView.swift */,
+				4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,6 +390,8 @@
 		8B0A4FC81F9A349E00B86005 /* Reusable Layer */ = {
 			isa = PBXGroup;
 			children = (
+				4AAD6F801F9B420000633119 /* PhotoSlider.swift */,
+				4AAD6F821F9B422900633119 /* PhotoSlider.xib */,
 			);
 			path = "Reusable Layer";
 			sourceTree = "<group>";
@@ -717,6 +729,7 @@
 			files = (
 				8B0A4FCE1F9A349E00B86005 /* LaunchScreen.xib in Resources */,
 				8B0A4FD01F9A349E00B86005 /* Assets.xcassets in Resources */,
+				4AAD6F831F9B422900633119 /* PhotoSlider.xib in Resources */,
 				8B0A4FF31F9A399900B86005 /* TabBarController.xib in Resources */,
 				8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */,
 				15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */,
@@ -872,9 +885,12 @@
 				8B0A50081F9A4D1B00B86005 /* ServerResponse.swift in Sources */,
 				8B0A50061F9A4D1B00B86005 /* BaseResult.swift in Sources */,
 				8B0A501C1F9A63FD00B86005 /* UIImageView.swift in Sources */,
+				4AAD6F7B1F9A870A00633119 /* UIView.swift in Sources */,
 				8B0A50051F9A4D1B00B86005 /* NetworkLayerBaseErrors.swift in Sources */,
+				4AAD6F7D1F9B39C400633119 /* CGAffineTransform.swift in Sources */,
 				8B0A4FF01F9A379900B86005 /* TabBarController.swift in Sources */,
 				8B0A50151F9A5F8300B86005 /* GetUserListRequest.swift in Sources */,
+				4AAD6F811F9B420000633119 /* PhotoSlider.swift in Sources */,
 				8B0A500B1F9A4D1B00B86005 /* ServerRequest+SupportedClasses.swift in Sources */,
 				C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */,
 				8B0A501A1F9A60BB00B86005 /* Constants.swift in Sources */,
