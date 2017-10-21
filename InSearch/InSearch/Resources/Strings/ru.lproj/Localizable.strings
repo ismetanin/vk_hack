@@ -20,3 +20,11 @@
 
 // MARK: - Events
 "Events.Title" = "События";
+
+// MARK: - Picker View
+"PickerView.InviteButtonTitle" = "Пригласить";
+"PickerView.AgeLabelNominative" = "Год";
+"PickerView.AgeLabelGenitiveSingular" = "Года";
+"PickerView.AgeLabelGenitivePlural" = "Лет";
+"PickerView.EmptyScreenLabel" = "Список иссяк, попробуйте немного позже";
+

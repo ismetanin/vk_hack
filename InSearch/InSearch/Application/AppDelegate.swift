@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Init root view
         window = UIWindow(frame: UIScreen.main.bounds)
+
         let rootViewController: UIViewController
 
         if let _: String = KeychainStorage().loadData(forUserAccount: Constants.Keys.userAccount,
