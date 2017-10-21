@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Init root view
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = AuthViewController()
+        let rootViewController = TabBarController() //AuthViewController()
 
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()

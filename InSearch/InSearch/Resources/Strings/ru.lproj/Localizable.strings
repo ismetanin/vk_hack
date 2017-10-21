@@ -8,5 +8,11 @@
 
 
 // MARK: - Authorization
-
 "Auth.EnterButtonTitle" = "Войти";
+
+// MARK: - Select favors
+"Favors.Title" = "Что вы любите?";
+"Favors.Done" = "Готово";
+
+// MARK: - Picker View
+"PickerView.InviteButtonTitle" = "Пригласить";

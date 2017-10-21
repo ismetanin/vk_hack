@@ -1,5 +1,5 @@
 //
-//  String.swift
+//  Categories.swift
 //  InSearch
 //
 //  Created by Ivan Smetanin on 21/10/2017.
@@ -7,5 +7,3 @@
 //
 
 import Foundation
-
-

@@ -16,6 +16,18 @@ enum L10n {
     /// Enter
     static let enterButtonTitle = L10n.tr("Auth.EnterButtonTitle")
   }
+
+  enum Favors {
+    /// Done
+    static let done = L10n.tr("Favors.Done")
+    /// What do you love?
+    static let title = L10n.tr("Favors.Title")
+  }
+
+  enum Pickerview {
+    /// Invite
+    static let inviteButtonTitle = L10n.tr("PickerView.InviteButtonTitle")
+  }
 }
 
 extension L10n {

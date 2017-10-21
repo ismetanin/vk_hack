@@ -6,11 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerViewController" customModule="InSearch" customModuleProvider="target">
             <connections>
+                <outlet property="dislikeButton" destination="2yy-qs-KhR" id="zDv-Hl-jFs"/>
+                <outlet property="inviteButton" destination="Flf-iU-5h5" id="vS1-OK-O4M"/>
+                <outlet property="likeButton" destination="NvR-5X-lJg" id="aYL-2y-wWA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q3p-Ee-1CD"/>
             </connections>
         </placeholder>
@@ -18,8 +22,63 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oVy-h3-wv2">
+                    <rect key="frame" x="32" y="603" width="311" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flf-iU-5h5">
+                            <rect key="frame" x="0.0" y="0.0" width="131" height="56"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.2627450980392157" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                            <state key="normal" title="Пригласить">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="inviteButtonAction:" destination="-1" eventType="touchUpInside" id="Vgc-DU-ZKL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yy-qs-KhR">
+                            <rect key="frame" x="165" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2yy-qs-KhR" secondAttribute="height" multiplier="1:1" id="0Te-ZY-99r"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <state key="normal" image="img_picker_view_cross"/>
+                            <connections>
+                                <action selector="dislikeButtonAction:" destination="-1" eventType="touchUpInside" id="cQ1-Al-3D1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-5X-lJg">
+                            <rect key="frame" x="255" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="NvR-5X-lJg" secondAttribute="height" multiplier="1:1" id="XB8-lP-vyH"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <state key="normal" image="img_picker_view_heart"/>
+                            <connections>
+                                <action selector="likeButtonAction:" destination="-1" eventType="touchUpInside" id="IDG-9Z-7s3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="jC3-1g-vGd"/>
+                    </constraints>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oVy-h3-wv2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="2Dk-Ec-wOO"/>
+                <constraint firstAttribute="bottom" secondItem="oVy-h3-wv2" secondAttribute="bottom" constant="8" id="Jgo-IT-zOn"/>
+                <constraint firstAttribute="trailing" secondItem="oVy-h3-wv2" secondAttribute="trailing" constant="32" id="jBz-mh-RJM"/>
+            </constraints>
             <point key="canvasLocation" x="39.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="img_picker_view_cross" width="23" height="23"/>
+        <image name="img_picker_view_heart" width="25" height="23"/>
+    </resources>
 </document>

@@ -33,17 +33,16 @@
                     </constraints>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rYS-Wg-Wz7">
-                    <rect key="frame" x="320" y="582" width="39" height="37"/>
+                    <rect key="frame" x="326" y="574" width="39" height="37"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="K1L-lo-HhI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="828-ZK-PpP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="K1L-lo-HhI" secondAttribute="bottom" id="Ti0-57-c71"/>
                 <constraint firstItem="K1L-lo-HhI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="V4F-S9-BZO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K1L-lo-HhI" secondAttribute="trailing" id="q7V-3I-0op"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rYS-Wg-Wz7" secondAttribute="trailing" constant="16" id="rbz-dt-eCz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rYS-Wg-Wz7" secondAttribute="bottom" constant="48" id="zC0-EN-foY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rYS-Wg-Wz7" secondAttribute="trailing" constant="10" id="rbz-dt-eCz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rYS-Wg-Wz7" secondAttribute="bottom" constant="56" id="zC0-EN-foY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
