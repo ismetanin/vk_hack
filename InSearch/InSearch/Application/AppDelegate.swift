@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyVK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
 
+        // Init vk delegate
+        vkDelegateReference = VKDelegateImpl()
+
+        // Init root view
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = TabBarController()
+        let rootViewController = AuthViewController()
 
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
@@ -25,4 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let app = options[.sourceApplication] as? String
+        // Process opening url by vk
+        VK.process(url: url, sourceApplication: app)
+        return true
+    }
 }
+
+

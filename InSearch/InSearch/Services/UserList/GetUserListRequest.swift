@@ -15,7 +15,7 @@ final class GetUserListRequest: BaseServerRequest<[User]> {
         return ServerRequest(method: .get,
                              relativeUrl: URLs.base,
                              baseUrl: URLs.base,
-                             token: "",
+                             token: token,
                              parameters: .simpleParams(nil))
     }
 

@@ -9,5 +9,20 @@
 import Foundation
 
 enum URLs {
-    static var base = "ourserv"
+    static var base = "https://77.244.217.34/v1/"
+    static var auth = "auth"
+}
+
+enum Constants {
+    enum Keys {
+        static var accessToken = "access_token"
+        static var userAccount = "InSearchUserAccount"
+    }
+}
+
+// MARK: - NSNotification
+
+extension NSNotification.Name {
+    static let userLoggedIn = NSNotification.Name("InSearch.notifications.userLoggedIn")
+    static let userFailedLogIn = NSNotification.Name("InSearch.notifications.userFailedLogIn")
 }

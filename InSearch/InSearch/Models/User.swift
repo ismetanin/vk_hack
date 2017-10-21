@@ -40,9 +40,10 @@ final class User: Mappable {
         if let genderValue: String = map.JSON[MappingKeys.gender] as? String {
             gender = Gender(rawValue: genderValue)
         }
-        avatarURLStrings <- map[MappingKeys.avatarURLString]
+        avatarURLStrings <- map[MappingKeys.avatarURLStrings]
         chatId <- map[MappingKeys.chatId]
         city <- map[MappingKeys.city]
+        age <- map[MappingKeys.age]
     }
 }
 
@@ -50,11 +51,12 @@ final class User: Mappable {
 
 private extension User {
     class MappingKeys {
+        static let id = "id"
         static let name = "name"
-        static let secondName = "secondName"
-        static let avatarURLString = "avatarURLString"
+        static let avatarURLStrings = "avatarURLStrings"
         static let gender = "gender"
         static let chatId = "chatId"
         static let city = "city"
+        static let age = "age"
     }
 }
