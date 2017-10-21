@@ -17,6 +17,8 @@
 		316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316700DF1F9B86C700FB451D /* EventsViewController.xib */; };
 		316700E31F9B872200FB451D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700E21F9B872200FB451D /* Event.swift */; };
 		3184362E1F9BCDAE00D4DC0F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184362D1F9BCDAD00D4DC0F /* RoundedButton.swift */; };
+		318436341F9BDBE300D4DC0F /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318436321F9BDBE300D4DC0F /* EventDetailsViewController.swift */; };
+		318436351F9BDBE300D4DC0F /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318436331F9BDBE300D4DC0F /* EventDetailsViewController.xib */; };
 		31ECF6C31F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C11F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift */; };
 		31ECF6C41F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF6C21F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib */; };
 		31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */; };
@@ -112,6 +114,8 @@
 		316700DF1F9B86C700FB451D /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		316700E21F9B872200FB451D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3184362D1F9BCDAD00D4DC0F /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		318436321F9BDBE300D4DC0F /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		318436331F9BDBE300D4DC0F /* EventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
 		31ECF6C11F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		31ECF6C21F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageIndicatorCollectionViewCell.xib; sourceTree = "<group>"; };
 		31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -258,6 +262,23 @@
 				31ECF6C01F9B913F00CB9A34 /* Cells */,
 				316700DE1F9B86C700FB451D /* EventsViewController.swift */,
 				316700DF1F9B86C700FB451D /* EventsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		318436301F9BDB9600D4DC0F /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				318436311F9BDBA900D4DC0F /* View */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
+		318436311F9BDBA900D4DC0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				318436321F9BDBE300D4DC0F /* EventDetailsViewController.swift */,
+				318436331F9BDBE300D4DC0F /* EventDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +455,7 @@
 		8B0A4FBB1F9A349E00B86005 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				318436301F9BDB9600D4DC0F /* EventDetails */,
 				316700DC1F9B869500FB451D /* Events */,
 				8B0A4FEE1F9A379900B86005 /* TabBarController.swift */,
 				8B0A4FF21F9A399900B86005 /* TabBarController.xib */,
@@ -980,6 +1002,7 @@
 				8B0A4FB81F9A349E00B86005 /* .gitignore in Resources */,
 				8B52CA211F9B235700CC0DA2 /* FavorsTableViewCell.xib in Resources */,
 				31ECF6C41F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib in Resources */,
+				318436351F9BDBE300D4DC0F /* EventDetailsViewController.xib in Resources */,
 				15DF2122F135F4425C807EC6 /* ProfileViewController.xib in Resources */,
 				8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */,
 				316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */,
@@ -1189,6 +1212,7 @@
 				8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
+				318436341F9BDBE300D4DC0F /* EventDetailsViewController.swift in Sources */,
 				3184362E1F9BCDAE00D4DC0F /* RoundedButton.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
