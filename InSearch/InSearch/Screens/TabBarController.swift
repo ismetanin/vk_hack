@@ -33,22 +33,38 @@ final class TabBarController: UITabBarController {
 
         // Notifies
         let notifiesViewController = EventsViewController()
-        notifiesViewController.tabBarItem = UITabBarItem(title: "Notifies", image: UIImage(), selectedImage: UIImage())
+        notifiesViewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: #imageLiteral(resourceName: "logo_notifies_tab"),
+            selectedImage: #imageLiteral(resourceName: "logo_notifies_tab_selected")
+        )
         let notifiesViewNavigationController = UINavigationController(rootViewController: notifiesViewController)
 
         // Chat list
         let chatListViewController = ChatListViewController()
-        chatListViewController.tabBarItem = UITabBarItem(title: "Chats", image: UIImage(), selectedImage: UIImage())
+        chatListViewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: #imageLiteral(resourceName: "logo_messages_tab"),
+            selectedImage: #imageLiteral(resourceName: "logo_messages_tab_selected")
+        )
         let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
 
         // Picker
         let pickerViewController = PickerViewController()
-        pickerViewController.tabBarItem = UITabBarItem(title: "Picker", image: UIImage(), selectedImage: UIImage())
+        pickerViewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: #imageLiteral(resourceName: "logo_picker_tab"),
+            selectedImage: #imageLiteral(resourceName: "logo_picker_tab_selected")
+        )
         let pickerViewNavigationController = UINavigationController(rootViewController: pickerViewController)
 
         // Profile
         let profileViewController = ProfileViewController()
-        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(), selectedImage: UIImage())
+        profileViewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: #imageLiteral(resourceName: "logo_profile_tab"),
+            selectedImage: #imageLiteral(resourceName: "logo_profile_tab_selected")
+        )
         let profileViewNavigationController = UINavigationController(rootViewController: profileViewController)
 
         // Set to tab bar
