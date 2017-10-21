@@ -12,3 +12,7 @@
 // MARK: - Select favors
 "Favors.Title" = "What do you love?";
 "Favors.Done" = "Done";
+
+// MARK: - Reactions
+"Reactions.Mutual" = "Mutual sympathy";
+"Reactions.Single" = "Sympathy";

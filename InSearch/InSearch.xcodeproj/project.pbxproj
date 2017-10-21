@@ -58,6 +58,10 @@
 		8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B52CA151F9A9CAF00CC0DA2 /* Localizable.strings */; };
 		8B52CA181F9A9CDD00CC0DA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA171F9A9CDD00CC0DA2 /* String.swift */; };
 		8B52CA1A1F9A9DC100CC0DA2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA191F9A9DC100CC0DA2 /* Localizable.swift */; };
+		8B6E2B311F9B8873008E1DCC /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B301F9B8873008E1DCC /* Reaction.swift */; };
+		8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B321F9B8A6B008E1DCC /* ReactionTableViewCell.swift */; };
+		8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */; };
+		8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */; };
 		8B52CA1D1F9B1CC800CC0DA2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA1C1F9B1CC800CC0DA2 /* Category.swift */; };
 		8B52CA201F9B235700CC0DA2 /* FavorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA1E1F9B235700CC0DA2 /* FavorsTableViewCell.swift */; };
 		8B52CA211F9B235700CC0DA2 /* FavorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B52CA1F1F9B235700CC0DA2 /* FavorsTableViewCell.xib */; };
@@ -146,6 +150,10 @@
 		8B0A50171F9A5FB100B86005 /* GetUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
 		8B0A50191F9A60BA00B86005 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B0A501B1F9A63FD00B86005 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		8B6E2B301F9B8873008E1DCC /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		8B6E2B321F9B8A6B008E1DCC /* ReactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTableViewCell.swift; sourceTree = "<group>"; };
+		8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactionTableViewCell.xib; sourceTree = "<group>"; };
+		8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesTableViewAdapter.swift; sourceTree = "<group>"; };
 		8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKDelegateImpl.swift; sourceTree = "<group>"; };
 		8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorable.swift; sourceTree = "<group>"; };
 		8B0A50211F9A811100B86005 /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
@@ -500,6 +508,7 @@
 			children = (
 				8B52CA1C1F9B1CC800CC0DA2 /* Category.swift */,
 				8B0A50121F9A5E7600B86005 /* User.swift */,
+				8B6E2B301F9B8873008E1DCC /* Reaction.swift */,
 				316700E21F9B872200FB451D /* Event.swift */,
 			);
 			name = Entity;
@@ -549,6 +558,15 @@
 				8B6E2B241F9B4815008E1DCC /* GradientView.swift */,
 			);
 			path = "Reusable Layer";
+			sourceTree = "<group>";
+		};
+		8B6E2B361F9B8AAF008E1DCC /* Reuse */ = {
+			isa = PBXGroup;
+			children = (
+				8B6E2B321F9B8A6B008E1DCC /* ReactionTableViewCell.swift */,
+				8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */,
+			);
+			name = Reuse;
 			sourceTree = "<group>";
 		};
 		8B0A4FC91F9A349E00B86005 /* Protocols */ = {
@@ -842,8 +860,10 @@
 		F14688D83B30984BDC33F797 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */,
 				647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */,
 				24A81217B1653390955E4543 /* NotifiesViewController.xib */,
+				8B6E2B361F9B8AAF008E1DCC /* Reuse */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -959,6 +979,7 @@
 				316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */,
 				F57E03C32B408FDC1A89F23B /* PickerViewController.xib in Resources */,
 				BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */,
+				8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */,
 				B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */,
 				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
@@ -1125,6 +1146,7 @@
 				8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */,
 				8B0A500A1F9A4D1B00B86005 /* ServerRequest.swift in Sources */,
 				8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */,
+				8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */,
 				8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */,
 				8B0A500F1F9A4D7400B86005 /* Colors.swift in Sources */,
 				31ECF6C31F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift in Sources */,
@@ -1153,9 +1175,11 @@
 				8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */,
 				8B0A50131F9A5E7600B86005 /* User.swift in Sources */,
 				8B52CA1A1F9A9DC100CC0DA2 /* Localizable.swift in Sources */,
+				8B6E2B311F9B8873008E1DCC /* Reaction.swift in Sources */,
 				29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */,
 				8B0A500C1F9A4D1B00B86005 /* SyncServerRequest.swift in Sources */,
 				8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */,
+				8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,

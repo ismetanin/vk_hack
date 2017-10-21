@@ -23,6 +23,13 @@ enum L10n {
     /// What do you love?
     static let title = L10n.tr("Favors.Title")
   }
+
+  enum Reactions {
+    /// Mutual sympathy
+    static let mutual = L10n.tr("Reactions.Mutual")
+    /// Sympathy
+    static let single = L10n.tr("Reactions.Single")
+  }
 }
 
 extension L10n {

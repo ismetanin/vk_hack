@@ -13,3 +13,7 @@
 // MARK: - Select favors
 "Favors.Title" = "Что вы любите?";
 "Favors.Done" = "Готово";
+
+// MARK: - Reactions
+"Reactions.Mutual" = "Взаимная симпатия";
+"Reactions.Single" = "Симпатия";
