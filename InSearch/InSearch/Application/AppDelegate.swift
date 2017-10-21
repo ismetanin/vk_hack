@@ -22,7 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Init root view
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = AuthViewController()
+        let rootViewController: UIViewController
+
+        if let _: String = KeychainStorage().loadData(forUserAccount: Constants.Keys.userAccount,
+                                                      byKey: Constants.Keys.accessToken) {
+
+            if UserDefaults.standard.isCategoriesSet {
+                rootViewController = TabBarController()
+            } else {
+                rootViewController = SelectFavorsViewController()
+            }
+        } else {
+            rootViewController = AuthViewController()
+        }
 
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()

@@ -22,4 +22,16 @@ final class CategoriesService {
         }
     }
 
+    class func sendCategories(ids: [String], completion: @escaping (BaseResult<Void>) -> Void) {
+        let request = SendCategoriesRequest(ids: ids)
+        request.performAsync { (result) in
+            switch result {
+            case .failure(let error):
+                completion(.error(error))
+            case .success(let value, let flag):
+                completion(.value(value, flag))
+            }
+        }
+    }
+
 }

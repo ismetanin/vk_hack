@@ -26,7 +26,7 @@ final class SelectFavorsViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction private func doneButtonAction(_ sender: UIButton) {
-        
+        sendCategoriesAndCloseView()
     }
 
     // MARK: - UIViewController
@@ -38,6 +38,39 @@ final class SelectFavorsViewController: UIViewController {
     }
 
     // MARK: - Private helpers
+
+    private func sendCategoriesAndCloseView() {
+        guard let categories = adapter?.getSelectedCategories() else {
+            return
+        }
+        let categoriesIds = categories.map { $0.id ?? "" }
+        CategoriesService.sendCategories(ids: categoriesIds) { [weak self] (result) in
+            if result.error == nil {
+                // Set key that user set categories
+                UserDefaults.standard.isCategoriesSet = true
+                // Show main screen
+                self?.showMainScreen()
+            } else {
+                // TODO: show error message
+            }
+        }
+    }
+
+    private func showMainScreen() {
+        let tabBarController = TabBarController()
+
+        if let window = UIApplication.shared.keyWindow {
+            UIView.transition(
+                with: window,
+                duration: 0.5,
+                options: .transitionCrossDissolve,
+                animations: {
+                    window.rootViewController = tabBarController
+                },
+                completion: nil
+            )
+        }
+    }
 
     private func loadCategoriesAndSetupView() {
         CategoriesService.getCategoryList { [weak self] (result) in
@@ -58,6 +91,7 @@ final class SelectFavorsViewController: UIViewController {
     }
 
     private func setupInitialState() {
+        fillStaticTexts()
         tableView.estimatedRowHeight = 66
         tableView.rowHeight = UITableViewAutomaticDimension
     }

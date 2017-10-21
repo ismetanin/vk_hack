@@ -57,6 +57,7 @@
 		8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B261F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift */; };
 		8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */; };
 		8B6E2B2C1F9B59F6008E1DCC /* GetCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */; };
+		8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B2E1F9B6CA7008E1DCC /* SendCategoriesRequest.swift */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
@@ -144,6 +145,7 @@
 		8B6E2B261F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFavorsTableViewAdapter.swift; sourceTree = "<group>"; };
 		8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesRequest.swift; sourceTree = "<group>"; };
+		8B6E2B2E1F9B6CA7008E1DCC /* SendCategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendCategoriesRequest.swift; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewControllerTests.swift; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */,
+				8B6E2B2E1F9B6CA7008E1DCC /* SendCategoriesRequest.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1100,6 +1103,7 @@
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
+				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
 				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
 			);

@@ -27,3 +27,12 @@ extension NSNotification.Name {
     static let userLoggedIn = NSNotification.Name("InSearch.notifications.userLoggedIn")
     static let userFailedLogIn = NSNotification.Name("InSearch.notifications.userFailedLogIn")
 }
+
+// MARK: - UserDefaults
+
+extension UserDefaults {
+    var isCategoriesSet: Bool {
+        get { return bool(forKey: #function) }
+        set { set(newValue, forKey: #function) }
+    }
+}

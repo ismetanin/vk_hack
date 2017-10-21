@@ -35,6 +35,18 @@ final class SelectFavorsTableViewAdapter: NSObject {
         )
     }
 
+    // MARK: - Internal methods
+
+    func getSelectedCategories() -> [Category] {
+        var categories = [Category]()
+        for (index, item) in isSelected.enumerated() {
+            if item {
+                categories.append(self.items[index])
+            }
+        }
+        return categories
+    }
+
 }
 
 
