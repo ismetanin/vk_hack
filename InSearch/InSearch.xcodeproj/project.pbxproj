@@ -58,6 +58,10 @@
 		8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */; };
 		8B6E2B2C1F9B59F6008E1DCC /* GetCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */; };
 		8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B2E1F9B6CA7008E1DCC /* SendCategoriesRequest.swift */; };
+		8B6E2B311F9B8873008E1DCC /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B301F9B8873008E1DCC /* Reaction.swift */; };
+		8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E2B321F9B8A6B008E1DCC /* ReactionTableViewCell.swift */; };
+		8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */; };
+		8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
@@ -146,6 +150,10 @@
 		8B6E2B281F9B595A008E1DCC /* CategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		8B6E2B2B1F9B59F6008E1DCC /* GetCategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesRequest.swift; sourceTree = "<group>"; };
 		8B6E2B2E1F9B6CA7008E1DCC /* SendCategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendCategoriesRequest.swift; sourceTree = "<group>"; };
+		8B6E2B301F9B8873008E1DCC /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		8B6E2B321F9B8A6B008E1DCC /* ReactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTableViewCell.swift; sourceTree = "<group>"; };
+		8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactionTableViewCell.xib; sourceTree = "<group>"; };
+		8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesTableViewAdapter.swift; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewControllerTests.swift; sourceTree = "<group>"; };
@@ -454,6 +462,7 @@
 			children = (
 				8B52CA1C1F9B1CC800CC0DA2 /* Category.swift */,
 				8B0A50121F9A5E7600B86005 /* User.swift */,
+				8B6E2B301F9B8873008E1DCC /* Reaction.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -679,6 +688,15 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		8B6E2B361F9B8AAF008E1DCC /* Reuse */ = {
+			isa = PBXGroup;
+			children = (
+				8B6E2B321F9B8A6B008E1DCC /* ReactionTableViewCell.swift */,
+				8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */,
+			);
+			name = Reuse;
+			sourceTree = "<group>";
+		};
 		9797399628FEA523F766F3BA /* Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,8 +812,10 @@
 		F14688D83B30984BDC33F797 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */,
 				647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */,
 				24A81217B1653390955E4543 /* NotifiesViewController.xib */,
+				8B6E2B361F9B8AAF008E1DCC /* Reuse */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -911,6 +931,7 @@
 				BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */,
 				B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */,
 				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
+				8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1074,6 +1095,7 @@
 				8B0A4FCC1F9A349E00B86005 /* AppDelegate.swift in Sources */,
 				8B0A500A1F9A4D1B00B86005 /* ServerRequest.swift in Sources */,
 				8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */,
+				8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */,
 				8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */,
 				8B0A500F1F9A4D7400B86005 /* Colors.swift in Sources */,
 				8B0A50081F9A4D1B00B86005 /* ServerResponse.swift in Sources */,
@@ -1102,9 +1124,11 @@
 				8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
+				8B6E2B311F9B8873008E1DCC /* Reaction.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
+				8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */,
 				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
