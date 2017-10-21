@@ -41,7 +41,7 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     // MARK: - IBOutlets
 
-    @IBOutlet private weak var messageTextField: UITextField!
+    @IBOutlet private weak var messageTextView: UITextView!
     @IBOutlet private weak var carousel: iCarousel!
 
     // MARK: - Constants
@@ -83,6 +83,10 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
         carousel.delegate = self
         carousel.dataSource = self
 
+        messageTextView.layer.cornerRadius = 12
+        messageTextView.layer.borderColor = UIColor.gray.cgColor
+        messageTextView.layer.borderWidth = 1
+
 //        tips = tips.shuffled
     }
 
@@ -115,7 +119,7 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
         if let tipView = Bundle.main.loadNibNamed("TipView", owner: self, options: nil)?.first as? TipView {
             // Configure tip view
-            tipView.frame = CGRect(x: 25, y: 0, width: self.messageTextField.frame.width, height: 63)
+            tipView.frame = CGRect(x: 25, y: 0, width: self.messageTextView.frame.width, height: 63)
             tipView.backgroundColor = .white
             tipView.layer.borderWidth = 1
             tipView.layer.borderColor = UIColor.Gray.main.cgColor
@@ -127,7 +131,7 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
     }
 
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-        messageTextField.text = tips[index]
+        messageTextView.text = tips[index]
     }
 
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {

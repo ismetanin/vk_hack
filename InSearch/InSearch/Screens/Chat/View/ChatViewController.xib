@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="InSearch" customModuleProvider="target">
             <connections>
                 <outlet property="carousel" destination="KjE-Dq-lde" id="dBX-qH-V4J"/>
-                <outlet property="messageTextField" destination="Gtx-Us-C7O" id="AV0-Fy-ML6"/>
+                <outlet property="messageTextView" destination="Arh-zl-puH" id="VRa-iY-ArL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q3p-Ee-1CD"/>
             </connections>
         </placeholder>
@@ -20,12 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сообщение" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gtx-Us-C7O">
-                    <rect key="frame" x="24" y="613" width="327" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjE-Dq-lde" customClass="iCarousel">
                     <rect key="frame" x="0.0" y="511" width="375" height="62"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,20 +33,26 @@
                     <color key="textColor" red="0.80392156862745101" green="0.80784313725490198" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-zl-puH">
+                    <rect key="frame" x="24" y="613" width="327" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Gtx-Us-C7O" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="HDq-RO-uDP"/>
+                <constraint firstItem="Arh-zl-puH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="07W-AF-HHU"/>
+                <constraint firstItem="Arh-zl-puH" firstAttribute="top" secondItem="KjE-Dq-lde" secondAttribute="bottom" constant="40" id="1e3-Qd-BKS"/>
+                <constraint firstAttribute="trailing" secondItem="Arh-zl-puH" secondAttribute="trailing" constant="24" id="5hm-PF-GGK"/>
+                <constraint firstAttribute="bottom" secondItem="Arh-zl-puH" secondAttribute="bottom" constant="20" id="8k1-du-0Vj"/>
                 <constraint firstAttribute="trailing" secondItem="Udb-4m-CgZ" secondAttribute="trailing" constant="24" id="L8j-21-9YY"/>
                 <constraint firstAttribute="trailing" secondItem="KjE-Dq-lde" secondAttribute="trailing" id="LCZ-aT-x0O"/>
-                <constraint firstAttribute="trailing" secondItem="Gtx-Us-C7O" secondAttribute="trailing" constant="24" id="Q8G-qd-giX"/>
                 <constraint firstItem="KjE-Dq-lde" firstAttribute="top" secondItem="Udb-4m-CgZ" secondAttribute="bottom" constant="20" id="Ror-kc-UcO"/>
                 <constraint firstItem="KjE-Dq-lde" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZJk-ac-QHD"/>
                 <constraint firstItem="Udb-4m-CgZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="c1B-0P-kK0"/>
-                <constraint firstItem="Gtx-Us-C7O" firstAttribute="top" secondItem="KjE-Dq-lde" secondAttribute="bottom" constant="40" id="gzT-j4-xd0"/>
-                <constraint firstAttribute="bottom" secondItem="Gtx-Us-C7O" secondAttribute="bottom" constant="24" id="yh9-qC-WMo"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="54.5"/>
+            <point key="canvasLocation" x="58.5" y="52.5"/>
         </view>
     </objects>
 </document>
