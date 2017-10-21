@@ -26,16 +26,6 @@ class RoundedButton: UIButton {
         }
     }
     
-    override var isHighlighted: Bool{
-        didSet {
-            if isHighlighted {
-                self.alpha = 0.8
-            } else {
-                self.alpha = 1.0
-            }
-        }
-    }
-    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let cornerRadius = rect.height / 2.0
@@ -46,6 +36,16 @@ class RoundedButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        growAnimated()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        shrinkAnimated()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,6 +59,21 @@ class RoundedButton: UIButton {
         layer.shadowRadius = 5.0
         layer.shadowOpacity = 0.5
         super.backgroundColor = UIColor.clear
+    }
+    
+    // MARK: - Private
+    
+    private func growAnimated() {
+        UIView.animate(withDuration: 0.1) { () -> Void in
+            let shrinkTransform = CGAffineTransform.identity.scaledBy(x: 1.03, y: 1.03)
+            self.transform = shrinkTransform
+        }
+    }
+    
+    private func shrinkAnimated() {
+        UIView.animate(withDuration: 0.1) { () -> Void in
+            self.transform = CGAffineTransform.identity
+        }
     }
 
     
