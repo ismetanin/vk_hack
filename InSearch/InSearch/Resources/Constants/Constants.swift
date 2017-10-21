@@ -10,6 +10,7 @@ import Foundation
 
 enum URLs {
     static var base = "https://77.244.217.34/v1/"
+    static var categories = "categories"
     static var auth = "auth"
 }
 
@@ -25,4 +26,13 @@ enum Constants {
 extension NSNotification.Name {
     static let userLoggedIn = NSNotification.Name("InSearch.notifications.userLoggedIn")
     static let userFailedLogIn = NSNotification.Name("InSearch.notifications.userFailedLogIn")
+}
+
+// MARK: - UserDefaults
+
+extension UserDefaults {
+    var isCategoriesSet: Bool {
+        get { return bool(forKey: #function) }
+        set { set(newValue, forKey: #function) }
+    }
 }

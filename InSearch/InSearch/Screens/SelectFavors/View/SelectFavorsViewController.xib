@@ -41,17 +41,16 @@
                         <constraint firstAttribute="height" constant="55" id="UAS-F7-uMy"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bao-mb-CsC">
-                    <rect key="frame" x="0.0" y="75" width="375" height="542"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bao-mb-CsC">
+                    <rect key="frame" x="0.0" y="75" width="375" height="532"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-mE-xXu">
-                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="RQ8-AE-gYH"/>
+                        <constraint firstAttribute="height" constant="60" id="RQ8-AE-gYH"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
                     <state key="normal" title="Готово">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>

@@ -88,6 +88,10 @@ class ServerRequest: NSObject {
 
         switch self.parameters {
         case .simpleParams(let params):
+            var params = params ?? [String: Any]()
+            if let tokenString = token {
+                params["token"] = tokenString
+            }
             let request = self.createSingleParamRequest(params)
             requests.forEach({ $0(request) })
         case .multipartParams(let params):
@@ -126,9 +130,6 @@ class ServerRequest: NSObject {
     /// Возвращает хедеры, которые необходимы для данного запроса.
     func createHeaders() -> HTTPHeaders {
         var headers: HTTPHeaders = self.headers ?? [:]
-        if let tokenString = token {
-            headers["Authorization"] = tokenString
-        }
         headers ["Content-Type"] = "Application/json"
         return headers
     }
