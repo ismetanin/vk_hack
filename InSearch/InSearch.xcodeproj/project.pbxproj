@@ -16,6 +16,7 @@
 		316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700DE1F9B86C700FB451D /* EventsViewController.swift */; };
 		316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316700DF1F9B86C700FB451D /* EventsViewController.xib */; };
 		316700E31F9B872200FB451D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700E21F9B872200FB451D /* Event.swift */; };
+		3184362E1F9BCDAE00D4DC0F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184362D1F9BCDAD00D4DC0F /* RoundedButton.swift */; };
 		31ECF6C31F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C11F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift */; };
 		31ECF6C41F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF6C21F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib */; };
 		31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */; };
@@ -110,6 +111,7 @@
 		316700DE1F9B86C700FB451D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		316700DF1F9B86C700FB451D /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		316700E21F9B872200FB451D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3184362D1F9BCDAD00D4DC0F /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		31ECF6C11F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		31ECF6C21F9B916500CB9A34 /* PageIndicatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageIndicatorCollectionViewCell.xib; sourceTree = "<group>"; };
 		31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 		8B0A4FC81F9A349E00B86005 /* Reusable Layer */ = {
 			isa = PBXGroup;
 			children = (
+				3184362D1F9BCDAD00D4DC0F /* RoundedButton.swift */,
 				8B6E2B241F9B4815008E1DCC /* GradientView.swift */,
 			);
 			path = "Reusable Layer";
@@ -887,12 +890,12 @@
 			buildConfigurationList = 8B0A4FE81F9A349E00B86005 /* Build configuration list for PBXNativeTarget "InSearch" */;
 			buildPhases = (
 				FC5E3E3708F613D3700E998A /* [CP] Check Pods Manifest.lock */,
+				8B52CA1B1F9A9DD000CC0DA2 /* Swift Gen */,
 				8B0A4FAE1F9A349E00B86005 /* Sources */,
 				8B0A4FAF1F9A349E00B86005 /* Frameworks */,
 				8B0A4FB01F9A349E00B86005 /* Resources */,
 				F53BE65DFF7A2E233C1E4451 /* [CP] Embed Pods Frameworks */,
 				9798E7B3BDBDEEDBC6D053DC /* [CP] Copy Pods Resources */,
-				8B52CA1B1F9A9DD000CC0DA2 /* Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -1186,6 +1189,7 @@
 				8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
+				3184362E1F9BCDAE00D4DC0F /* RoundedButton.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,

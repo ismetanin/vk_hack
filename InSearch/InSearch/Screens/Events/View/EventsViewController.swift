@@ -20,11 +20,17 @@ class EventsViewController: UIViewController {
     
     fileprivate var eventsModels: [EventCollectionViewCell.Model] = []
     fileprivate var pageModels: [PageModel] = []
+    fileprivate var selectedPageIndex: Int = 0
+
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.removeNavigationBarBackground()
+        
+        self.title = L10n.Events.title
         
 //        self.events = [
 //            Event(JSON: [
@@ -66,6 +72,18 @@ class EventsViewController: UIViewController {
     
     // MARK: - Private
     
+    private func selectPage(at index: Int) {
+        self.selectedPageIndex = index
+        self.pageSelectorCollectionView.selectItem(at: IndexPath(item: index, section: 1), animated: true, scrollPosition: .left)
+    }
+    
+    private func removeNavigationBarBackground() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+    }
+    
     private func configurePageSelectorCollectionView() {
     
         self.pageSelectorCollectionView.backgroundColor = .clear
@@ -74,20 +92,13 @@ class EventsViewController: UIViewController {
         self.pageSelectorCollectionView.register(UINib(nibName:"PageIndicatorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PageIndicatorCollectionViewCell")
         self.pageSelectorCollectionView.showsVerticalScrollIndicator = false
         self.pageSelectorCollectionView.showsHorizontalScrollIndicator = false
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
-        layout.itemSize = CGSize(width: 66.0, height: 55.0)
-        
-        self.pageSelectorCollectionView.collectionViewLayout = layout
     }
     
     private func updatePageSelectorCollectionViewLayout() {
         if let layout = self.pageSelectorCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
             layout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
-            layout.itemSize = CGSize(width: 66.0, height: 55.0)
+            layout.itemSize = CGSize(width: 75.0, height: 55.0)
         }
     }
     
@@ -99,13 +110,7 @@ class EventsViewController: UIViewController {
         self.eventsCollectionView.register(UINib(nibName:"EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EventCollectionViewCell")
         self.eventsCollectionView.showsVerticalScrollIndicator = true
         self.eventsCollectionView.showsHorizontalScrollIndicator = false
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
-        layout.itemSize = CGSize(width: self.eventsCollectionView.bounds.width * 0.88, height: 316.0)
-        
-        self.eventsCollectionView.collectionViewLayout = layout
+
     }
     
     private func updateEventsCollectionViewLayout() {
@@ -123,6 +128,13 @@ class EventsViewController: UIViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageIndicatorCollectionViewCell", for: indexPath) as! PageIndicatorCollectionViewCell
         let model = pageModels[indexPath.item]
         cell.configure(with: model)
+        
+        if indexPath.item == self.selectedPageIndex {
+            cell.isSelected = true
+        } else {
+            cell.isSelected = false
+        }
+        
         return cell
     }
     

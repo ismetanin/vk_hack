@@ -17,3 +17,6 @@
 // MARK: - Reactions
 "Reactions.Mutual" = "Взаимная симпатия";
 "Reactions.Single" = "Симпатия";
+
+// MARK: - Events
+"Events.Title" = "События";

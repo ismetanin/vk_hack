@@ -17,6 +17,11 @@ enum L10n {
     static let enterButtonTitle = L10n.tr("Auth.EnterButtonTitle")
   }
 
+  enum Events {
+    /// Events
+    static let title = L10n.tr("Events.Title")
+  }
+
   enum Favors {
     /// Done
     static let done = L10n.tr("Favors.Done")

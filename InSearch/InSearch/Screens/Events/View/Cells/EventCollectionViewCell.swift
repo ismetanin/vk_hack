@@ -51,6 +51,16 @@ class EventCollectionViewCell: UICollectionViewCell {
         self.configureCellStyle()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        shrinkAnimated()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        growAnimated()
+    }
+    
     // MARK: - Public
     
     public func configure(with model: Model) {
@@ -63,6 +73,19 @@ class EventCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Private
+    
+    private func shrinkAnimated() {
+        UIView.animate(withDuration: 0.1) { () -> Void in
+            let shrinkTransform = CGAffineTransform.identity.scaledBy(x: 0.97, y: 0.97)
+            self.transform = shrinkTransform
+        }
+    }
+    
+    private func growAnimated() {
+        UIView.animate(withDuration: 0.1) { () -> Void in
+            self.transform = CGAffineTransform.identity
+        }
+    }
     
     private func configureShadow() {
         self.layer.shadowColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1).cgColor
