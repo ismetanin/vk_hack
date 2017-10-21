@@ -22,9 +22,7 @@
 		3184362E1F9BCDAE00D4DC0F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184362D1F9BCDAD00D4DC0F /* RoundedButton.swift */; };
 		318436341F9BDBE300D4DC0F /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318436321F9BDBE300D4DC0F /* EventDetailsViewController.swift */; };
 		318436351F9BDBE300D4DC0F /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318436331F9BDBE300D4DC0F /* EventDetailsViewController.xib */; };
-		37864D002F8F9EC162CE3D02 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */; };
 		318436371F9BDD4300D4DC0F /* EventDetailsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318436361F9BDD4300D4DC0F /* EventDetailsTableViewAdapter.swift */; };
-		4F25B05C8619AE68106BE339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */; };
 		3184363B1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318436391F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.swift */; };
 		3184363C1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3184363A1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib */; };
 		3184363E1F9BEA5A00D4DC0F /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184363D1F9BEA5A00D4DC0F /* UINavigationController.swift */; };
@@ -35,6 +33,7 @@
 		31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */; };
 		31ECF6C91F9BA25700CB9A34 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C71F9BA25700CB9A34 /* EventCollectionViewCell.swift */; };
 		31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF6C81F9BA25700CB9A34 /* EventCollectionViewCell.xib */; };
+		37864D002F8F9EC162CE3D02 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
 		4A3AC3CA1F9BEB0A002D6E4F /* PostLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3C91F9BEB0A002D6E4F /* PostLikesRequest.swift */; };
 		4A3AC3CC1F9BF20B002D6E4F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */; };
@@ -43,6 +42,7 @@
 		4AAD6F7D1F9B39C400633119 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */; };
 		4AAD6F811F9B420000633119 /* PhotoSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F801F9B420000633119 /* PhotoSlider.swift */; };
 		4AAD6F831F9B422900633119 /* PhotoSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD6F821F9B422900633119 /* PhotoSlider.xib */; };
+		4F25B05C8619AE68106BE339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */; };
 		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
 		70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */; };
 		723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */; };
@@ -74,9 +74,8 @@
 		8B0A501C1F9A63FD00B86005 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501B1F9A63FD00B86005 /* UIImageView.swift */; };
 		8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */; };
 		8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */; };
-		8BBDC7AC1F9BD69D00113DA9 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */; };
-		8BBDC7AE1F9BD6A800113DA9 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */; };
 		8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A50211F9A811100B86005 /* KeychainStorage.swift */; };
+		8B3618FF1F9BFB4A00CC2B5C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3618FE1F9BFB4A00CC2B5C /* Array.swift */; };
 		8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */; };
 		8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B52CA151F9A9CAF00CC0DA2 /* Localizable.strings */; };
 		8B52CA181F9A9CDD00CC0DA2 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA171F9A9CDD00CC0DA2 /* Int.swift */; };
@@ -94,6 +93,8 @@
 		8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */; };
 		8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */; };
 		8BBDC7A81F9BBB4500113DA9 /* ActivityIndicated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A71F9BBB4500113DA9 /* ActivityIndicated.swift */; };
+		8BBDC7AC1F9BD69D00113DA9 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */; };
+		8BBDC7AE1F9BD6A800113DA9 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
@@ -123,9 +124,7 @@
 /* Begin PBXFileReference section */
 		11369D40F53F2CF101D4BA0E /* Pods-InSearch-InSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		14DA09B3F4EFC8C94494CFDA /* MyServiceMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceMappingTests.swift; path = ../Services/MyService/MyServiceMappingTests.swift; sourceTree = "<group>"; };
-		3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		16092E590D95C053EB4D3508 /* AuthorizationServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationServiceTests.swift; path = ../Services/Authorization/AuthorizationServiceTests.swift; sourceTree = "<group>"; };
-		4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewControllerTests.swift; sourceTree = "<group>"; };
 		1A5C5F5DA94ECC5C23DF1504 /* ChatListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		1F25F7DB97B7BFA8C6598441 /* UserListServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListServiceTests.swift; path = ../Services/UserList/UserListServiceTests.swift; sourceTree = "<group>"; };
 		22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		35033645FFF63539C7A9AFB6 /* PickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch_InSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
+		3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
 		4A3AC3C91F9BEB0A002D6E4F /* PostLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLikesRequest.swift; sourceTree = "<group>"; };
 		4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -162,6 +162,7 @@
 		4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		4AAD6F801F9B420000633119 /* PhotoSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlider.swift; sourceTree = "<group>"; };
 		4AAD6F821F9B422900633119 /* PhotoSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSlider.xib; sourceTree = "<group>"; };
+		4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewControllerTests.swift; sourceTree = "<group>"; };
 		5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SelectFavorsViewController.xib; sourceTree = "<group>"; };
@@ -179,15 +180,12 @@
 		8B0A4FE51F9A349E00B86005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0A4FEE1F9A379900B86005 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B0A4FF21F9A399900B86005 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
-		8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
-		8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
 		8B0A4FF71F9A4D1B00B86005 /* BaseServerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServerRequest.swift; sourceTree = "<group>"; };
 		8B0A4FF81F9A4D1B00B86005 /* NetworkLayerBaseErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayerBaseErrors.swift; sourceTree = "<group>"; };
 		8B0A4FF91F9A4D1B00B86005 /* BaseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
 		8B0A4FFC1F9A4D1B00B86005 /* ServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		8B0A4FFD1F9A4D1B00B86005 /* MultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartData.swift; sourceTree = "<group>"; };
 		8B0A4FFF1F9A4D1B00B86005 /* ServerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequest.swift; sourceTree = "<group>"; };
-		B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8B0A50001F9A4D1B00B86005 /* ServerRequest+SupportedClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServerRequest+SupportedClasses.swift"; sourceTree = "<group>"; };
 		8B0A50011F9A4D1B00B86005 /* SyncServerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncServerRequest.swift; sourceTree = "<group>"; };
 		8B0A50031F9A4D1B00B86005 /* ErrorMapperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMapperAdapter.swift; sourceTree = "<group>"; };
@@ -200,6 +198,7 @@
 		8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKDelegateImpl.swift; sourceTree = "<group>"; };
 		8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorable.swift; sourceTree = "<group>"; };
 		8B0A50211F9A811100B86005 /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		8B3618FE1F9BFB4A00CC2B5C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTokenRequest.swift; sourceTree = "<group>"; };
 		8B52CA141F9A9CAF00CC0DA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B52CA161F9A9CBF00CC0DA2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -218,12 +217,15 @@
 		8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactionTableViewCell.xib; sourceTree = "<group>"; };
 		8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiesTableViewAdapter.swift; sourceTree = "<group>"; };
 		8BBDC7A71F9BBB4500113DA9 /* ActivityIndicated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicated.swift; sourceTree = "<group>"; };
+		8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
 		8F845B25FA3369A3199F0139 /* ChatListViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
 		9C0BA1B5D852896FB2E7BE08 /* Pods-InSearch-InSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch-InSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch-InSearchTests/Pods-InSearch-InSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewControllerTests.swift; sourceTree = "<group>"; };
 		A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BE02FC7F6EA52D11D46D48C6 /* UserService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CECEF2B97387BFF79A13240A /* AuthViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -255,33 +257,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3667D0E0FE4B55C2CE5EF517 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				38C84EE4CA427C652094A7AB /* View */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		38C84EE4CA427C652094A7AB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		40A694050AB3950C2E4A573E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */,
-				3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */,
-				8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */,
-				8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		09D7E9E8E5F4170EE8F00958 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +349,33 @@
 				31ECF6C81F9BA25700CB9A34 /* EventCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3667D0E0FE4B55C2CE5EF517 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				38C84EE4CA427C652094A7AB /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		38C84EE4CA427C652094A7AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40A694050AB3950C2E4A573E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */,
+				3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */,
+				8BBDC7AB1F9BD69D00113DA9 /* TipView.swift */,
+				8BBDC7AD1F9BD6A800113DA9 /* TipView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4503C9A411020C414BA38F32 /* Notifies */ = {
@@ -480,14 +482,6 @@
 				CBA41C6E86C1984D24853D92 /* Pods */,
 				6C23875A6B8C963A9BF2344E /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		94C936673A8117AE663B525C /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				40A694050AB3950C2E4A573E /* View */,
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		8B0A4FB31F9A349E00B86005 /* Products */ = {
@@ -668,6 +662,7 @@
 				3184363D1F9BEA5A00D4DC0F /* UINavigationController.swift */,
 				4AAD6F7A1F9A870A00633119 /* UIView.swift */,
 				4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */,
+				8B3618FE1F9BFB4A00CC2B5C /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -871,6 +866,14 @@
 				8B6E2B331F9B8A6B008E1DCC /* ReactionTableViewCell.xib */,
 			);
 			name = Reuse;
+			sourceTree = "<group>";
+		};
+		94C936673A8117AE663B525C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				40A694050AB3950C2E4A573E /* View */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		9797399628FEA523F766F3BA /* Picker */ = {
@@ -1292,6 +1295,7 @@
 				8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */,
 				8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */,
 				4A3AC3CC1F9BF20B002D6E4F /* CardView.swift in Sources */,
+				8B3618FF1F9BFB4A00CC2B5C /* Array.swift in Sources */,
 				8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */,
 				8B0A500F1F9A4D7400B86005 /* Colors.swift in Sources */,
 				31ECF6C31F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift in Sources */,
