@@ -22,15 +22,17 @@ class EventsViewController: UIViewController {
     fileprivate var pageModels: [PageModel] = []
     fileprivate var selectedPageIndex: Int = 0
 
+    fileprivate var bufferedBarTintColor: UIColor?
+
+    public var user: User?
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.removeNavigationBarBackground()
-        
-        self.title = L10n.Events.title
+        self.configureNavigationBarStyle()
+        self.configureTitle()
         
 //        self.events = [
 //            Event(JSON: [
@@ -63,6 +65,19 @@ class EventsViewController: UIViewController {
         self.pageSelectorCollectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.configureTitle()
+        self.configureNavigationBarStyle()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.revertNavigationBarStyle()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -73,12 +88,10 @@ class EventsViewController: UIViewController {
     // MARK: - User Actions
     
     fileprivate func inviteActionPerformed(eventModel: EventCollectionViewCell.Model) {
-        // TODO: Implement me
+        self.openChatScreen()
     }
     
     fileprivate func openEventDetailsActionPerformed(eventModel: EventCollectionViewCell.Model) {
-        // TODO: Implement me
-        
         let event = Event(JSON: [
             "id": "123",
             "title": "124254242",
@@ -87,6 +100,7 @@ class EventsViewController: UIViewController {
         
         let eventDetailsViewController = EventDetailsViewController()
         eventDetailsViewController.event = event
+        eventDetailsViewController.user = self.user
         self.navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
     
@@ -98,6 +112,22 @@ class EventsViewController: UIViewController {
     
     // MARK: - Private
     
+    /// Настраивает заголовок экрана
+    /// Если есть, пользователь, то его имя будет являться заголовком
+    private func configureTitle() {
+        if let userName = self.user?.name {
+            self.title = userName
+        } else {
+            self.title = L10n.Events.title
+        }
+    }
+    
+    private func openChatScreen() {
+        let chatViewController = ChatViewController()
+        chatViewController.user = self.user
+        self.navigationController?.pushViewController(chatViewController, animated: true)
+    }
+    
     fileprivate func eventModel(byIndexPath indexPath: IndexPath) -> EventCollectionViewCell.Model {
         return self.eventsModels[indexPath.item]
     }
@@ -108,11 +138,20 @@ class EventsViewController: UIViewController {
         self.pageSelectorCollectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: .left)
     }
     
-    private func removeNavigationBarBackground() {
+    private func configureNavigationBarStyle() {
+        // Удаляем фон
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        // Изменяем цвет
+        self.bufferedBarTintColor = self.navigationController?.navigationBar.tintColor
+        self.navigationController?.navigationBar.tintColor = UIApplication.shared.keyWindow?.tintColor
+    }
+    
+    private func revertNavigationBarStyle() {
+        self.navigationController?.navigationBar.tintColor = self.bufferedBarTintColor
     }
     
     private func configurePageSelectorCollectionView() {

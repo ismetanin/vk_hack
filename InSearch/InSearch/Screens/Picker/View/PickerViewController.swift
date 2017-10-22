@@ -21,7 +21,8 @@ final class PickerViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func inviteButtonAction(_ sender: Any) {
-        
+        guard let currentUser = topView?.user else { return }
+        self.openEventsScreen(with: currentUser)
     }
     
     @IBAction func dislikeButtonAction(_ sender: Any) {
@@ -347,5 +348,14 @@ final class PickerViewController: UIViewController {
                 )
             }
         )
+    }
+    
+    /// Переход на экран списка событий
+    ///
+    /// - Parameter user: Пользователь, которого собираемся пригласить
+    private func openEventsScreen(with user: User) {
+        let eventsViewController = EventsViewController()
+        eventsViewController.user = user
+        self.navigationController?.pushViewController(eventsViewController, animated: true)
     }
 }

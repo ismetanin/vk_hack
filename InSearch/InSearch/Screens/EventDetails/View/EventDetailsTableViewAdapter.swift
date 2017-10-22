@@ -10,6 +10,8 @@ import UIKit
 
 class EventDetailsTableViewAdapter: NSObject {
     
+    typealias ActionButtonCallback = (() -> Void)
+    
     enum CellType {
         case header
         case description
@@ -32,6 +34,8 @@ class EventDetailsTableViewAdapter: NSObject {
     fileprivate var event: Event
     fileprivate (set) var tableView: UITableView
     fileprivate var cellTypes: [CellType]
+    
+    public var actionButtonCallback: ActionButtonCallback?
     
     // MARK: - Initialization and deinitialization
     
@@ -60,6 +64,7 @@ class EventDetailsTableViewAdapter: NSObject {
         let model = EventDetailsHeaderTableViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/event/52/74/5274e20a71af854d3664cdfbbcbaa0ab.jpg", title: "Вечер живого джаза в Музее советских игровых автоматов", actionTitle: "Пригласить")
         
         cell.configure(with: model)
+        cell.delegate = self
         
         return cell
     }
@@ -113,6 +118,14 @@ extension EventDetailsTableViewAdapter: UITableViewDataSource {
 
 extension EventDetailsTableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+
+// MARK: - EventDetailsHeaderTableViewCellDelegate
+
+extension EventDetailsTableViewAdapter: EventDetailsHeaderTableViewCellDelegate {
+    func eventDetailsHeaderCellDidPressedActionButton(_ eventCell: EventDetailsHeaderTableViewCell) {
+        self.actionButtonCallback?()
     }
 }
 

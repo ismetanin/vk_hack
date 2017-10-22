@@ -98,7 +98,6 @@
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
 		8F7B0410C03ADB52E2857FAC /* PartnerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
-		9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
 		AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */; };
 		B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A81217B1653390955E4543 /* NotifiesViewController.xib */; };
@@ -157,7 +156,6 @@
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
 		3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewControllerTests.swift; sourceTree = "<group>"; };
 		3D6DEBB2352629AAD783D2D2 /* ChatViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
-		43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PartnerViewController.xib; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
 		4A3AC3C91F9BEB0A002D6E4F /* PostLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLikesRequest.swift; sourceTree = "<group>"; };
 		4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 		CECEF2B97387BFF79A13240A /* AuthViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
 		D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListMappingTests.swift; path = ../Services/UserList/UserListMappingTests.swift; sourceTree = "<group>"; };
-		DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewController.swift; sourceTree = "<group>"; };
 		E1C9349AEA75826FC1C61BFD /* Pods-InSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.release.xcconfig"; sourceTree = "<group>"; };
 		E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewControllerTests.swift; sourceTree = "<group>"; };
 		E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewController.swift; sourceTree = "<group>"; };
@@ -459,15 +456,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7B0F0055827C0DE526F1D739 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */,
-				43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		7B8932B8C9751D371D8C39BC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,14 +481,6 @@
 				D4D69DEF025F3E54C0036FBE /* View */,
 			);
 			path = ChatList;
-			sourceTree = "<group>";
-		};
-		86FEDD8B268E5C99BF4C1A77 /* Partner */ = {
-			isa = PBXGroup;
-			children = (
-				7B0F0055827C0DE526F1D739 /* View */,
-			);
-			path = Partner;
 			sourceTree = "<group>";
 		};
 		8861143DEC1AD08513915CDE /* SelectFavors */ = {
@@ -588,7 +568,6 @@
 				4503C9A411020C414BA38F32 /* Notifies */,
 				94C936673A8117AE663B525C /* Chat */,
 				5EDD5649913B1C791244EA99 /* SelectFavors */,
-				86FEDD8B268E5C99BF4C1A77 /* Partner */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -1162,7 +1141,6 @@
 				3132DEC61F9BF3CF00F1290D /* EventFieldTableViewCell.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
 				31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */,
-				9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

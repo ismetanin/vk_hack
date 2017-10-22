@@ -45,6 +45,8 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
         "Я думаю, это прекрасное событие, сходим вместе?",
         "Как насчет провести завтрашний вот тут?"
     ]
+    
+    public var user: User?
 
     // MARK: - IBActions
 
@@ -63,6 +65,8 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.configureTitle()
         IQKeyboardManager.shared().isEnabled = true
     }
 
@@ -82,6 +86,14 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
         messageTextView.layer.cornerRadius = 12
         messageTextView.layer.borderColor = UIColor.gray.cgColor
         messageTextView.layer.borderWidth = 1
+    }
+    
+    /// Настраивает заголовок экрана
+    /// Если есть пользователь, то его имя будет являться заголовком
+    private func configureTitle() {
+        if let userName = self.user?.name {
+            self.title = userName
+        }
     }
 
     // MARK: - iCarousel
