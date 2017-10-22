@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,30 +24,31 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8U-PP-dBx">
-                    <rect key="frame" x="140" y="100" width="95" height="95"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8U-PP-dBx">
+                    <rect key="frame" x="140" y="64" width="95" height="95"/>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.26274509800000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="d8U-PP-dBx" secondAttribute="height" multiplier="1:1" id="K91-QI-Bwp"/>
+                        <constraint firstAttribute="height" constant="95" id="FfS-Dq-oUG"/>
+                        <constraint firstAttribute="width" constant="95" id="XLU-a4-4r0"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя, Возрасть" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-5a-ToI">
-                    <rect key="frame" x="116" y="223" width="143.5" height="24"/>
+                    <rect key="frame" x="116" y="187" width="143.5" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="img_partner_locaion" translatesAutoresizingMaskIntoConstraints="NO" id="dWs-ut-MdZ">
-                    <rect key="frame" x="157" y="256" width="10" height="14"/>
+                    <rect key="frame" x="157" y="220" width="10" height="14"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-Ym-op8">
-                    <rect key="frame" x="173" y="253" width="45.5" height="19.5"/>
+                    <rect key="frame" x="173" y="217" width="45.5" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XZ-fU-1tF">
-                    <rect key="frame" x="99.5" y="352.5" width="192" height="50"/>
+                    <rect key="frame" x="99.5" y="316.5" width="192" height="50"/>
                     <color key="backgroundColor" red="0.96078431372549022" green="0.2627450980392157" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <inset key="contentEdgeInsets" minX="60" minY="10" maxX="60" maxY="10"/>
@@ -63,9 +63,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="dWs-ut-MdZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="507-X9-9to"/>
-                <constraint firstAttribute="trailing" secondItem="d8U-PP-dBx" secondAttribute="trailing" constant="140" id="7Yp-nw-gca"/>
+                <constraint firstItem="d8U-PP-dBx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5hc-hJ-S9W"/>
                 <constraint firstItem="3XZ-fU-1tF" firstAttribute="centerX" secondItem="n1l-Ym-op8" secondAttribute="centerX" id="7m5-Re-ykZ"/>
-                <constraint firstItem="d8U-PP-dBx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="140" id="C9L-yY-jlg"/>
                 <constraint firstItem="n1l-Ym-op8" firstAttribute="centerX" secondItem="Ctg-5a-ToI" secondAttribute="centerX" constant="8" id="QTs-yG-abN"/>
                 <constraint firstItem="n1l-Ym-op8" firstAttribute="top" secondItem="Ctg-5a-ToI" secondAttribute="bottom" constant="6" id="Z1r-YM-pRs"/>
                 <constraint firstItem="Ctg-5a-ToI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="auM-0T-mQg"/>
@@ -75,7 +74,7 @@
                 <constraint firstItem="3XZ-fU-1tF" firstAttribute="top" secondItem="n1l-Ym-op8" secondAttribute="bottom" constant="80" id="qoJ-Pv-mca"/>
                 <constraint firstItem="Ctg-5a-ToI" firstAttribute="centerX" secondItem="d8U-PP-dBx" secondAttribute="centerX" id="viG-RR-rT0"/>
                 <constraint firstItem="n1l-Ym-op8" firstAttribute="leading" secondItem="dWs-ut-MdZ" secondAttribute="trailing" constant="6" id="xxs-lQ-yHP"/>
-                <constraint firstItem="d8U-PP-dBx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="yix-yH-UUV"/>
+                <constraint firstItem="d8U-PP-dBx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="yix-yH-UUV"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n1l-Ym-op8" secondAttribute="trailing" constant="16" id="zWl-e6-qCv"/>
             </constraints>
         </view>
