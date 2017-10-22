@@ -32,6 +32,10 @@ final class ProfileViewController: UIViewController {
     
     private let exitButtonCornerRadius: CGFloat = 26.0
     
+    // MARK: - Properties
+    
+    private var indicator: IndicatorItem?
+    
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -44,6 +48,7 @@ final class ProfileViewController: UIViewController {
     
     /// Устанавливает первоначальное состояние вью
     private func setupInitialState() {
+        indicator = IndicatorItem(view: self.view, color: UIColor.Red.main)
         avatarImageView.roundSquare()
         exitButton.round(to: exitButtonCornerRadius)
         exitButton.setTitle(L10n.Profileview.exitButtonTitle, for: .normal)

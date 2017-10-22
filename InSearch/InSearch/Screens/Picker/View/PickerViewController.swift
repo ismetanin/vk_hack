@@ -77,6 +77,7 @@ final class PickerViewController: UIViewController {
     private var midView: CardView?
     private var bottomView: CardView?
     private var users: [User]?
+    private var indicator: IndicatorItem?
     
     // MARK: - UIViewController
 
@@ -90,7 +91,9 @@ final class PickerViewController: UIViewController {
     
     /// Загружает список пользователей
     private func loadUsers() {
+        indicator?.make(visible: true)
         UserService.getUsers { [weak self] result in
+            self?.indicator?.make(visible: false)
             guard
                 let `self` = self,
                 let users = result.value?.value
@@ -125,6 +128,7 @@ final class PickerViewController: UIViewController {
     
     /// Конфигурирует начальное состояние экрана
     private func setupInitialState() {
+        indicator = IndicatorItem(view: self.view, color: UIColor.Red.main)
         removeNavigationBarBackground()
         inviteButton.round(to: Constants.inviteButtonCornerRadius)
         inviteButton.setTitle(L10n.Pickerview.inviteButtonTitle, for: .normal)
