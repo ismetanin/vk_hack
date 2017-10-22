@@ -30,7 +30,6 @@ class EventsViewController: UIViewController {
         
         self.removeNavigationBarBackground()
         
-        self.title = L10n.Events.title
         
 //        self.events = [
 //            Event(JSON: [

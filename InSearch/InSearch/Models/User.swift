@@ -26,6 +26,7 @@ final class User: Mappable {
     var gender: Gender?
     var city: String?
     var age: Int?
+    var isMutually: Bool?
 
     // MARK: - Initialization and deinitialization
 
@@ -45,6 +46,7 @@ final class User: Mappable {
         city <- map[MappingKeys.city]
         age <- map[MappingKeys.age]
         id <- map[MappingKeys.id]
+        isMutually <- map[MappingKeys.isMutually]
     }
 }
 
@@ -59,5 +61,6 @@ private extension User {
         static let chatId = "chatId"
         static let city = "city"
         static let age = "age"
+        static let isMutually = "is_mutually"
     }
 }

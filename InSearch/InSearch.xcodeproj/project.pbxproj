@@ -33,9 +33,21 @@
 		31ECF6C91F9BA25700CB9A34 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF6C71F9BA25700CB9A34 /* EventCollectionViewCell.swift */; };
 		31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF6C81F9BA25700CB9A34 /* EventCollectionViewCell.xib */; };
 		44018B7A0D49E0A812989456 /* MyServiceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */; };
+		453B34556AA3F340304A4EE2 /* PartnerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C6406F1A46BE161394401 /* PartnerViewControllerTests.swift */; };
+		4A10549F1F9C3158001DC025 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10549E1F9C3158001DC025 /* UINavigationItem.swift */; };
 		4A3AC3CA1F9BEB0A002D6E4F /* PostLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3C91F9BEB0A002D6E4F /* PostLikesRequest.swift */; };
 		4A3AC3CC1F9BF20B002D6E4F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */; };
 		4A3AC3CE1F9BF591002D6E4F /* PostDislikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3CD1F9BF591002D6E4F /* PostDislikesRequest.swift */; };
+		4A3AC3D21F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3D01F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.swift */; };
+		4A3AC3D31F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3AC3D11F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.xib */; };
+		4A3AC3D71F9BFCBB002D6E4F /* PartnerTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3D61F9BFCBB002D6E4F /* PartnerTableViewAdapter.swift */; };
+		4A3AC3DA1F9C08DC002D6E4F /* PartnerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3D81F9C08DC002D6E4F /* PartnerNameTableViewCell.swift */; };
+		4A3AC3DB1F9C08DC002D6E4F /* PartnerNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3AC3D91F9C08DC002D6E4F /* PartnerNameTableViewCell.xib */; };
+		4A3AC3DE1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3DC1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.swift */; };
+		4A3AC3DF1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3AC3DD1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.xib */; };
+		4A3AC3E21F9C136E002D6E4F /* PartnerActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AC3E01F9C136E002D6E4F /* PartnerActionsTableViewCell.swift */; };
+		4A3AC3E31F9C136E002D6E4F /* PartnerActionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3AC3E11F9C136E002D6E4F /* PartnerActionsTableViewCell.xib */; };
+		4A8D63C01F9C2F83002F61D3 /* LeftBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8D63BF1F9C2F83002F61D3 /* LeftBarButtonItem.swift */; };
 		4AAD6F7B1F9A870A00633119 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F7A1F9A870A00633119 /* UIView.swift */; };
 		4AAD6F7D1F9B39C400633119 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */; };
 		4AAD6F811F9B420000633119 /* PhotoSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6F801F9B420000633119 /* PhotoSlider.swift */; };
@@ -90,10 +102,9 @@
 		8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A51F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift */; };
 		8BBDC7A81F9BBB4500113DA9 /* ActivityIndicated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC7A71F9BBB4500113DA9 /* ActivityIndicated.swift */; };
 		8EB167F1399056433269C999 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECEF2B97387BFF79A13240A /* AuthViewController.xib */; };
-		8F7B0410C03ADB52E2857FAC /* PartnerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */; };
-		9035572AB47AACB3B9A8604F /* PartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */; };
+		962314EE6F7DD9A1860DAB3B /* PartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871CA76E941378C2DB1313D /* PartnerViewController.swift */; };
 		96F61466A9AE7BF08C13FEED /* Pods_InSearch_InSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */; };
-		9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */; };
+		9DD0B631C5BE0EAF54A8F1C3 /* PartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2603BA8401EA331CD8ED3863 /* PartnerViewController.xib */; };
 		A073789A5E9B8D1B71A5C2DE /* PickerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */; };
 		AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */; };
 		B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A81217B1653390955E4543 /* NotifiesViewController.xib */; };
@@ -126,6 +137,7 @@
 		1F25F7DB97B7BFA8C6598441 /* UserListServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListServiceTests.swift; path = ../Services/UserList/UserListServiceTests.swift; sourceTree = "<group>"; };
 		22EF6137CED6D5F85E995175 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
 		24A81217B1653390955E4543 /* NotifiesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NotifiesViewController.xib; sourceTree = "<group>"; };
+		2603BA8401EA331CD8ED3863 /* PartnerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PartnerViewController.xib; sourceTree = "<group>"; };
 		279D218C281B66BAF96442A8 /* Pods-InSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		2AA9A898A6753361A00059BB /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
 		3132DEC31F9BF3CF00F1290D /* EventFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,12 +162,21 @@
 		35033645FFF63539C7A9AFB6 /* PickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		3962FB2CE40C448D527A7C60 /* Pods_InSearch_InSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch_InSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewControllerTests.swift; sourceTree = "<group>"; };
-		3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewControllerTests.swift; sourceTree = "<group>"; };
-		43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PartnerViewController.xib; sourceTree = "<group>"; };
 		47531760ED5EAFBE64F8E02B /* MyServiceServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyServiceServiceTests.swift; path = ../Services/MyService/MyServiceServiceTests.swift; sourceTree = "<group>"; };
+		4A10549E1F9C3158001DC025 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		4A3AC3C91F9BEB0A002D6E4F /* PostLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLikesRequest.swift; sourceTree = "<group>"; };
 		4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4A3AC3CD1F9BF591002D6E4F /* PostDislikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDislikesRequest.swift; sourceTree = "<group>"; };
+		4A3AC3D01F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerPhotoSliderTableViewCell.swift; sourceTree = "<group>"; };
+		4A3AC3D11F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerPhotoSliderTableViewCell.xib; sourceTree = "<group>"; };
+		4A3AC3D61F9BFCBB002D6E4F /* PartnerTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerTableViewAdapter.swift; sourceTree = "<group>"; };
+		4A3AC3D81F9C08DC002D6E4F /* PartnerNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerNameTableViewCell.swift; sourceTree = "<group>"; };
+		4A3AC3D91F9C08DC002D6E4F /* PartnerNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerNameTableViewCell.xib; sourceTree = "<group>"; };
+		4A3AC3DC1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerInterestsTableViewCell.swift; sourceTree = "<group>"; };
+		4A3AC3DD1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerInterestsTableViewCell.xib; sourceTree = "<group>"; };
+		4A3AC3E01F9C136E002D6E4F /* PartnerActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerActionsTableViewCell.swift; sourceTree = "<group>"; };
+		4A3AC3E11F9C136E002D6E4F /* PartnerActionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerActionsTableViewCell.xib; sourceTree = "<group>"; };
+		4A8D63BF1F9C2F83002F61D3 /* LeftBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItem.swift; sourceTree = "<group>"; };
 		4AAD6F7A1F9A870A00633119 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		4AAD6F801F9B420000633119 /* PhotoSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlider.swift; sourceTree = "<group>"; };
@@ -164,6 +185,7 @@
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SelectFavorsViewController.xib; sourceTree = "<group>"; };
 		69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationMappingTests.swift; path = ../Services/Authorization/AuthorizationMappingTests.swift; sourceTree = "<group>"; };
+		7871CA76E941378C2DB1313D /* PartnerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewController.swift; sourceTree = "<group>"; };
 		8B0A4FB21F9A349E00B86005 /* InSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A4FB61F9A349E00B86005 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		8B0A4FB71F9A349E00B86005 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
@@ -220,10 +242,10 @@
 		ACB8BC2ED458110C79B02963 /* ProfileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		AF22B0CE720EE63E409D48A0 /* AuthorizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		BE02FC7F6EA52D11D46D48C6 /* UserService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		C98C6406F1A46BE161394401 /* PartnerViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewControllerTests.swift; sourceTree = "<group>"; };
 		CECEF2B97387BFF79A13240A /* AuthViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatListViewControllerTests.swift; sourceTree = "<group>"; };
 		D8B73FAAAB18EBE2477A346A /* UserListMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserListMappingTests.swift; path = ../Services/UserList/UserListMappingTests.swift; sourceTree = "<group>"; };
-		DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartnerViewController.swift; sourceTree = "<group>"; };
 		E1C9349AEA75826FC1C61BFD /* Pods-InSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InSearch/Pods-InSearch.release.xcconfig"; sourceTree = "<group>"; };
 		E297122CEEF3AEACFDCF627A /* NotifiesViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewControllerTests.swift; sourceTree = "<group>"; };
 		E9104907A262AD9D4D513878 /* SelectFavorsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFavorsViewController.swift; sourceTree = "<group>"; };
@@ -345,21 +367,11 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		38F48619FF9015925F4C8A3F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3D5532BB726D784E88414E7B /* PartnerViewControllerTests.swift */,
-			);
-			name = View;
-			path = View;
-			sourceTree = "<group>";
-		};
 		3D8C6F7FA3A5BDFA83BE57B0 /* Partner */ = {
 			isa = PBXGroup;
 			children = (
-				38F48619FF9015925F4C8A3F /* View */,
+				4EDD7BA58E69EC62A1DB3263 /* View */,
 			);
-			name = Partner;
 			path = Partner;
 			sourceTree = "<group>";
 		};
@@ -376,6 +388,29 @@
 			children = (
 				A0F56011C0E21E52A6B0E898 /* PickerViewController.swift */,
 				35033645FFF63539C7A9AFB6 /* PickerViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A3AC3CF1F9BFC5D002D6E4F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4A3AC3D01F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.swift */,
+				4A3AC3D11F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.xib */,
+				4A3AC3D81F9C08DC002D6E4F /* PartnerNameTableViewCell.swift */,
+				4A3AC3D91F9C08DC002D6E4F /* PartnerNameTableViewCell.xib */,
+				4A3AC3DC1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.swift */,
+				4A3AC3DD1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.xib */,
+				4A3AC3E01F9C136E002D6E4F /* PartnerActionsTableViewCell.swift */,
+				4A3AC3E11F9C136E002D6E4F /* PartnerActionsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4EDD7BA58E69EC62A1DB3263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C98C6406F1A46BE161394401 /* PartnerViewControllerTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,16 +458,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7B0F0055827C0DE526F1D739 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DF429A9E9207CB1E74E0651B /* PartnerViewController.swift */,
-				43A79C7D7DBBC7BDB9F00CC5 /* PartnerViewController.xib */,
-			);
-			name = View;
-			path = View;
-			sourceTree = "<group>";
-		};
 		7B8932B8C9751D371D8C39BC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,9 +488,8 @@
 		86FEDD8B268E5C99BF4C1A77 /* Partner */ = {
 			isa = PBXGroup;
 			children = (
-				7B0F0055827C0DE526F1D739 /* View */,
+				E2B90E328B61A2CAFAF69CF5 /* View */,
 			);
-			name = Partner;
 			path = Partner;
 			sourceTree = "<group>";
 		};
@@ -661,12 +685,12 @@
 			isa = PBXGroup;
 			children = (
 				8B0A501B1F9A63FD00B86005 /* UIImageView.swift */,
-				8B52CA171F9A9CDD00CC0DA2 /* Int.swift */,
 				31ECF6C51F9B9C1100CB9A34 /* UIImage.swift */,
 				3184363D1F9BEA5A00D4DC0F /* UINavigationController.swift */,
 				4AAD6F7A1F9A870A00633119 /* UIView.swift */,
 				4AAD6F7C1F9B39C400633119 /* CGAffineTransform.swift */,
 				8B52CA171F9A9CDD00CC0DA2 /* Int.swift */,
+				4A10549E1F9C3158001DC025 /* UINavigationItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -679,6 +703,7 @@
 				4AAD6F821F9B422900633119 /* PhotoSlider.xib */,
 				8B6E2B241F9B4815008E1DCC /* GradientView.swift */,
 				4A3AC3CB1F9BF20B002D6E4F /* CardView.swift */,
+				4A8D63BF1F9C2F83002F61D3 /* LeftBarButtonItem.swift */,
 			);
 			path = "Reusable Layer";
 			sourceTree = "<group>";
@@ -975,6 +1000,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E2B90E328B61A2CAFAF69CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A3AC3CF1F9BFC5D002D6E4F /* Cells */,
+				4A3AC3D61F9BFCBB002D6E4F /* PartnerTableViewAdapter.swift */,
+				7871CA76E941378C2DB1313D /* PartnerViewController.swift */,
+				2603BA8401EA331CD8ED3863 /* PartnerViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E6E3A01CC57F0C29212508D2 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -1096,6 +1132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0A4FCE1F9A349E00B86005 /* LaunchScreen.xib in Resources */,
+				4A3AC3DF1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.xib in Resources */,
 				8B0A4FD01F9A349E00B86005 /* Assets.xcassets in Resources */,
 				4AAD6F831F9B422900633119 /* PhotoSlider.xib in Resources */,
 				8B0A4FF31F9A399900B86005 /* TabBarController.xib in Resources */,
@@ -1110,13 +1147,16 @@
 				F57E03C32B408FDC1A89F23B /* PickerViewController.xib in Resources */,
 				BB2AD2570BE28A3B63A3F0F4 /* ChatListViewController.xib in Resources */,
 				3184363C1F9BDE6800D4DC0F /* EventDetailsHeaderTableViewCell.xib in Resources */,
+				4A3AC3E31F9C136E002D6E4F /* PartnerActionsTableViewCell.xib in Resources */,
 				8B6E2B351F9B8A6B008E1DCC /* ReactionTableViewCell.xib in Resources */,
 				B6E70E4A9F9F087FC11C42D3 /* NotifiesViewController.xib in Resources */,
 				8EB167F1399056433269C999 /* AuthViewController.xib in Resources */,
 				3132DEC61F9BF3CF00F1290D /* EventFieldTableViewCell.xib in Resources */,
 				AD3C584CAE9CD7199D61166D /* SelectFavorsViewController.xib in Resources */,
+				4A3AC3D31F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.xib in Resources */,
+				4A3AC3DB1F9C08DC002D6E4F /* PartnerNameTableViewCell.xib in Resources */,
 				31ECF6CA1F9BA25700CB9A34 /* EventCollectionViewCell.xib in Resources */,
-				9FE10CD691FDAF33B49E0BE5 /* PartnerViewController.xib in Resources */,
+				9DD0B631C5BE0EAF54A8F1C3 /* PartnerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1283,20 +1323,24 @@
 				8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */,
 				4A3AC3CC1F9BF20B002D6E4F /* CardView.swift in Sources */,
 				8B6E2B271F9B579A008E1DCC /* SelectFavorsTableViewAdapter.swift in Sources */,
+				4A3AC3E21F9C136E002D6E4F /* PartnerActionsTableViewCell.swift in Sources */,
 				8B0A500F1F9A4D7400B86005 /* Colors.swift in Sources */,
 				31ECF6C31F9B916500CB9A34 /* PageIndicatorCollectionViewCell.swift in Sources */,
 				8B0A50081F9A4D1B00B86005 /* ServerResponse.swift in Sources */,
 				8BBDC7A81F9BBB4500113DA9 /* ActivityIndicated.swift in Sources */,
 				8B0A50061F9A4D1B00B86005 /* BaseResult.swift in Sources */,
 				4A3AC3CE1F9BF591002D6E4F /* PostDislikesRequest.swift in Sources */,
+				4A3AC3D21F9BFC93002D6E4F /* PartnerPhotoSliderTableViewCell.swift in Sources */,
 				8B52CA1D1F9B1CC800CC0DA2 /* Category.swift in Sources */,
 				8B0A501C1F9A63FD00B86005 /* UIImageView.swift in Sources */,
 				4AAD6F7B1F9A870A00633119 /* UIView.swift in Sources */,
 				8B0A50051F9A4D1B00B86005 /* NetworkLayerBaseErrors.swift in Sources */,
+				4A3AC3DE1F9C0E0F002D6E4F /* PartnerInterestsTableViewCell.swift in Sources */,
 				4AAD6F7D1F9B39C400633119 /* CGAffineTransform.swift in Sources */,
 				8B0A4FF01F9A379900B86005 /* TabBarController.swift in Sources */,
 				8B0A50151F9A5F8300B86005 /* GetUsersRequest.swift in Sources */,
 				4AAD6F811F9B420000633119 /* PhotoSlider.swift in Sources */,
+				4A3AC3DA1F9C08DC002D6E4F /* PartnerNameTableViewCell.swift in Sources */,
 				8B0A500B1F9A4D1B00B86005 /* ServerRequest+SupportedClasses.swift in Sources */,
 				C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */,
 				8B6E2B2C1F9B59F6008E1DCC /* GetCategoriesRequest.swift in Sources */,
@@ -1307,6 +1351,7 @@
 				79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */,
 				4A3AC3CA1F9BEB0A002D6E4F /* PostLikesRequest.swift in Sources */,
 				8B0A50041F9A4D1B00B86005 /* BaseServerRequest.swift in Sources */,
+				4A10549F1F9C3158001DC025 /* UINavigationItem.swift in Sources */,
 				318436411F9BEE8200D4DC0F /* EventDescriptionTableViewCell.swift in Sources */,
 				318436371F9BDD4300D4DC0F /* EventDetailsTableViewAdapter.swift in Sources */,
 				1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */,
@@ -1323,6 +1368,7 @@
 				29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */,
 				8B0A500C1F9A4D1B00B86005 /* SyncServerRequest.swift in Sources */,
 				8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */,
+				4A8D63C01F9C2F83002F61D3 /* LeftBarButtonItem.swift in Sources */,
 				8B6E2B341F9B8A6B008E1DCC /* ReactionTableViewCell.swift in Sources */,
 				FBD8929C649C1E168C9E92EF /* UserService.swift in Sources */,
 				8B0A50181F9A5FB100B86005 /* GetUserRequest.swift in Sources */,
@@ -1332,8 +1378,9 @@
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
+				4A3AC3D71F9BFCBB002D6E4F /* PartnerTableViewAdapter.swift in Sources */,
 				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
-				9035572AB47AACB3B9A8604F /* PartnerViewController.swift in Sources */,
+				962314EE6F7DD9A1860DAB3B /* PartnerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1354,7 +1401,7 @@
 				723C503B76B4AE1E399F8127 /* AuthorizationMappingTests.swift in Sources */,
 				122572A9B0B8841FDF3A2587 /* AuthViewControllerTests.swift in Sources */,
 				70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */,
-				8F7B0410C03ADB52E2857FAC /* PartnerViewControllerTests.swift in Sources */,
+				453B34556AA3F340304A4EE2 /* PartnerViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

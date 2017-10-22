@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias VoidClosure = () -> Void
+
 final class PhotoSlider: UIView {
     
     // MARK: - IBOutlets
@@ -15,6 +17,17 @@ final class PhotoSlider: UIView {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var disclosureButton: UIButton!
+    
+    // MARK: - IBActions
+    
+    @IBAction func disclosureButtonAction(_ sender: Any) {
+        didTapDisclosureButtonBlock?()
+    }
+    
+    // MARK: - Properties
+    
+    var didTapDisclosureButtonBlock: VoidClosure?
     
     // MARK: - Static
     
@@ -26,8 +39,9 @@ final class PhotoSlider: UIView {
     
     // MARK: - Internal helpers
     
-    func configure(with urlStrings: [String]) {
+    func configure(with urlStrings: [String], buttonHidden: Bool = false) {
         scrollView.delegate = self
+        disclosureButton.isHidden = buttonHidden
         pageControl.numberOfPages = urlStrings.count
         pageControl.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         pageControl.subviews.forEach { $0.addShadow(opacity: 0.2) }

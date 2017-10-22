@@ -39,6 +39,9 @@
                     <rect key="frame" x="318" y="604" width="57" height="57"/>
                     <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                     <state key="normal" image="img_picker_view_disclosure"/>
+                    <connections>
+                        <action selector="disclosureButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fcn-dh-wHE"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>
@@ -53,6 +56,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="disclosureButton" destination="ow9-vK-7fN" id="q97-qH-FRw"/>
                 <outlet property="pageControl" destination="rYS-Wg-Wz7" id="4cK-K1-5gI"/>
                 <outlet property="scrollView" destination="K1L-lo-HhI" id="8rH-12-Nma"/>
                 <outlet property="stackView" destination="wRs-7W-Lb5" id="Ats-sM-raV"/>
