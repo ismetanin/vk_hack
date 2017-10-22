@@ -47,6 +47,11 @@ enum L10n {
     static let inviteButtonTitle = L10n.tr("PickerView.InviteButtonTitle")
   }
 
+  enum Profileview {
+    /// Exit
+    static let exitButtonTitle = L10n.tr("ProfileView.ExitButtonTitle")
+  }
+
   enum Reactions {
     /// Mutual sympathy
     static let mutual = L10n.tr("Reactions.Mutual")

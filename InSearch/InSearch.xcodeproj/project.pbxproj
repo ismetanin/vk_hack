@@ -60,6 +60,8 @@
 		4AB50BF61F9C43BF00879196 /* PartnerInterestsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB50BEB1F9C43BF00879196 /* PartnerInterestsTableViewCell.xib */; };
 		4AB50BF71F9C43BF00879196 /* PartnerTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB50BEC1F9C43BF00879196 /* PartnerTableViewAdapter.swift */; };
 		4AB50BF81F9C43BF00879196 /* PartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB50BED1F9C43BF00879196 /* PartnerViewController.swift */; };
+		4AB50BFB1F9C540C00879196 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB50BFA1F9C540C00879196 /* ProfileService.swift */; };
+		4AB50BFE1F9C544300879196 /* GetProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB50BFD1F9C544300879196 /* GetProfileRequest.swift */; };
 		4F25B05C8619AE68106BE339 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028DB1A8D9CDF795E0BC9FC /* ChatViewController.swift */; };
 		64D0AA04661EB23898DF619F /* ChatListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838ABF105A6304E1BFB9EA /* ChatListViewControllerTests.swift */; };
 		70BC4C6E737864F72B545F85 /* SelectFavorsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11A4713D2CB085395365F9 /* SelectFavorsViewControllerTests.swift */; };
@@ -211,6 +213,8 @@
 		4AB50BEB1F9C43BF00879196 /* PartnerInterestsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PartnerInterestsTableViewCell.xib; sourceTree = "<group>"; };
 		4AB50BEC1F9C43BF00879196 /* PartnerTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerTableViewAdapter.swift; sourceTree = "<group>"; };
 		4AB50BED1F9C43BF00879196 /* PartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerViewController.swift; sourceTree = "<group>"; };
+		4AB50BFA1F9C540C00879196 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		4AB50BFD1F9C544300879196 /* GetProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileRequest.swift; sourceTree = "<group>"; };
 		4B2B8DA9936A7B502378052B /* ChatViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewControllerTests.swift; sourceTree = "<group>"; };
 		5A05BDC2CAE145CD654A180B /* Pods_InSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
@@ -541,6 +545,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4AB50BF91F9C540000879196 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4AB50BFC1F9C543600879196 /* Requests */,
+				4AB50BFA1F9C540C00879196 /* ProfileService.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4AB50BFC1F9C543600879196 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4AB50BFD1F9C544300879196 /* GetProfileRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		4EDD7BA58E69EC62A1DB3263 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,6 +708,7 @@
 				313AE6D11F9C4AF10023B76F /* Events */,
 				3132DEC71F9C372000F1290D /* Reactions */,
 				55373BA99C4F5E973CC0947D /* UserList */,
+				4AB50BF91F9C540000879196 /* Profile */,
 				0B03DDEB156890AD3B63F1E7 /* Authorization */,
 				8B6E2B2A1F9B59DB008E1DCC /* Categories */,
 				8B2C69721F9C76A6000FDB52 /* ChatService.swift */,
@@ -1227,7 +1249,7 @@
 				TargetAttributes = {
 					8B0A4FB11F9A349E00B86005 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = QYFE8U765U;
+						DevelopmentTeam = 3HQ82VEXXC;
 						ProvisioningStyle = Automatic;
 					};
 					8B0A4FD81F9A349E00B86005 = {
@@ -1463,6 +1485,7 @@
 				8B0A500A1F9A4D1B00B86005 /* ServerRequest.swift in Sources */,
 				8B6E2B291F9B595A008E1DCC /* CategoriesService.swift in Sources */,
 				8BBDC7A61F9BA65E00113DA9 /* NotifiesTableViewAdapter.swift in Sources */,
+				4AB50BFE1F9C544300879196 /* GetProfileRequest.swift in Sources */,
 				4A3AC3CC1F9BF20B002D6E4F /* CardView.swift in Sources */,
 				4AB50BF01F9C43BF00879196 /* PartnerNameTableViewCell.swift in Sources */,
 				8B3618FF1F9BFB4A00CC2B5C /* Array.swift in Sources */,
@@ -1526,6 +1549,7 @@
 				318436341F9BDBE300D4DC0F /* EventDetailsViewController.swift in Sources */,
 				3184362E1F9BCDAE00D4DC0F /* RoundedButton.swift in Sources */,
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
+				4AB50BFB1F9C540C00879196 /* ProfileService.swift in Sources */,
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
 				313AE6D61F9C4B280023B76F /* GetEventsRequest.swift in Sources */,
@@ -1682,7 +1706,7 @@
 			baseConfigurationReference = 279D218C281B66BAF96442A8 /* Pods-InSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QYFE8U765U;
+				DEVELOPMENT_TEAM = 3HQ82VEXXC;
 				INFOPLIST_FILE = InSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1697,7 +1721,7 @@
 			baseConfigurationReference = E1C9349AEA75826FC1C61BFD /* Pods-InSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QYFE8U765U;
+				DEVELOPMENT_TEAM = 3HQ82VEXXC;
 				INFOPLIST_FILE = InSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

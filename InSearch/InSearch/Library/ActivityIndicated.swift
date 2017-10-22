@@ -20,9 +20,11 @@ struct IndicatorItem {
         }
         didSet {
             if let activityIndicator = indicator, let view = self.view {
-                activityIndicator.center = view.center
-                activityIndicator.color = color ?? .white
+                activityIndicator.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview(activityIndicator)
+                activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+                activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+                activityIndicator.color = color ?? .white
                 activityIndicator.startAnimating()
             }
         }
