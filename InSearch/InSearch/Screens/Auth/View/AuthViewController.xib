@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,9 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_auth_background" translatesAutoresizingMaskIntoConstraints="NO" id="BLz-oT-NfA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gto-Jd-503">
                     <rect key="frame" x="97.5" y="497" width="180" height="50"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,21 +45,45 @@
                         <action selector="enterButtonAction:" destination="-1" eventType="touchUpInside" id="KzC-fo-Nbt"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fm-dk-5gq">
+                    <rect key="frame" x="40" y="381" width="295" height="60"/>
+                    <string key="text">Это новый
+cпособ найти друзей!</string>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balloon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-o7-Fz0">
+                    <rect key="frame" x="80" y="40" width="215" height="72"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_baloon" translatesAutoresizingMaskIntoConstraints="NO" id="VXB-wL-4ww" customClass="img_baloon">
+                    <rect key="frame" x="74.5" y="154" width="225" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VXB-wL-4ww" secondAttribute="height" multiplier="24:23" id="3rF-jO-DzE"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.72549019607843135" green="0.23921568627450979" blue="0.17254901960784313" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="BLz-oT-NfA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3Nb-db-8FT"/>
+                <constraint firstItem="VXB-wL-4ww" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3a0-e2-GvF"/>
+                <constraint firstItem="Gto-Jd-503" firstAttribute="top" secondItem="8Fm-dk-5gq" secondAttribute="bottom" constant="56" id="7qX-3h-SRK"/>
                 <constraint firstAttribute="bottom" secondItem="Gto-Jd-503" secondAttribute="bottom" constant="120" id="9bB-fb-zpU"/>
-                <constraint firstAttribute="bottom" secondItem="BLz-oT-NfA" secondAttribute="bottom" id="Ld3-fL-kax"/>
+                <constraint firstItem="8Fm-dk-5gq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Sbb-e7-4hi"/>
+                <constraint firstItem="8Fm-dk-5gq" firstAttribute="top" secondItem="VXB-wL-4ww" secondAttribute="bottom" constant="11" id="SsE-3M-Yhg"/>
                 <constraint firstItem="Gto-Jd-503" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T1u-eK-uF9"/>
-                <constraint firstItem="BLz-oT-NfA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b6H-Di-WWW"/>
-                <constraint firstAttribute="trailing" secondItem="BLz-oT-NfA" secondAttribute="trailing" id="iGY-ua-tii"/>
+                <constraint firstItem="VXB-wL-4ww" firstAttribute="top" secondItem="ODz-o7-Fz0" secondAttribute="bottom" constant="42" id="Xk6-VC-8Ex"/>
+                <constraint firstItem="ODz-o7-Fz0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mhD-aK-Kzh"/>
+                <constraint firstItem="ODz-o7-Fz0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="p3a-Pg-1kq"/>
+                <constraint firstAttribute="trailing" secondItem="8Fm-dk-5gq" secondAttribute="trailing" constant="40" id="tCQ-AZ-RuF"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
-        <image name="img_auth_background" width="375" height="667"/>
+        <image name="img_baloon" width="216" height="216"/>
         <image name="img_icon_login_button" width="31" height="18"/>
         <image name="img_icon_login_button_highlight" width="31" height="18"/>
     </resources>

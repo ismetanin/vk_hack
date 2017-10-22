@@ -14,9 +14,9 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     // MARK: - IBOutlets
 
-    @IBOutlet private
-    weak var messageTextView: UITextView!
+    @IBOutlet private weak var messageTextView: UITextView!
     @IBOutlet private weak var carousel: iCarousel!
+    @IBOutlet private weak var eventDescriptionView: UIView!
 
     // MARK: - Constants
 
@@ -26,9 +26,9 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
     // MARK: - Properties
 
     private var tips: [String] = [
-        "Как тебе последний альбом группы Мальбэк?",
-        "Пойдешь на выборы 20!8?",
+        "Пойдешь на выборы в 20!8?",
         "Кажется, ты в группе Хакатона ВК 2017, едешь туда?",
+        "Как тебе последний альбом группы Мальбэк?",
         "Ого, ты слушаешь Хлеб? Что ты думаешь об их творчестве?",
         "Должно быть, это больно… падать с небес.",
         "Время не подскажете?.. А свободного?",
@@ -43,14 +43,22 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     private var eventTips: [String] = [
         "Я думаю, это прекрасное событие, сходим вместе?",
-        "Как насчет провести завтрашний вот тут?"
+        "Как насчет провести завтрашний вечер вот тут?",
+        "Как насчет заглянуть сюда завтра?"
     ]
     
     public var user: User?
+    public var event: Event?
 
     // MARK: - IBActions
 
     @IBAction func sendButtonAction(_ sender: UIButton) {
+        if let userId = user?.id {
+            ChatService().sendMessage(userId: user?.id, message: messageTextView.text, eventId: event?.id, completion: { (result) in
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+        }
+
     }
 
     // MARK: - UIViewController
@@ -65,9 +73,16 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.configureTitle()
         IQKeyboardManager.shared().isEnabled = true
+        if let event = event,
+            let eventView = Bundle.main.loadNibNamed("EventDetailsHeaderTableViewCell", owner: self, options: nil)?.first as? EventDetailsHeaderTableViewCell {
+
+            eventView.frame = eventDescriptionView.frame
+            let model = EventDetailsHeaderTableViewCell.Model(with: event)
+            eventView.configure(with: model, isNeedHideActionButton: true)
+            self.eventDescriptionView.addSubview(eventView)
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,6 +101,8 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
         messageTextView.layer.cornerRadius = 12
         messageTextView.layer.borderColor = UIColor.gray.cgColor
         messageTextView.layer.borderWidth = 1
+
+
     }
     
     /// Настраивает заголовок экрана
@@ -113,14 +130,22 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
             tipView.layer.borderWidth = 1
             tipView.layer.borderColor = UIColor.Gray.main.cgColor
             tipView.layer.cornerRadius = tipView.frame.height / 3
-            tipView.fill(with: tips[index])
+            if event != nil {
+                tipView.fill(with: eventTips[index])
+            } else {
+                tipView.fill(with: tips[index])
+            }
             itemView.addSubview(tipView)
         }
         return itemView
     }
 
     func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-        messageTextView.text = tips[index]
+        if event != nil {
+            messageTextView.text = eventTips[index]
+        } else {
+            messageTextView.text = tips[index]
+        }
     }
 
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {

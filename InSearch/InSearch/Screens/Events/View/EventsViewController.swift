@@ -80,8 +80,8 @@ class EventsViewController: UIViewController {
     
     // MARK: - User Actions
     
-    fileprivate func inviteActionPerformed(eventModel: EventCollectionViewCell.Model) {
-        self.openChatScreen()
+    fileprivate func inviteActionPerformed(event: Event) {
+        self.openChatScreen(event: event)
     }
     
     fileprivate func openEventDetailsActionPerformed(eventModel: EventCollectionViewCell.Model, with index: Int) {
@@ -132,9 +132,10 @@ class EventsViewController: UIViewController {
         }
     }
     
-    private func openChatScreen() {
+    private func openChatScreen(event: Event) {
         let chatViewController = ChatViewController()
         chatViewController.user = self.user
+        chatViewController.event = event
         self.navigationController?.pushViewController(chatViewController, animated: true)
     }
     
@@ -277,8 +278,8 @@ extension EventsViewController: EventCollectionCellDelegate {
     
     func eventCollectionCellDidPressedActionButton(_ eventCell: EventCollectionViewCell) {
         if let indexPath = self.eventsCollectionView.indexPath(for: eventCell) {
-            let model = self.eventModel(byIndexPath: indexPath)
-            self.inviteActionPerformed(eventModel: model)
+            let event = events[indexPath.row]
+            self.inviteActionPerformed(event: event)
         }
     }
     

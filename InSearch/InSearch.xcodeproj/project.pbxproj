@@ -93,6 +93,8 @@
 		8B0A501E1F9A7EF800B86005 /* VKDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */; };
 		8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */; };
 		8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A50211F9A811100B86005 /* KeychainStorage.swift */; };
+		8B2C69731F9C76A6000FDB52 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C69721F9C76A6000FDB52 /* ChatService.swift */; };
+		8B2C69751F9C76E4000FDB52 /* SendMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C69741F9C76E4000FDB52 /* SendMessageRequest.swift */; };
 		8B3618FF1F9BFB4A00CC2B5C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3618FE1F9BFB4A00CC2B5C /* Array.swift */; };
 		8B52CA0F1F9A859D00CC0DA2 /* SendTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */; };
 		8B52CA131F9A9CAF00CC0DA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B52CA151F9A9CAF00CC0DA2 /* Localizable.strings */; };
@@ -245,6 +247,8 @@
 		8B0A501D1F9A7EF800B86005 /* VKDelegateImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKDelegateImpl.swift; sourceTree = "<group>"; };
 		8B0A501F1F9A80F800B86005 /* KeychainStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorable.swift; sourceTree = "<group>"; };
 		8B0A50211F9A811100B86005 /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		8B2C69721F9C76A6000FDB52 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		8B2C69741F9C76E4000FDB52 /* SendMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageRequest.swift; sourceTree = "<group>"; };
 		8B3618FE1F9BFB4A00CC2B5C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		8B52CA0E1F9A859D00CC0DA2 /* SendTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTokenRequest.swift; sourceTree = "<group>"; };
 		8B52CA141F9A9CAF00CC0DA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -685,6 +689,8 @@
 				55373BA99C4F5E973CC0947D /* UserList */,
 				0B03DDEB156890AD3B63F1E7 /* Authorization */,
 				8B6E2B2A1F9B59DB008E1DCC /* Categories */,
+				8B2C69721F9C76A6000FDB52 /* ChatService.swift */,
+				8B2C69741F9C76E4000FDB52 /* SendMessageRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1473,6 +1479,7 @@
 				8B0A50051F9A4D1B00B86005 /* NetworkLayerBaseErrors.swift in Sources */,
 				4AAD6F7D1F9B39C400633119 /* CGAffineTransform.swift in Sources */,
 				8B0A4FF01F9A379900B86005 /* TabBarController.swift in Sources */,
+				8B2C69731F9C76A6000FDB52 /* ChatService.swift in Sources */,
 				8B0A50151F9A5F8300B86005 /* GetUsersRequest.swift in Sources */,
 				4AAD6F811F9B420000633119 /* PhotoSlider.swift in Sources */,
 				4AB50BF21F9C43BF00879196 /* PartnerActionsTableViewCell.swift in Sources */,
@@ -1483,6 +1490,7 @@
 				8B0A501A1F9A60BB00B86005 /* Constants.swift in Sources */,
 				8B0A500D1F9A4D1B00B86005 /* ErrorMapperAdapter.swift in Sources */,
 				31ECF6C91F9BA25700CB9A34 /* EventCollectionViewCell.swift in Sources */,
+				8B2C69751F9C76E4000FDB52 /* SendMessageRequest.swift in Sources */,
 				316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */,
 				79808A08FA5F29FF0D0A24FC /* PickerViewController.swift in Sources */,
 				4A3AC3CA1F9BEB0A002D6E4F /* PostLikesRequest.swift in Sources */,
@@ -1678,7 +1686,7 @@
 				INFOPLIST_FILE = InSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.9thbit.InSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregoryvit.InSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1693,7 +1701,7 @@
 				INFOPLIST_FILE = InSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.9thbit.InSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregoryvit.InSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

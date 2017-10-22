@@ -97,6 +97,7 @@ class EventDetailsViewController: UIViewController {
     private func openChatScreen() {
         let chatViewController = ChatViewController()
         chatViewController.user = self.user
+        chatViewController.event = self.event
         self.navigationController?.pushViewController(chatViewController, animated: true)
     }
 

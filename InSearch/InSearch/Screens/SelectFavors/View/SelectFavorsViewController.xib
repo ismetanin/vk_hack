@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,14 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_select_favs_background" translatesAutoresizingMaskIntoConstraints="NO" id="vPC-1e-EQR">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-qK-M3l">
                     <rect key="frame" x="0.0" y="20" width="375" height="55"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что вы любите?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re3-GU-XTt">
-                            <rect key="frame" x="83.5" y="12.5" width="207" height="30"/>
+                            <rect key="frame" x="85" y="12.5" width="204" height="30"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -59,28 +57,21 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.72549019609999998" green="0.23921568630000001" blue="0.17254901959999999" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vPC-1e-EQR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5oK-gj-HYS"/>
                 <constraint firstAttribute="trailing" secondItem="bao-mb-CsC" secondAttribute="trailing" id="7dx-BZ-rnu"/>
                 <constraint firstItem="bao-mb-CsC" firstAttribute="top" secondItem="3ey-qK-M3l" secondAttribute="bottom" id="8ti-8c-aRQ"/>
                 <constraint firstAttribute="trailing" secondItem="fSN-mE-xXu" secondAttribute="trailing" id="Lr3-To-zyi"/>
                 <constraint firstItem="fSN-mE-xXu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MDo-j5-hmr"/>
                 <constraint firstItem="bao-mb-CsC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Pdo-mc-UMM"/>
                 <constraint firstItem="3ey-qK-M3l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="XMb-TA-SGD"/>
-                <constraint firstAttribute="trailing" secondItem="vPC-1e-EQR" secondAttribute="trailing" id="Zlk-o7-OU9"/>
                 <constraint firstItem="fSN-mE-xXu" firstAttribute="top" secondItem="bao-mb-CsC" secondAttribute="bottom" id="dnF-U5-482"/>
                 <constraint firstItem="3ey-qK-M3l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fgK-5x-9k0"/>
-                <constraint firstAttribute="bottom" secondItem="vPC-1e-EQR" secondAttribute="bottom" id="hak-zO-TUI"/>
                 <constraint firstAttribute="trailing" secondItem="3ey-qK-M3l" secondAttribute="trailing" id="lEk-4j-KqQ"/>
                 <constraint firstAttribute="bottom" secondItem="fSN-mE-xXu" secondAttribute="bottom" id="s0Q-fz-5uO"/>
-                <constraint firstItem="vPC-1e-EQR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wVX-nC-JTx"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="13.5" y="298.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="img_select_favs_background" width="375" height="667"/>
-    </resources>
 </document>

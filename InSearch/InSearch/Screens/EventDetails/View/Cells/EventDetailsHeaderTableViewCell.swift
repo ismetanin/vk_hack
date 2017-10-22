@@ -59,10 +59,11 @@ class EventDetailsHeaderTableViewCell: UITableViewCell {
     
     // MARK: - Public
     
-    public func configure(with model: Model) {
+    public func configure(with model: Model, isNeedHideActionButton: Bool = false) {
         self.actionButton.setTitle(model.actionTitle, for: .normal)
         self.headerImageView.setImage(withUrlString: model.imageURL, placeholderImage: nil)
         self.titleLabel.text = model.title
+        actionButton.isHidden = isNeedHideActionButton
     }
     
 }
