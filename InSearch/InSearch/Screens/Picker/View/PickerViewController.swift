@@ -51,7 +51,7 @@ final class PickerViewController: UIViewController {
     }
     
     private enum Constants {
-        static let topViewTopPadding: CGFloat = 24.0
+        static let topViewTopPadding: CGFloat = 64.0
         static let topViewBottomPadding: CGFloat = -80.0
         static let topViewHorizontalPadding: CGFloat = 32.0
         static let midViewScale: CGFloat = 0.89
