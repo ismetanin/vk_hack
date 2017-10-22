@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyVK
 
 final class ProfileViewController: UIViewController {
 
@@ -21,7 +22,10 @@ final class ProfileViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func exitButtonAction(_ sender: Any) {
-        
+        try? KeychainStorage().deleteData(forUserAccount: Constants.Keys.userAccount)
+        VK.logOut()
+        UserDefaults.standard.isCategoriesSet = false
+        UIApplication.shared.keyWindow?.rootViewController = AuthViewController()
     }
     
     // MARK: - Constants
