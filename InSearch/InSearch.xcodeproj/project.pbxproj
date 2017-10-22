@@ -220,7 +220,7 @@
 		647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotifiesViewController.swift; sourceTree = "<group>"; };
 		68B95A0C5B27639797F5F110 /* SelectFavorsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SelectFavorsViewController.xib; sourceTree = "<group>"; };
 		69B7F16AF6D69B3BBB796244 /* AuthorizationMappingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationMappingTests.swift; path = ../Services/Authorization/AuthorizationMappingTests.swift; sourceTree = "<group>"; };
-		8B0A4FB21F9A349E00B86005 /* InSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0A4FB21F9A349E00B86005 /* Balloon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balloon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A4FB61F9A349E00B86005 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		8B0A4FB71F9A349E00B86005 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		8B0A4FCB1F9A349E00B86005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -663,7 +663,7 @@
 		8B0A4FB31F9A349E00B86005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B0A4FB21F9A349E00B86005 /* InSearch.app */,
+				8B0A4FB21F9A349E00B86005 /* Balloon.app */,
 				8B0A4FD91F9A349E00B86005 /* InSearchTests.xctest */,
 			);
 			name = Products;
@@ -1213,7 +1213,7 @@
 			);
 			name = InSearch;
 			productName = InSearch;
-			productReference = 8B0A4FB21F9A349E00B86005 /* InSearch.app */;
+			productReference = 8B0A4FB21F9A349E00B86005 /* Balloon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8B0A4FD81F9A349E00B86005 /* InSearchTests */ = {
@@ -1711,7 +1711,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregoryvit.InSearch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Balloon;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1726,7 +1726,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregoryvit.InSearch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Balloon;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

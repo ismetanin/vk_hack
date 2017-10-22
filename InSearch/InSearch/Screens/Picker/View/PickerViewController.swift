@@ -55,9 +55,9 @@ final class PickerViewController: UIViewController {
         static let topViewBottomPadding: CGFloat = -80.0
         static let topViewHorizontalPadding: CGFloat = 32.0
         static let midViewScale: CGFloat = 0.89
-        static let midViewX: CGFloat = 8.0 * 100 / Constants.topViewHorizontalPadding
+        static let midViewX: CGFloat = 8.0 * 100 / 24
         static let bottomViewScale: CGFloat = 0.7
-        static let bottomViewX: CGFloat = 24.0 * 100 / Constants.topViewHorizontalPadding
+        static let bottomViewX: CGFloat = 24.0 * 100 / 24
         static let animationDuration: TimeInterval = 0.2
         static let cardViewCornerRadius: CGFloat = 10.0
         static let cardViewCornerShadowOpacity: Float = 0.2
