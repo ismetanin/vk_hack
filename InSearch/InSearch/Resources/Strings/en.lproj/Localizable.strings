@@ -16,6 +16,7 @@
 // MARK: - Reactions
 "Reactions.Mutual" = "Mutual sympathy";
 "Reactions.Single" = "Sympathy";
+"Reactions.Title" = "Reactions";
 
 // MARK: - Events
 "Events.Title" = "Events";

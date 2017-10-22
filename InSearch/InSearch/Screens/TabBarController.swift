@@ -32,14 +32,14 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // Notifies
-        let notifiesViewController = EventsViewController()
+        let notifiesViewController = NotifiesViewController()
         notifiesViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: #imageLiteral(resourceName: "logo_notifies_tab"),
             selectedImage: #imageLiteral(resourceName: "logo_notifies_tab_selected")
         )
         notifiesViewController.navigationItem.leftBarButtonItem = LeftTitleBarButtonItem(
-            with: L10n.Events.title
+            with: L10n.Reactions.title
         )
         notifiesViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
             title: "",
@@ -49,20 +49,21 @@ final class TabBarController: UITabBarController {
         )
         let notifiesViewNavigationController = UINavigationController(rootViewController: notifiesViewController)
 
-        // Chat list
-        let chatListViewController = ChatListViewController()
-        chatListViewController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: #imageLiteral(resourceName: "logo_messages_tab"),
-            selectedImage: #imageLiteral(resourceName: "logo_messages_tab_selected")
-        )
-        chatListViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "",
-            style: .plain,
-            target: nil,
-            action: nil
-        )
-        let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
+
+//        // Chat list
+//        let chatListViewController = ChatListViewController()
+//        chatListViewController.tabBarItem = UITabBarItem(
+//            title: nil,
+//            image: #imageLiteral(resourceName: "logo_messages_tab"),
+//            selectedImage: #imageLiteral(resourceName: "logo_messages_tab_selected")
+//        )
+//        chatListViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
+//            title: "",
+//            style: .plain,
+//            target: nil,
+//            action: nil
+//        )
+//        let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
 
         // Picker
         let pickerViewController = PickerViewController()
@@ -97,7 +98,6 @@ final class TabBarController: UITabBarController {
         // Set to tab bar
         self.setViewControllers(
             [   notifiesViewNavigationController,
-                chatListViewNavigationController,
                 pickerViewNavigationController,
                 profileViewNavigationController
             ],

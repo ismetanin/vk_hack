@@ -52,6 +52,8 @@ enum L10n {
     static let mutual = L10n.tr("Reactions.Mutual")
     /// Sympathy
     static let single = L10n.tr("Reactions.Single")
+    /// Reactions
+    static let title = L10n.tr("Reactions.Title")
   }
 }
 

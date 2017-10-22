@@ -36,8 +36,22 @@ final class PartnerViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = nil
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     // MARK: - Private helpers
     
+    /// Конфигурация вью
+    ///
+    /// - Parameter user: пользователь
     private func configureView(with user: User) {
         let adapter = PartnerTableViewAdapter(user: user, tableView: tableView)
         adapter.didTapOnLikeButtonBlock = {
@@ -48,23 +62,37 @@ final class PartnerViewController: UIViewController {
             self?.didTapOnDislikeButton?()
             self?.navigationController?.popViewController(animated: true)
         }
-        adapter.didTapOnInviteButtonBlock = {  }
+        adapter.didTapOnInviteButtonBlock = {
+            guard let currentUser = self.user else { return }
+            self.openEventsScreen(with: currentUser)
+        }
         adapter.didTapOnChatButtonBlock = {  }
         tableView.dataSource = adapter
         self.adapter = adapter
         tableView.reloadData()
     }
     
+    /// Начальное состояние контроллера
     private func setupInitialState() {
         tableView.estimatedRowHeight = 66
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
+    /// Убирает фон навбара
     private func removeNavigationBarBackground() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationController?.navigationBar.tintColor = .white
+    }
+    
+    /// Переход на экран списка событий
+    ///
+    /// - Parameter user: Пользователь, которого собираемся пригласить
+    private func openEventsScreen(with user: User) {
+        let eventsViewController = EventsViewController()
+        eventsViewController.user = user
+        self.navigationController?.pushViewController(eventsViewController, animated: true)
     }
 }
