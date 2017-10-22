@@ -30,3 +30,6 @@
 
 // MARK: - Partner View
 "PartnerView.ChatButtonTitle" = "Write";
+
+// MARK: - Profile View
+"ProfileView.ExitButtonTitle" = "Exit";
