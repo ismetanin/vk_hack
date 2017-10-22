@@ -1243,7 +1243,7 @@
 				TargetAttributes = {
 					8B0A4FB11F9A349E00B86005 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = QYFE8U765U;
+						DevelopmentTeam = 3HQ82VEXXC;
 						ProvisioningStyle = Automatic;
 					};
 					8B0A4FD81F9A349E00B86005 = {
@@ -1698,11 +1698,11 @@
 			baseConfigurationReference = 279D218C281B66BAF96442A8 /* Pods-InSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QYFE8U765U;
+				DEVELOPMENT_TEAM = 3HQ82VEXXC;
 				INFOPLIST_FILE = InSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.9thbit.InSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregoryvit.InSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1713,11 +1713,11 @@
 			baseConfigurationReference = E1C9349AEA75826FC1C61BFD /* Pods-InSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QYFE8U765U;
+				DEVELOPMENT_TEAM = 3HQ82VEXXC;
 				INFOPLIST_FILE = InSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.9thbit.InSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregoryvit.InSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
