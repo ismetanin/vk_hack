@@ -54,7 +54,7 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
 
     @IBAction func sendButtonAction(_ sender: UIButton) {
         if let userId = user?.id {
-            ChatService().sendMessage(userId: user?.id, message: messageTextView.text, eventId: event?.id, completion: { (result) in
+            ChatService().sendMessage(userId: userId, message: messageTextView.text, eventId: event?.id, completion: { (result) in
                 self.navigationController?.popToRootViewController(animated: true)
             })
         }
