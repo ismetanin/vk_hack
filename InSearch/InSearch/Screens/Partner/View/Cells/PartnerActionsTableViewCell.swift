@@ -35,6 +35,7 @@ final class PartnerActionsTableViewCell: UITableViewCell {
     @IBAction func likeButtonAction(_ sender: Any) {
         didTapOnLikeButtonBlock?()
         showChatButton()
+        likeButton.addBorder(width: Constants.buttonBorderWidth, color: UIColor.Red.main)
     }
     
     // MARK: - Enums
@@ -50,14 +51,14 @@ final class PartnerActionsTableViewCell: UITableViewCell {
     var didTapOnChatButtonBlock: VoidClosure?
     var didTapOnDislikeButtonBlock: VoidClosure?
     var didTapOnLikeButtonBlock: VoidClosure?
+    private var isMutually = false
     
     // MARK: - Internal helpers
     
     func configure(mutually: Bool) {
         setupInitialState()
-        if mutually {
-            showChatButton()
-        }
+        self.isMutually = mutually
+        showChatButton()
     }
     
     // MARK: - Private helpers
@@ -75,6 +76,7 @@ final class PartnerActionsTableViewCell: UITableViewCell {
     }
     
     private func showChatButton() {
+        guard isMutually else { return }
         likeButton.isHidden = true
         dislikeButton.isHidden = true
         chatButton.isHidden = false

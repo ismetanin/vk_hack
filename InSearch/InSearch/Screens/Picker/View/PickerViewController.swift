@@ -294,6 +294,9 @@ final class PickerViewController: UIViewController {
             partnerViewController.didTapOnDislikeButton = { [weak self] in
                 self?.dislikeUser()
             }
+            partnerViewController.didTapOnLikeButton = { [weak self] in
+                self?.changeViews()
+            }
             self?.navigationController?.pushViewController(partnerViewController, animated: true)
         }
         view.addSubview(photoSlider)

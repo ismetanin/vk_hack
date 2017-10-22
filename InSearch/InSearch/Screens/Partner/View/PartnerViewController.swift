@@ -17,6 +17,7 @@ final class PartnerViewController: UIViewController {
     // MARK: - Properties
     
     var user: User?
+    var didTapOnLikeButton: VoidClosure?
     var didTapOnDislikeButton: VoidClosure?
     private var adapter: PartnerTableViewAdapter?
     
@@ -44,6 +45,7 @@ final class PartnerViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.title = nil
+        self.navigationController?.navigationBar.tintColor = .black
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
@@ -54,19 +56,21 @@ final class PartnerViewController: UIViewController {
     /// - Parameter user: пользователь
     private func configureView(with user: User) {
         let adapter = PartnerTableViewAdapter(user: user, tableView: tableView)
-        adapter.didTapOnLikeButtonBlock = {
+        adapter.didTapOnLikeButtonBlock = { [weak self] in
             guard let id = user.id else { return }
             UserService.postLikes(id: id, completion: { _ in })
+            self?.didTapOnLikeButton?()
         }
         adapter.didTapOnDislikeButtonBlock = { [weak self] in
             self?.didTapOnDislikeButton?()
-            self?.navigationController?.popViewController(animated: true)
         }
-        adapter.didTapOnInviteButtonBlock = {
-            guard let currentUser = self.user else { return }
-            self.openEventsScreen(with: currentUser)
+        adapter.didTapOnInviteButtonBlock = { [weak self] in
+            guard let currentUser = self?.user else { return }
+            self?.openEventsScreen(with: currentUser)
         }
-        adapter.didTapOnChatButtonBlock = {  }
+        adapter.didTapOnChatButtonBlock = { [weak self] in
+            self?.openChatScreen()
+        }
         tableView.dataSource = adapter
         self.adapter = adapter
         tableView.reloadData()
@@ -94,5 +98,12 @@ final class PartnerViewController: UIViewController {
         let eventsViewController = EventsViewController()
         eventsViewController.user = user
         self.navigationController?.pushViewController(eventsViewController, animated: true)
+    }
+    
+    /// Переход на экран чата
+    private func openChatScreen() {
+        let chatViewController = ChatViewController()
+        chatViewController.user = self.user
+        self.navigationController?.pushViewController(chatViewController, animated: true)
     }
 }
