@@ -18,6 +18,8 @@
 		3132DEC61F9BF3CF00F1290D /* EventFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */; };
 		3132DEC91F9C373B00F1290D /* ReactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132DEC81F9C373B00F1290D /* ReactionsService.swift */; };
 		3132DECC1F9C379000F1290D /* GetReactionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132DECB1F9C379000F1290D /* GetReactionsRequest.swift */; };
+		313AE6D31F9C4B070023B76F /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313AE6D21F9C4B070023B76F /* EventsService.swift */; };
+		313AE6D61F9C4B280023B76F /* GetEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313AE6D51F9C4B280023B76F /* GetEventsRequest.swift */; };
 		316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700DE1F9B86C700FB451D /* EventsViewController.swift */; };
 		316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316700DF1F9B86C700FB451D /* EventsViewController.xib */; };
 		316700E31F9B872200FB451D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700E21F9B872200FB451D /* Event.swift */; };
@@ -138,6 +140,8 @@
 		3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventFieldTableViewCell.xib; sourceTree = "<group>"; };
 		3132DEC81F9C373B00F1290D /* ReactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsService.swift; sourceTree = "<group>"; };
 		3132DECB1F9C379000F1290D /* GetReactionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReactionsRequest.swift; sourceTree = "<group>"; };
+		313AE6D21F9C4B070023B76F /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
+		313AE6D51F9C4B280023B76F /* GetEventsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsRequest.swift; sourceTree = "<group>"; };
 		316700DE1F9B86C700FB451D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		316700DF1F9B86C700FB451D /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		316700E21F9B872200FB451D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -309,6 +313,23 @@
 			isa = PBXGroup;
 			children = (
 				3132DECB1F9C379000F1290D /* GetReactionsRequest.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		313AE6D11F9C4AF10023B76F /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				313AE6D41F9C4B0F0023B76F /* Requests */,
+				313AE6D21F9C4B070023B76F /* EventsService.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		313AE6D41F9C4B0F0023B76F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				313AE6D51F9C4B280023B76F /* GetEventsRequest.swift */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -568,6 +589,7 @@
 		8B0A4FBA1F9A349E00B86005 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				313AE6D11F9C4AF10023B76F /* Events */,
 				3132DEC71F9C372000F1290D /* Reactions */,
 				55373BA99C4F5E973CC0947D /* UserList */,
 				0B03DDEB156890AD3B63F1E7 /* Authorization */,
@@ -1355,6 +1377,7 @@
 				8B0A500B1F9A4D1B00B86005 /* ServerRequest+SupportedClasses.swift in Sources */,
 				C2A989B110F085251F13CB13 /* ProfileViewController.swift in Sources */,
 				8B6E2B2C1F9B59F6008E1DCC /* GetCategoriesRequest.swift in Sources */,
+				313AE6D31F9C4B070023B76F /* EventsService.swift in Sources */,
 				8B0A501A1F9A60BB00B86005 /* Constants.swift in Sources */,
 				8B0A500D1F9A4D1B00B86005 /* ErrorMapperAdapter.swift in Sources */,
 				31ECF6C91F9BA25700CB9A34 /* EventCollectionViewCell.swift in Sources */,
@@ -1391,6 +1414,7 @@
 				07FFA462CFEE1D6E5DB0E30D /* AuthorizationService.swift in Sources */,
 				8B6E2B2F1F9B6CA7008E1DCC /* SendCategoriesRequest.swift in Sources */,
 				8A51C068880BCB1D9C8D088D /* AuthViewController.swift in Sources */,
+				313AE6D61F9C4B280023B76F /* GetEventsRequest.swift in Sources */,
 				EC2E3E2C2FBB846A45A4FD4B /* SelectFavorsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

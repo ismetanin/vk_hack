@@ -22,6 +22,23 @@ class EventsViewController: UIViewController {
     fileprivate var pageModels: [PageModel] = []
     fileprivate var selectedPageIndex: Int = 0
 
+    fileprivate var events: [Event] = [] {
+        didSet {
+            self.eventsModels = events.map({EventCollectionViewCell.Model(with: $0)})
+            self.eventsCollectionView.reloadData()
+        }
+    }
+    fileprivate var categories: [Category] = [] {
+        didSet {
+            self.pageModels = categories.map({PageModel(with: $0)})
+            self.pageSelectorCollectionView.reloadData()
+            self.selectPage(at: 0)
+        }
+    }
+    fileprivate var selectedCategory: Category {
+        return self.categories[selectedPageIndex]
+    }
+    
     fileprivate var bufferedBarTintColor: UIColor?
 
     public var user: User?
@@ -42,27 +59,29 @@ class EventsViewController: UIViewController {
 //                ])!
 //        ]
 //
-        self.eventsModels = [
-            EventCollectionViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/event/52/74/5274e20a71af854d3664cdfbbcbaa0ab.jpg",title: "Вечер живого джаза в Музее советских игровых автоматов", description: "Не пропустите вечер живого джаза в Музее советских игровых автоматов — вот где свобода самовыражения! Организаторы придерживаются правила «Главное — атмосфера», поэтому обстановка здесь очень душевная. Коллективы виртуозно импровизируют на радость публике.", score: 4.0, actionTitle: "Пригласить"),
-            EventCollectionViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/place/38/c1/38c1405ab5a79abb29fa2e7ef1d326ad.jpg",title: "Игра в реальности «Прятки в темноте»", description: "Захватывающее развлечение для смельчаков и любителей острых ощущений приготовила компания «Страшнотемно». Призраки вышли на охоту и ищут заблудившихся в ночи людей. Интригует? Не то слово! Но вам должно понравиться.", score: 4.7, actionTitle: "Пригласить")
-        ]
-        
-        self.pageModels = [
-            PageModel(image: #imageLiteral(resourceName: "icon_cinema"), title: "Кино"),
-            PageModel(image: #imageLiteral(resourceName: "icon_food"), title: "Еда"),
-            PageModel(image: #imageLiteral(resourceName: "icon_concert"), title: "Концерты"),
-            PageModel(image: #imageLiteral(resourceName: "icon_humor"), title: "Юмор"),
-            PageModel(image: #imageLiteral(resourceName: "icon_culture"), title: "Культура"),
-            PageModel(image: #imageLiteral(resourceName: "icon_games"), title: "Игры"),
-            PageModel(image: #imageLiteral(resourceName: "icon_sport"), title: "Спорт"),
-            PageModel(image: #imageLiteral(resourceName: "icon_festival"), title: "Фестивали")
-        ]
-        
+//        self.eventsModels = [
+//            EventCollectionViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/event/52/74/5274e20a71af854d3664cdfbbcbaa0ab.jpg",title: "Вечер живого джаза в Музее советских игровых автоматов", description: "Не пропустите вечер живого джаза в Музее советских игровых автоматов — вот где свобода самовыражения! Организаторы придерживаются правила «Главное — атмосфера», поэтому обстановка здесь очень душевная. Коллективы виртуозно импровизируют на радость публике.", score: 4.0, actionTitle: "Пригласить"),
+//            EventCollectionViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/place/38/c1/38c1405ab5a79abb29fa2e7ef1d326ad.jpg",title: "Игра в реальности «Прятки в темноте»", description: "Захватывающее развлечение для смельчаков и любителей острых ощущений приготовила компания «Страшнотемно». Призраки вышли на охоту и ищут заблудившихся в ночи людей. Интригует? Не то слово! Но вам должно понравиться.", score: 4.7, actionTitle: "Пригласить")
+//        ]
+//
+//        self.pageModels = [
+//            PageModel(image: #imageLiteral(resourceName: "icon_cinema"), title: "Кино"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_food"), title: "Еда"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_concert"), title: "Концерты"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_humor"), title: "Юмор"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_culture"), title: "Культура"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_games"), title: "Игры"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_sport"), title: "Спорт"),
+//            PageModel(image: #imageLiteral(resourceName: "icon_festival"), title: "Фестивали")
+//        ]
+//
         self.configurePageSelectorCollectionView()
         self.configureEventsCollectionView()
         
-        self.eventsCollectionView.reloadData()
-        self.pageSelectorCollectionView.reloadData()
+//        self.eventsCollectionView.reloadData()
+//        self.pageSelectorCollectionView.reloadData()
+        
+        loadCategoriesAndSetupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,6 +141,26 @@ class EventsViewController: UIViewController {
         }
     }
     
+    private func loadEventsAndSetupView() {
+        EventsService.getEventsList(category: self.selectedCategory) { [weak self] (result) in
+            if let events = result.value?.value {
+                self?.events = events
+            } else {
+                // TODO: show error
+            }
+        }
+    }
+    
+    private func loadCategoriesAndSetupView() {
+        CategoriesService.getCategoryList { [weak self] (result) in
+            if let categories = result.value?.value {
+                self?.categories = categories
+            } else {
+                // TODO: show error
+            }
+        }
+    }
+    
     private func openChatScreen() {
         let chatViewController = ChatViewController()
         chatViewController.user = self.user
@@ -135,6 +174,8 @@ class EventsViewController: UIViewController {
     private func selectPage(at index: Int) {
         self.eventsCollectionView.deselectItem(at: IndexPath(item: self.selectedPageIndex, section: 0), animated: true)
         self.selectedPageIndex = index
+        
+        self.loadEventsAndSetupView()
         self.pageSelectorCollectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: .left)
     }
     

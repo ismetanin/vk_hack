@@ -13,6 +13,13 @@ struct PageModel {
     let title: String
 }
 
+extension PageModel {
+    init(with category: Category) {
+        self.image = category.normalImage ?? UIImage()
+        self.title = category.title ?? ""
+    }
+}
+
 class PageIndicatorCollectionViewCell: UICollectionViewCell {
 
     // MARK: - IBOutlets

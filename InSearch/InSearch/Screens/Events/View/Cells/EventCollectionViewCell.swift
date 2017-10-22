@@ -116,3 +116,13 @@ class EventCollectionViewCell: UICollectionViewCell {
     }
 
 }
+
+extension EventCollectionViewCell.Model {
+    init(with event: Event) {
+        self.actionTitle = L10n.Pickerview.inviteButtonTitle
+        self.title = event.title ?? ""
+        self.score = event.score ?? 0.0
+        self.imageURL = event.image
+        self.description = event.summary ?? ""
+    }
+}
