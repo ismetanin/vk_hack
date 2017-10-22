@@ -75,14 +75,32 @@ final class ChatViewController: UIViewController, iCarouselDataSource, iCarousel
         super.viewWillAppear(animated)
         self.configureTitle()
         IQKeyboardManager.shared().isEnabled = true
-        if let event = event,
-            let eventView = Bundle.main.loadNibNamed("EventDetailsHeaderTableViewCell", owner: self, options: nil)?.first as? EventDetailsHeaderTableViewCell {
+    }
 
-            eventView.frame = eventDescriptionView.frame
-            let model = EventDetailsHeaderTableViewCell.Model(with: event)
-            eventView.configure(with: model, isNeedHideActionButton: true)
-            self.eventDescriptionView.addSubview(eventView)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.async {
+            if let event = self.event,
+                let eventView = Bundle.main.loadNibNamed("EventDetailsHeaderTableViewCell", owner: self, options: nil)?.first as? EventDetailsHeaderTableViewCell {
+
+
+                let model = EventDetailsHeaderTableViewCell.Model(with: event)
+                eventView.configure(with: model, isNeedHideActionButton: true)
+                self.eventDescriptionView.addSubview(eventView)
+
+                eventView.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    eventView.topAnchor.constraint(equalTo: self.eventDescriptionView.topAnchor),
+                    eventView.leadingAnchor.constraint(equalTo: self.eventDescriptionView.leadingAnchor),
+                    eventView.trailingAnchor.constraint(equalTo: self.eventDescriptionView.trailingAnchor),
+                    eventView.bottomAnchor.constraint(equalTo: self.eventDescriptionView.bottomAnchor)
+                    ])
+
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
+            }
         }
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
