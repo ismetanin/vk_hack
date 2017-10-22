@@ -21,6 +21,8 @@ class EventsViewController: UIViewController {
     fileprivate var eventsModels: [EventCollectionViewCell.Model] = []
     fileprivate var pageModels: [PageModel] = []
     fileprivate var selectedPageIndex: Int = 0
+    fileprivate var indicator: IndicatorItem?
+
 
     fileprivate var events: [Event] = [] {
         didSet {
@@ -47,6 +49,9 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        indicator = IndicatorItem(view: self.view, color: UIColor.Red.main)
+        
         self.configureNavigationBarStyle()
         self.configureTitle()
       
@@ -113,7 +118,9 @@ class EventsViewController: UIViewController {
     }
     
     private func loadEventsAndSetupView() {
+        indicator?.make(visible: true)
         EventsService.getEventsList(category: self.selectedCategory) { [weak self] (result) in
+            self?.indicator?.make(visible: false)
             if let events = result.value?.value {
                 self?.events = events
             } else {
