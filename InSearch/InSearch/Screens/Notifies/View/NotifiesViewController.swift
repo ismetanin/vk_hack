@@ -22,54 +22,44 @@ final class NotifiesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTitle()
         setupInitialState()
-
-        let react1 = Reaction()
-        let user1 = User()
-        user1.name = "Александр"
-        user1.avatarURLStrings = ["http://www.foodmatters.com/media/uploads/images/articles/pets-article.jpg"]
-        react1.user = user1
-        react1.mutually = true
-        react1.timestamp = Date()
-
-        let react2 = Reaction()
-        let user2 = User()
-        user2.name = "Петруччио Де Сантес"
-        react2.user = user2
-        react2.mutually = false
-        react2.timestamp = Date()
-
-        let react3 = Reaction()
-        let user3 = User()
-        user3.name = "Георгий"
-        react3.user = user3
-        react3.mutually = false
-        react3.timestamp = Date()
-
-
-        let adapter = NotifiesTableViewAdapter(
-            items: [
-                react1, react2, react3, react1, react2, react3, react1,
-                react2, react3, react1, react2, react3, react1, react2,
-                react3, react1, react2, react3, react1, react2, react3
-                ],
-            tableView: tableView,
-            output: self
-        )
-        tableView.delegate = adapter
-        tableView.dataSource = adapter
-        self.adapter = adapter
+        configureView(with: [])
+        loadReactionsAndSetupView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loadReactionsAndSetupView()
     }
 
     // MARK: - Private helpers
 
+    private func configureView(with reactions: [Reaction]) {
+        let adapter = NotifiesTableViewAdapter(items: reactions, tableView: tableView, output: self)
+        tableView.delegate = adapter
+        tableView.dataSource = adapter
+        self.adapter = adapter
+        tableView.reloadData()
+    }
+    
     private func setupInitialState() {
         tableView.estimatedRowHeight = 82.5
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func loadReactionsAndSetupView() {
+        ReactionsService.getReactionsList { [weak self] (result) in
+            if let reactions = result.value?.value {
+                self?.configureView(with: reactions)
+            } else {
+                // TODO: show error
+            }
+        }
+    }
+    
+    private func configureTitle() {
+        self.title = L10n.Reactions.title
     }
 }
 

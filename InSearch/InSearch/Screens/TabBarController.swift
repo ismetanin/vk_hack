@@ -32,7 +32,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // Notifies
-        let notifiesViewController = ChatViewController()
+        let notifiesViewController = NotifiesViewController()
         notifiesViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: #imageLiteral(resourceName: "logo_notifies_tab"),
@@ -40,14 +40,14 @@ final class TabBarController: UITabBarController {
         )
         let notifiesViewNavigationController = UINavigationController(rootViewController: notifiesViewController)
 
-        // Chat list
-        let chatListViewController = ChatListViewController()
-        chatListViewController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: #imageLiteral(resourceName: "logo_messages_tab"),
-            selectedImage: #imageLiteral(resourceName: "logo_messages_tab_selected")
-        )
-        let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
+//        // Chat list
+//        let chatListViewController = ChatListViewController()
+//        chatListViewController.tabBarItem = UITabBarItem(
+//            title: nil,
+//            image: #imageLiteral(resourceName: "logo_messages_tab"),
+//            selectedImage: #imageLiteral(resourceName: "logo_messages_tab_selected")
+//        )
+//        let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
 
         // Picker
         let pickerViewController = PickerViewController()
@@ -70,7 +70,6 @@ final class TabBarController: UITabBarController {
         // Set to tab bar
         self.setViewControllers(
             [   notifiesViewNavigationController,
-                chatListViewNavigationController,
                 pickerViewNavigationController,
                 profileViewNavigationController
             ],

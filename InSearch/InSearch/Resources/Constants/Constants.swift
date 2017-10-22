@@ -15,6 +15,7 @@ enum URLs {
     static var users = "users"
     static var likes = "likes"
     static var dislikes = "dislikes"
+    static var reactions = "reactions"
 }
 
 enum Constants {

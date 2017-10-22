@@ -16,6 +16,8 @@
 		29DA51DB37B2767BC2D83BFB /* NotifiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CC1F089A11A96CB7E3931 /* NotifiesViewController.swift */; };
 		3132DEC51F9BF3CF00F1290D /* EventFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132DEC31F9BF3CF00F1290D /* EventFieldTableViewCell.swift */; };
 		3132DEC61F9BF3CF00F1290D /* EventFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */; };
+		3132DEC91F9C373B00F1290D /* ReactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132DEC81F9C373B00F1290D /* ReactionsService.swift */; };
+		3132DECC1F9C379000F1290D /* GetReactionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132DECB1F9C379000F1290D /* GetReactionsRequest.swift */; };
 		316700E01F9B86C700FB451D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700DE1F9B86C700FB451D /* EventsViewController.swift */; };
 		316700E11F9B86C700FB451D /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316700DF1F9B86C700FB451D /* EventsViewController.xib */; };
 		316700E31F9B872200FB451D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316700E21F9B872200FB451D /* Event.swift */; };
@@ -134,6 +136,8 @@
 		2AA9A898A6753361A00059BB /* AuthViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthViewControllerTests.swift; sourceTree = "<group>"; };
 		3132DEC31F9BF3CF00F1290D /* EventFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFieldTableViewCell.swift; sourceTree = "<group>"; };
 		3132DEC41F9BF3CF00F1290D /* EventFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventFieldTableViewCell.xib; sourceTree = "<group>"; };
+		3132DEC81F9C373B00F1290D /* ReactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsService.swift; sourceTree = "<group>"; };
+		3132DECB1F9C379000F1290D /* GetReactionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReactionsRequest.swift; sourceTree = "<group>"; };
 		316700DE1F9B86C700FB451D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		316700DF1F9B86C700FB451D /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		316700E21F9B872200FB451D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -290,6 +294,23 @@
 				3C5AD3370DEB6A8C59B8052E /* PickerViewControllerTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3132DEC71F9C372000F1290D /* Reactions */ = {
+			isa = PBXGroup;
+			children = (
+				3132DECA1F9C377A00F1290D /* Requests */,
+				3132DEC81F9C373B00F1290D /* ReactionsService.swift */,
+			);
+			path = Reactions;
+			sourceTree = "<group>";
+		};
+		3132DECA1F9C377A00F1290D /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				3132DECB1F9C379000F1290D /* GetReactionsRequest.swift */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		316700DC1F9B869500FB451D /* Events */ = {
@@ -547,6 +568,7 @@
 		8B0A4FBA1F9A349E00B86005 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3132DEC71F9C372000F1290D /* Reactions */,
 				55373BA99C4F5E973CC0947D /* UserList */,
 				0B03DDEB156890AD3B63F1E7 /* Authorization */,
 				8B6E2B2A1F9B59DB008E1DCC /* Categories */,
@@ -1344,9 +1366,11 @@
 				8BBDC7AC1F9BD69D00113DA9 /* TipView.swift in Sources */,
 				318436371F9BDD4300D4DC0F /* EventDetailsTableViewAdapter.swift in Sources */,
 				1489A4AEAEBDD6EA0C30B464 /* ChatListViewController.swift in Sources */,
+				3132DECC1F9C379000F1290D /* GetReactionsRequest.swift in Sources */,
 				316700E31F9B872200FB451D /* Event.swift in Sources */,
 				8B0A50221F9A811100B86005 /* KeychainStorage.swift in Sources */,
 				31ECF6C61F9B9C1200CB9A34 /* UIImage.swift in Sources */,
+				3132DEC91F9C373B00F1290D /* ReactionsService.swift in Sources */,
 				8B0A50201F9A80F800B86005 /* KeychainStorable.swift in Sources */,
 				3132DEC51F9BF3CF00F1290D /* EventFieldTableViewCell.swift in Sources */,
 				8B6E2B251F9B4815008E1DCC /* GradientView.swift in Sources */,
