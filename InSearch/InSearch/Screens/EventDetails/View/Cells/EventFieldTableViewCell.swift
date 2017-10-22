@@ -57,3 +57,10 @@ class EventFieldTableViewCell: UITableViewCell {
     }
     
 }
+
+extension EventFieldTableViewCell.Model {
+    init(with field: Event.Field) {
+        self.title = field.name ?? ""
+        self.value = field.value ?? ""
+    }
+}

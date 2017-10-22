@@ -48,12 +48,16 @@ class EventDetailsTableViewAdapter: NSObject {
         tableView.register(UINib(nibName: CellType.fieldEmpty.cellClass, bundle: nil), forCellReuseIdentifier: CellType.fieldEmpty.cellClass)
 
         
-        cellTypes = [
+        var resultTypes: [CellType] = [
             .header,
-            .description,
-            .field(EventFieldTableViewCell.Model(title: "Режиссер", value: "Дени Вильнев")),
-            .field(EventFieldTableViewCell.Model(title: "Жанр", value: "Фантастика"))
+            .description
         ]
+        
+        if let fields = event.fields?.map({CellType.field(EventFieldTableViewCell.Model(with: $0))}) {
+            resultTypes.append(contentsOf: fields)
+        }
+        
+        self.cellTypes = resultTypes
     }
     
     // MARK: - Cells generation
@@ -61,7 +65,7 @@ class EventDetailsTableViewAdapter: NSObject {
     fileprivate func getHeaderCell(_ tableView: UITableView,  indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellType.header.cellClass, for: indexPath) as! EventDetailsHeaderTableViewCell
         
-        let model = EventDetailsHeaderTableViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/event/52/74/5274e20a71af854d3664cdfbbcbaa0ab.jpg", title: "Вечер живого джаза в Музее советских игровых автоматов", actionTitle: "Пригласить")
+        let model = EventDetailsHeaderTableViewCell.Model(with: self.event)
         
         cell.configure(with: model)
         cell.delegate = self
@@ -72,7 +76,7 @@ class EventDetailsTableViewAdapter: NSObject {
     fileprivate func getDescriptionCell(_ tableView: UITableView,  indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellType.description.cellClass, for: indexPath) as! EventDescriptionTableViewCell
         
-        let model = EventDescriptionTableViewCell.Model(description: "Не пропустите вечер живого джаза в Музее советских игровых автоматов — вот где свобода самовыражения! Организаторы придерживаются правила «Главное — атмосфера», поэтому обстановка здесь очень душевная. Коллективы виртуозно импровизируют на радость публике.")
+        let model = EventDescriptionTableViewCell.Model(with: self.event)
         
         cell.configure(with: model)
         

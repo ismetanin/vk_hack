@@ -49,36 +49,9 @@ class EventsViewController: UIViewController {
         super.viewDidLoad()
         self.configureNavigationBarStyle()
         self.configureTitle()
-        
-//        self.events = [
-//            Event(JSON: [
-//                "id": "123",
-//                "title": "124254242",
-//                "type": "cinema"
-//                ])!
-//        ]
-//
-//        self.eventsModels = [
-//            EventCollectionViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/event/52/74/5274e20a71af854d3664cdfbbcbaa0ab.jpg",title: "Вечер живого джаза в Музее советских игровых автоматов", description: "Не пропустите вечер живого джаза в Музее советских игровых автоматов — вот где свобода самовыражения! Организаторы придерживаются правила «Главное — атмосфера», поэтому обстановка здесь очень душевная. Коллективы виртуозно импровизируют на радость публике.", score: 4.0, actionTitle: "Пригласить"),
-//            EventCollectionViewCell.Model(imageURL: "https://kudago.com/media/thumbs/xl/images/place/38/c1/38c1405ab5a79abb29fa2e7ef1d326ad.jpg",title: "Игра в реальности «Прятки в темноте»", description: "Захватывающее развлечение для смельчаков и любителей острых ощущений приготовила компания «Страшнотемно». Призраки вышли на охоту и ищут заблудившихся в ночи людей. Интригует? Не то слово! Но вам должно понравиться.", score: 4.7, actionTitle: "Пригласить")
-//        ]
-//
-//        self.pageModels = [
-//            PageModel(image: #imageLiteral(resourceName: "icon_cinema"), title: "Кино"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_food"), title: "Еда"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_concert"), title: "Концерты"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_humor"), title: "Юмор"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_culture"), title: "Культура"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_games"), title: "Игры"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_sport"), title: "Спорт"),
-//            PageModel(image: #imageLiteral(resourceName: "icon_festival"), title: "Фестивали")
-//        ]
-//
+      
         self.configurePageSelectorCollectionView()
         self.configureEventsCollectionView()
-        
-//        self.eventsCollectionView.reloadData()
-//        self.pageSelectorCollectionView.reloadData()
         
         loadCategoriesAndSetupView()
     }
@@ -111,12 +84,9 @@ class EventsViewController: UIViewController {
         self.openChatScreen()
     }
     
-    fileprivate func openEventDetailsActionPerformed(eventModel: EventCollectionViewCell.Model) {
-        let event = Event(JSON: [
-            "id": "123",
-            "title": "124254242",
-            "type": "cinema"
-            ])!
+    fileprivate func openEventDetailsActionPerformed(eventModel: EventCollectionViewCell.Model, with index: Int) {
+        
+        let event = self.events[index]
         
         let eventDetailsViewController = EventDetailsViewController()
         eventDetailsViewController.event = event
@@ -260,7 +230,7 @@ class EventsViewController: UIViewController {
     
     fileprivate func didSelectEvent(with indexPath: IndexPath) {
         let model = self.eventModel(byIndexPath: indexPath)
-        self.openEventDetailsActionPerformed(eventModel: model)
+        self.openEventDetailsActionPerformed(eventModel: model, with: indexPath.item)
     }
     
     fileprivate func didSelectPage(with indexPath: IndexPath) {

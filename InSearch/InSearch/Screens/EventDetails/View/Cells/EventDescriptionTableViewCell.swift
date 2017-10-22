@@ -39,3 +39,9 @@ class EventDescriptionTableViewCell: UITableViewCell {
     }
     
 }
+
+extension EventDescriptionTableViewCell.Model {
+    init(with event: Event) {
+        self.description = event.summary ?? ""
+    }
+}

@@ -66,3 +66,11 @@ class EventDetailsHeaderTableViewCell: UITableViewCell {
     }
     
 }
+
+extension EventDetailsHeaderTableViewCell.Model {
+    init(with event: Event) {
+        self.actionTitle = L10n.Pickerview.inviteButtonTitle
+        self.imageURL = event.image ?? ""
+        self.title = event.title ?? ""
+    }
+}
