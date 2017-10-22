@@ -47,7 +47,6 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.configureNavigationBarStyle()
         self.configureTitle()
         
@@ -94,6 +93,8 @@ class EventsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        self.title = nil
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.revertNavigationBarStyle()
     }
     
@@ -188,7 +189,7 @@ class EventsViewController: UIViewController {
         
         // Изменяем цвет
         self.bufferedBarTintColor = self.navigationController?.navigationBar.tintColor
-        self.navigationController?.navigationBar.tintColor = UIApplication.shared.keyWindow?.tintColor
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     private func revertNavigationBarStyle() {

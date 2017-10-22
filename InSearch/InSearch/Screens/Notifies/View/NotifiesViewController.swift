@@ -22,7 +22,6 @@ final class NotifiesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTitle()
         setupInitialState()
         configureView(with: [])
         loadReactionsAndSetupView()
@@ -56,10 +55,6 @@ final class NotifiesViewController: UIViewController {
                 // TODO: show error
             }
         }
-    }
-    
-    private func configureTitle() {
-        self.title = L10n.Reactions.title
     }
 }
 

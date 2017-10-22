@@ -29,6 +29,11 @@ enum L10n {
     static let title = L10n.tr("Favors.Title")
   }
 
+  enum Partnerview {
+    /// Write
+    static let chatButtonTitle = L10n.tr("PartnerView.ChatButtonTitle")
+  }
+
   enum Pickerview {
     /// Years
     static let ageLabelGenitivePlural = L10n.tr("PickerView.AgeLabelGenitivePlural")

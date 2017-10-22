@@ -38,7 +38,17 @@ final class TabBarController: UITabBarController {
             image: #imageLiteral(resourceName: "logo_notifies_tab"),
             selectedImage: #imageLiteral(resourceName: "logo_notifies_tab_selected")
         )
+        notifiesViewController.navigationItem.leftBarButtonItem = LeftTitleBarButtonItem(
+            with: L10n.Reactions.title
+        )
+        notifiesViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
         let notifiesViewNavigationController = UINavigationController(rootViewController: notifiesViewController)
+
 
 //        // Chat list
 //        let chatListViewController = ChatListViewController()
@@ -46,6 +56,12 @@ final class TabBarController: UITabBarController {
 //            title: nil,
 //            image: #imageLiteral(resourceName: "logo_messages_tab"),
 //            selectedImage: #imageLiteral(resourceName: "logo_messages_tab_selected")
+//        )
+//        chatListViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
+//            title: "",
+//            style: .plain,
+//            target: nil,
+//            action: nil
 //        )
 //        let chatListViewNavigationController = UINavigationController(rootViewController: chatListViewController)
 
@@ -56,6 +72,12 @@ final class TabBarController: UITabBarController {
             image: #imageLiteral(resourceName: "logo_picker_tab"),
             selectedImage: #imageLiteral(resourceName: "logo_picker_tab_selected")
         )
+        pickerViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
         let pickerViewNavigationController = UINavigationController(rootViewController: pickerViewController)
 
         // Profile
@@ -64,6 +86,12 @@ final class TabBarController: UITabBarController {
             title: nil,
             image: #imageLiteral(resourceName: "logo_profile_tab"),
             selectedImage: #imageLiteral(resourceName: "logo_profile_tab_selected")
+        )
+        profileViewController.navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
         )
         let profileViewNavigationController = UINavigationController(rootViewController: profileViewController)
 

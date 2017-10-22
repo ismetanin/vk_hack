@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().shadowImage = nil
         UITabBar.appearance().clipsToBounds = true
         UITabBar.appearance().isTranslucent = false
+        
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().barStyle = .default
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "img_navigation_bar_arrow")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "img_navigation_bar_arrow")
 
         // Init vk delegate
         vkDelegateReference = VKDelegateImpl()

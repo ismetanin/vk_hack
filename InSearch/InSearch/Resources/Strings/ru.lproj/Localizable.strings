@@ -29,3 +29,5 @@
 "PickerView.AgeLabelGenitivePlural" = "Лет";
 "PickerView.EmptyScreenLabel" = "Список иссяк, попробуйте немного позже";
 
+// MARK: - Partner View
+"PartnerView.ChatButtonTitle" = "Написать";

@@ -26,11 +26,7 @@ final class PickerViewController: UIViewController {
     }
     
     @IBAction func dislikeButtonAction(_ sender: Any) {
-        guard let id = topView?.user?.id else { return }
-        UserService.postDislikes(id: id) { [weak self] result in
-            guard let _ = result.value else { return }
-            self?.changeViews()
-        }
+        dislikeUser()
     }
     
     @IBAction func likeButtonAction(_ sender: Any) {
@@ -55,7 +51,7 @@ final class PickerViewController: UIViewController {
     }
     
     private enum Constants {
-        static let topViewTopPadding: CGFloat = 16.0
+        static let topViewTopPadding: CGFloat = 24.0
         static let topViewBottomPadding: CGFloat = -80.0
         static let topViewHorizontalPadding: CGFloat = 32.0
         static let midViewScale: CGFloat = 0.89
@@ -129,7 +125,7 @@ final class PickerViewController: UIViewController {
     
     /// Конфигурирует начальное состояние экрана
     private func setupInitialState() {
-        edgesForExtendedLayout = []
+        removeNavigationBarBackground()
         inviteButton.round(to: Constants.inviteButtonCornerRadius)
         inviteButton.setTitle(L10n.Pickerview.inviteButtonTitle, for: .normal)
         dislikeButton.roundSquare()
@@ -292,7 +288,35 @@ final class PickerViewController: UIViewController {
         view.clipsToBounds = true
         photoSlider.frame = view.bounds
         photoSlider.configure(with: photosURLs)
+        photoSlider.didTapDisclosureButtonBlock = { [weak self] in
+            let partnerViewController = PartnerViewController()
+            partnerViewController.user = self?.topView?.user
+            partnerViewController.didTapOnDislikeButton = { [weak self] in
+                self?.dislikeUser()
+            }
+            partnerViewController.didTapOnLikeButton = { [weak self] in
+                self?.changeViews()
+            }
+            self?.navigationController?.pushViewController(partnerViewController, animated: true)
+        }
         view.addSubview(photoSlider)
+    }
+    
+    /// Удаляет фон нав бара
+    private func removeNavigationBarBackground() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+    }
+    
+    /// Ставит дизлайк пользователю
+    private func dislikeUser() {
+        guard let id = topView?.user?.id else { return }
+        UserService.postDislikes(id: id) { [weak self] result in
+            guard let _ = result.value else { return }
+            self?.changeViews()
+        }
     }
     
     /// Перестановка вьюшек
