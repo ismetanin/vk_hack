@@ -60,9 +60,11 @@ final class PartnerViewController: UIViewController {
             guard let id = user.id else { return }
             UserService.postLikes(id: id, completion: { _ in })
             self?.didTapOnLikeButton?()
+            self?.navigationController?.popViewController(animated: true)
         }
         adapter.didTapOnDislikeButtonBlock = { [weak self] in
             self?.didTapOnDislikeButton?()
+            self?.navigationController?.popViewController(animated: true)
         }
         adapter.didTapOnInviteButtonBlock = { [weak self] in
             guard let currentUser = self?.user else { return }

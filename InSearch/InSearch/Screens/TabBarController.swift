@@ -15,7 +15,6 @@ final class TabBarController: UITabBarController {
 
     enum Tab: Int {
         case notifies
-        case chatList
         case picker
         case profile
     }
@@ -103,6 +102,8 @@ final class TabBarController: UITabBarController {
             ],
             animated: true
         )
+
+        self.selectedIndex = Tab.picker.rawValue
     }
 
     // MARK: - Static methods

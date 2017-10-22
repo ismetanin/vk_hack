@@ -28,7 +28,7 @@ final class PickerViewController: UIViewController {
     @IBAction func dislikeButtonAction(_ sender: Any) {
         dislikeUser()
     }
-    
+   
     @IBAction func likeButtonAction(_ sender: Any) {
         guard let id = topView?.user?.id else { return }
         UserService.postLikes(id: id) { [weak self] result in

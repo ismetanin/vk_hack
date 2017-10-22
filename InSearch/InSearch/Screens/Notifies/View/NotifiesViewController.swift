@@ -61,6 +61,12 @@ final class NotifiesViewController: UIViewController {
 // MARK: - NotifiesViewAdapterOutput
 extension NotifiesViewController: NotifiesViewAdapterOutput {
     func didSelectReaction(reaction: Reaction) {
-        // todo: transition
+        let partnerViewController = PartnerViewController()
+        partnerViewController.user = reaction.user
+        partnerViewController.didTapOnDislikeButton = { [weak self] in
+        }
+        partnerViewController.didTapOnLikeButton = { [weak self] in
+        }
+        self.navigationController?.pushViewController(partnerViewController, animated: true)
     }
 }
